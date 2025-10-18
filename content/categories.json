@@ -1,0 +1,118 @@
+{
+  "categories": [
+    {
+      "id": "system",
+      "name": "System & Utilities",
+      "icon": "⚙️",
+      "description": "System tools and utilities for macOS",
+      "order": 1,
+      "subcategories": [
+        "launcher",
+        "menu-bar",
+        "utilities",
+        "monitoring",
+        "compression",
+        "cloud-storage",
+        "file-management",
+        "screenshots",
+        "maintenance",
+        "networking",
+        "health"
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "icon": "💻",
+      "description": "Development tools and environments",
+      "order": 2,
+      "subcategories": [
+        "code-editor",
+        "version-control",
+        "markdown",
+        "terminal",
+        "design-tools",
+        "networking",
+        "remote-access",
+        "testing"
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "icon": "📝",
+      "description": "Productivity and office applications",
+      "order": 3,
+      "subcategories": [
+        "task-management",
+        "notes",
+        "database",
+        "calendar",
+        "contacts",
+        "office-suite",
+        "email",
+        "focus-tools",
+        "file-management"
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "icon": "💬",
+      "description": "Browsers and communication tools",
+      "order": 4,
+      "subcategories": [
+        "browsers",
+        "messaging",
+        "video-conferencing"
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Creative & Media",
+      "icon": "🎨",
+      "description": "Media players and creative tools",
+      "order": 5,
+      "subcategories": [
+        "video-players",
+        "music",
+        "design-tools"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "icon": "🔒",
+      "description": "Security and privacy tools",
+      "order": 6,
+      "subcategories": [
+        "password-managers"
+      ]
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized Tools",
+      "icon": "🔧",
+      "description": "Specialized and niche applications",
+      "order": 7,
+      "subcategories": [
+        "input-devices",
+        "automation",
+        "calculators",
+        "design-tools",
+        "security-cameras",
+        "clipboard"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI & Automation",
+      "icon": "🤖",
+      "description": "AI assistants and automation tools",
+      "order": 8,
+      "subcategories": [
+        "ai-assistants"
+      ]
+    }
+  ]
+}

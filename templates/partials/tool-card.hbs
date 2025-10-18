@@ -1,0 +1,107 @@
+<article class="tool-card {{#if (eq status 'retired')}}tool-card-retired{{/if}}"
+         data-tags="{{tags}}"
+         data-name="{{name}}"
+         data-tool-id="{{slug}}"
+         {{#if featured}}data-featured="true"{{/if}}
+         {{#if (eq status 'retired')}}data-status="retired"{{/if}}>
+  <button class="tool-card-button" data-modal-trigger="{{slug}}">
+    <div class="tool-card-inner">
+      {{#if icon}}
+        <div class="tool-icon">
+          <img src="/images/tools/{{icon}}" alt="{{name}} logo" loading="lazy">
+        </div>
+      {{else}}
+        <div class="tool-icon tool-icon-placeholder">
+          <span>{{substring name 0 1}}</span>
+        </div>
+      {{/if}}
+
+      <div class="tool-content">
+        {{#if subcategory}}
+          <p class="tool-subcategory">{{subcategory}}</p>
+        {{/if}}
+        <h3 class="tool-name">
+          {{name}}
+          {{#if (eq status 'retired')}}
+            <span class="retired-badge">Retired</span>
+          {{/if}}
+        </h3>
+
+        <p class="tool-description">{{description}}</p>
+      </div>
+    </div>
+  </button>
+
+  <!-- Modal -->
+  <div class="tool-modal" id="modal-{{slug}}" role="dialog" aria-hidden="true" aria-labelledby="modal-title-{{slug}}">
+    <div class="tool-modal-overlay" data-modal-close></div>
+    <div class="tool-modal-content">
+      <button class="tool-modal-close" data-modal-close aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="tool-modal-header">
+        {{#if icon}}
+          <div class="tool-modal-icon">
+            <img src="/images/tools/{{icon}}" alt="{{name}} logo">
+          </div>
+        {{else}}
+          <div class="tool-modal-icon tool-icon-placeholder">
+            <span>{{substring name 0 1}}</span>
+          </div>
+        {{/if}}
+        <div>
+          <h2 id="modal-title-{{slug}}" class="tool-modal-title">{{name}}</h2>
+          <p class="tool-modal-subtitle">{{description}}</p>
+        </div>
+      </div>
+
+      <div class="tool-modal-body">
+        {{#if content}}
+          <div class="tool-modal-section">
+            <h3>Why I Use It</h3>
+            <div class="tool-modal-text">
+              {{{markdown content}}}
+            </div>
+          </div>
+        {{/if}}
+
+        {{#if notes}}
+          <div class="tool-modal-section">
+            <h3>Notes</h3>
+            <div class="tool-modal-text">
+              {{{markdown notes}}}
+            </div>
+          </div>
+        {{/if}}
+
+        {{#if previouslyUsed}}
+          <div class="tool-modal-section tool-modal-migration">
+            <h3>Previously Used</h3>
+            <p>Before {{name}}, I used <strong>{{previouslyUsed}}</strong></p>
+          </div>
+        {{/if}}
+
+        {{#if replacedBy}}
+          <div class="tool-modal-section tool-modal-migration">
+            <h3>Replaced By</h3>
+            <p>I now use <strong>{{replacedBy}}</strong> instead</p>
+          </div>
+        {{/if}}
+
+        {{#if url}}
+          <div class="tool-modal-actions">
+            <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="tool-modal-link">
+              Visit Website
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</article>

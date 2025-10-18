@@ -1,0 +1,143 @@
+/* ========================================
+   Theme Variables
+   Light and Dark themes
+   ======================================== */
+
+/* Light Theme (Default) */
+:root,
+[data-theme="light"] {
+  /* Background Colors */
+  --color-bg: #ffffff;
+  --color-surface: #fafafa;
+  --color-surface-hover: #f5f5f5;
+  --color-section-bg: #fafafa;
+  --color-section-border: #f0f0f0;
+
+  /* Text Colors */
+  --color-text: #171717;
+  --color-text-secondary: #737373;
+  --color-heading: #0a0a0a;
+
+  /* Border */
+  --color-border: #e5e5e5;
+
+  /* Primary Color */
+  --color-primary: #2563eb;
+  --color-primary-alpha: rgba(37, 99, 235, 0.1);
+
+  /* Tags */
+  --color-tag-bg: #f3f4f6;
+  --color-tag-text: #4b5563;
+  --color-tag-hover: #e5e7eb;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-text: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* Success/Info/Warning */
+  --color-success: #10b981;
+  --color-info: #3b82f6;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  /* Background Colors */
+  --color-bg: #0a0a0a;
+  --color-surface: #171717;
+  --color-surface-hover: #262626;
+  --color-section-bg: #1a1a1a;
+  --color-section-border: #262626;
+
+  /* Text Colors */
+  --color-text: #fafafa;
+  --color-text-secondary: #a3a3a3;
+  --color-heading: #ffffff;
+
+  /* Border */
+  --color-border: #262626;
+
+  /* Primary Color */
+  --color-primary: #60a5fa;
+  --color-primary-alpha: rgba(96, 165, 250, 0.1);
+
+  /* Tags */
+  --color-tag-bg: #262626;
+  --color-tag-text: #d4d4d4;
+  --color-tag-hover: #404040;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-text: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+
+  /* Success/Info/Warning */
+  --color-success: #34d399;
+  --color-info: #60a5fa;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+}
+
+/* Auto Theme (respects system preference) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Background Colors */
+    --color-bg: #0a0a0a;
+    --color-surface: #171717;
+    --color-surface-hover: #262626;
+    --color-section-bg: #1a1a1a;
+    --color-section-border: #262626;
+
+    /* Text Colors */
+    --color-text: #fafafa;
+    --color-text-secondary: #a3a3a3;
+    --color-heading: #ffffff;
+
+    /* Border */
+    --color-border: #262626;
+
+    /* Primary Color */
+    --color-primary: #60a5fa;
+    --color-primary-alpha: rgba(96, 165, 250, 0.1);
+
+    /* Tags */
+    --color-tag-bg: #262626;
+    --color-tag-text: #d4d4d4;
+    --color-tag-hover: #404040;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-text: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+
+    /* Success/Info/Warning */
+    --color-success: #34d399;
+    --color-info: #60a5fa;
+    --color-warning: #fbbf24;
+    --color-error: #f87171;
+  }
+}
+
+/* Alternative Theme: Gradient */
+[data-theme="gradient"] {
+  --color-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-text: #ffffff;
+  --color-heading: #ffffff;
+  --color-surface: rgba(255, 255, 255, 0.1);
+  --color-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Alternative Theme: Minimal */
+[data-theme="minimal"] {
+  --color-bg: #fefefe;
+  --color-surface: #ffffff;
+  --color-text: #2d3748;
+  --color-heading: #1a202c;
+  --color-border: #e2e8f0;
+  --color-primary: #2d3748;
+  --gradient-text: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+}
+
+/* Theme Transition */
+* {
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
+}
