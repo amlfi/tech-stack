@@ -1,8 +1,9 @@
 # Decap CMS Configuration for Tech Stack
 
 backend:
-  name: git-gateway
-  branch: main # Branch to update (master or main)
+  name: github
+  repo: amlfi/tech-stack
+  branch: main
 
 # Publish mode: editorial workflow allows drafts, reviews, and approvals
 publish_mode: editorial_workflow

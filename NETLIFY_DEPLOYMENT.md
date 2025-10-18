@@ -60,36 +60,46 @@ netlify init
 netlify deploy --prod
 ```
 
-## Step 3: Enable Netlify Identity
+## Step 3: Set Up GitHub OAuth Authentication
 
-Decap CMS needs authentication to let you edit content. Netlify Identity provides this.
+**Note**: Netlify Identity is deprecated. We'll use GitHub OAuth instead (simpler and more reliable).
 
-1. In your Netlify site dashboard, go to "Site settings"
-2. Navigate to "Identity" in the left sidebar
-3. Click "Enable Identity"
-4. Under "Registration preferences", select "Invite only" (recommended for personal sites)
-5. Scroll down to "Services" → "Git Gateway"
-6. Click "Enable Git Gateway"
+### Create GitHub OAuth App
 
-## Step 4: Invite Yourself as a User
+1. Go to GitHub: https://github.com/settings/developers
+2. Click **"New OAuth App"**
+3. Fill in:
+   - **Application name**: Tech Stack CMS
+   - **Homepage URL**: `https://your-site-name.netlify.app` (use your actual Netlify URL)
+   - **Authorization callback URL**: `https://api.netlify.com/auth/done`
+4. Click **"Register application"**
+5. Copy your **Client ID**
+6. Click **"Generate a new client secret"** and copy it
 
-1. Still in the Identity section, click "Invite users"
-2. Enter your email address
-3. Check your email for the invitation
-4. Click the link and set your password
+### Add OAuth to Netlify
 
-## Step 5: Access Your CMS
+1. In Netlify dashboard: **Site settings** → **Access control** → **OAuth**
+2. Click **"Install provider"** → **"GitHub"**
+3. Enter:
+   - **Client ID**: (from GitHub)
+   - **Client Secret**: (from GitHub)
+4. Click **"Install"**
 
-Once deployed and Identity is enabled:
+**📖 Detailed OAuth Guide**: See [GITHUB_OAUTH_SETUP.md](./GITHUB_OAUTH_SETUP.md)
+
+## Step 4: Access Your CMS
+
+Once deployed and OAuth is configured:
 
 1. Visit `https://your-site-name.netlify.app/admin/`
-2. Log in with the email and password you set up
-3. You should see the Decap CMS interface with:
+2. Click **"Login with GitHub"**
+3. Authorize the OAuth app when prompted
+4. You should see the Decap CMS interface with:
    - **Tools** collection (to manage your tools)
    - **Categories** collection (to manage categories)
    - **Site Configuration** (to update site settings)
 
-## Step 6: Update Your Repository Settings (Optional)
+## Step 5: Update Your Repository Settings (Optional)
 
 If you want to customize your Netlify domain:
 
@@ -149,9 +159,10 @@ Check the deploy log in Netlify. Common issues:
 
 ### Can't Log Into CMS
 
-- Make sure Netlify Identity is enabled
-- Check that Git Gateway is enabled
-- Verify you accepted the email invitation
+- Make sure GitHub OAuth is configured in Netlify (Site settings → Access control → OAuth)
+- Verify Client ID and Secret are correct
+- Check callback URL is exactly: `https://api.netlify.com/auth/done`
+- Make sure your GitHub account has write access to the repo
 - Try clearing browser cache and cookies
 
 ### Changes Not Appearing
@@ -174,7 +185,8 @@ Once deployed, you can:
 
 - [Netlify Documentation](https://docs.netlify.com/)
 - [Decap CMS Documentation](https://decapcms.org/docs/)
-- [Netlify Identity Documentation](https://docs.netlify.com/visitor-access/identity/)
+- [Decap CMS GitHub Backend](https://decapcms.org/docs/github-backend/)
+- [GitHub OAuth Apps](https://docs.github.com/en/developers/apps/building-oauth-apps)
 
 ---
 
