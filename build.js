@@ -10,7 +10,7 @@ const md = new MarkdownIt();
 // Directories
 const CONTENT_DIR = path.join(__dirname, 'content');
 const TEMPLATES_DIR = path.join(__dirname, 'templates');
-const PUBLIC_DIR = path.join(__dirname, 'public');
+const PUBLIC_DIR = path.join(__dirname, process.env.BUILD_DIR || 'public');
 const SRC_DIR = path.join(__dirname, 'src');
 
 // Initialize Handlebars helpers
@@ -129,7 +129,7 @@ async function copyAssets() {
   }
 
   // Copy admin folder for Decap CMS
-  const adminSrc = path.join(__dirname, 'admin');
+  const adminSrc = path.join(SRC_DIR, 'admin');
   const adminDest = path.join(PUBLIC_DIR, 'admin');
   if (await fs.pathExists(adminSrc)) {
     await fs.copy(adminSrc, adminDest);

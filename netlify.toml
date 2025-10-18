@@ -1,0 +1,52 @@
+# Netlify configuration for Tech Stack site
+
+[build]
+  # Build command - generates the site
+  command = "BUILD_DIR=dist npm run build"
+
+  # Output directory - where the built files are
+  publish = "dist"
+
+  # Environment variables for build
+  [build.environment]
+    NODE_VERSION = "18"
+    BUILD_DIR = "dist"
+
+# Redirect rules
+[[redirects]]
+  # SPA-style redirect for client-side routing (if needed)
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+# Headers for security and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Netlify Identity (for Decap CMS authentication)
+[dev]
+  command = "npm run dev"
+  port = 8080
+  targetPort = 8080
+  autoLaunch = false
