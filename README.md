@@ -66,6 +66,9 @@ tech-stack-showcase/
 │       └── tool-card.hbs  # Tool card component
 │
 ├── src/                    # Source files
+│   ├── admin/             # Decap CMS admin interface
+│   │   ├── config.yml     # CMS configuration
+│   │   └── index.html     # CMS entry point
 │   ├── styles/            # CSS stylesheets
 │   │   ├── main.css       # Main styles
 │   │   └── themes.css     # Theme variables
@@ -75,11 +78,8 @@ tech-stack-showcase/
 │   │   └── filter.js      # Category filter
 │   └── images/            # Images and icons
 │
-├── admin/                  # Decap CMS admin interface
-│   ├── config.yml         # CMS configuration
-│   └── index.html         # CMS entry point
-│
-├── public/                 # Generated site (git-ignored)
+├── public/                # Generated site (git-ignored)
+├── dist/                  # Netlify build output (git-ignored)
 │
 ├── scripts/               # Build scripts
 │   └── init-content.js    # Content initialization
@@ -169,14 +169,35 @@ Edit `content/settings.json`:
 
 ## 🚀 Deployment
 
-### GitHub Pages (Recommended)
+### Netlify (Recommended for CMS)
+
+**Why Netlify?** Netlify Identity makes CMS authentication seamless without complex OAuth setup.
+
+1. **Create Netlify account** at [netlify.com](https://www.netlify.com)
+2. **Import repository**: Add new site → Import from GitHub
+3. **Configure build**:
+   - Build command: `BUILD_DIR=dist npm run build`
+   - Publish directory: `dist`
+4. **Enable Netlify Identity**: Site settings → Identity → Enable
+5. **Enable Git Gateway**: Identity → Services → Git Gateway → Enable
+6. **Invite yourself**: Identity → Invite users → Enter your email
+
+**📖 Detailed Guide**: See [NETLIFY_DEPLOYMENT.md](./NETLIFY_DEPLOYMENT.md)
+
+**🎨 CMS Guide**: See [CMS_USAGE_GUIDE.md](./CMS_USAGE_GUIDE.md)
+
+Your site will be live at: `https://your-site-name.netlify.app/`
+
+Access CMS at: `https://your-site-name.netlify.app/admin/`
+
+### GitHub Pages (Alternative)
 
 1. **Create a GitHub repository**
 2. **Push your code** to the repository
 3. **Enable GitHub Pages** in repository settings:
    - Go to Settings → Pages
    - Source: "GitHub Actions"
-4. **Update CMS config** in `admin/config.yml`:
+4. **Update CMS config** in `src/admin/config.yml`:
    ```yaml
    backend:
      name: github
@@ -186,6 +207,8 @@ Edit `content/settings.json`:
 5. **Push changes** - GitHub Actions will automatically build and deploy
 
 Your site will be live at: `https://yourusername.github.io/your-repo/`
+
+**Note**: GitHub Pages requires OAuth app setup for CMS authentication (more complex than Netlify).
 
 ### Manual Deployment
 
