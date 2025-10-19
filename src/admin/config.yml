@@ -17,11 +17,11 @@ collections:
   # Tools Collection
   - name: "tools"
     label: "Tools"
-    folder: "data/tools"
+    folder: "content/tools"
     create: true
     slug: "{{slug}}"
-    extension: "json"
-    format: "json"
+    extension: "md"
+    format: "frontmatter"
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
@@ -48,19 +48,22 @@ collections:
       - { label: "Previously Used", name: "previouslyUsed", widget: "string", required: false }
       - { label: "Replaced By", name: "replacedBy", widget: "string", required: false }
 
-  # Categories Collection
+  # Categories Collection (single file)
   - name: "categories"
     label: "Categories"
-    folder: "data/categories"
-    create: true
-    slug: "{{slug}}"
-    extension: "json"
-    format: "json"
-    fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Name", name: "name", widget: "string" }
-      - { label: "Icon", name: "icon", widget: "string" }
-      - { label: "Order", name: "order", widget: "number", default: 0 }
+    files:
+      - label: "All Categories"
+        name: "categories"
+        file: "content/categories.json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Order", name: "order", widget: "number", default: 0 }
 
   # Site Configuration
   - name: "config"
@@ -68,7 +71,7 @@ collections:
     files:
       - label: "Site Settings"
         name: "site"
-        file: "data/config.json"
+        file: "content/settings.json"
         fields:
           - { label: "Site Title", name: "title", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
