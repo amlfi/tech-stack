@@ -1,0 +1,16 @@
+fragment ToolParts on Tool {
+  __typename
+  name
+  description
+  category
+  subcategory
+  icon
+  url
+  tags
+  status
+  featured
+  content
+  notes
+  previouslyUsed
+  replacedBy
+}
