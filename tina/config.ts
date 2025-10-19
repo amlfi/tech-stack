@@ -8,6 +8,9 @@ export default defineConfig({
   clientId: process.env.TINA_CLIENT_ID || null, // Get this from tina.io
   token: process.env.TINA_TOKEN || null, // Get this from tina.io
 
+  // Add authorized origins for local development and production
+  contentApiUrlOverride: "/api/tina/gql",
+
   build: {
     outputFolder: "admin",
     publicFolder: "public",
