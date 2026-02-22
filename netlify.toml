@@ -2,9 +2,7 @@
 
 [build]
   # Build command - generates the site
-  # --skip-cloud-checks: temporary workaround for breaking schema change (image→string icon field)
-  # Remove after first successful build syncs the new schema to Tina Cloud
-  command = "BUILD_DIR=dist node build.js && tinacms build --skip-cloud-checks"
+  command = "BUILD_DIR=dist node build.js && tinacms build"
 
   # Output directory - where the built files are
   publish = "dist"

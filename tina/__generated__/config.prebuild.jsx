@@ -15,6 +15,14 @@ var config_default = defineConfig({
       publicFolder: "src"
     }
   },
+  search: {
+    tina: {
+      indexerToken: process.env.TINA_SEARCH_TOKEN,
+      stopwordLanguages: ["eng"]
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100
+  },
   schema: {
     collections: [
       {
@@ -71,7 +79,8 @@ var config_default = defineConfig({
             type: "string",
             name: "icon",
             label: "Icon URL",
-            description: "macOS icon URL from macosicons.com (paste the image URL)"
+            description: "macOS icon URL from macosicons.com (paste the image URL)",
+            searchable: false
           },
           {
             type: "string",
