@@ -86,11 +86,13 @@
           </div>
         {{/if}}
 
-        {{#if replacedBy}}
-          <div class="tool-modal-section tool-modal-migration">
-            <h3>Replaced By</h3>
-            <p>I now use <strong>{{replacedBy}}</strong> instead</p>
-          </div>
+        {{#if (eq status 'retired')}}
+          {{#if replacedBy}}
+            <div class="tool-modal-section tool-modal-migration">
+              <h3>Replaced By</h3>
+              <p>I now use <strong>{{replacedBy}}</strong> instead</p>
+            </div>
+          {{/if}}
         {{/if}}
 
         {{#if tags.length}}

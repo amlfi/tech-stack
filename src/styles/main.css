@@ -301,6 +301,10 @@ body {
   padding: var(--spacing-xs);
 }
 
+.tool-card[data-featured="true"] .tool-card-button {
+  border-left: 3px solid var(--color-primary);
+}
+
 .tool-card-retired {
   opacity: 0.6;
 }

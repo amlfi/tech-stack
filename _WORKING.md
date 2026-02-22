@@ -341,3 +341,26 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 - TinaCMS search requires a separate indexer token from the dashboard (different from `TINA_TOKEN`)
 - `fs.readdir({ recursive: true })` (Node 18+) works for reading subdirectories without additional dependencies
 - Changing a field type in TinaCMS is a breaking schema change — requires `--skip-cloud-checks` or manual Tina Cloud re-index before the next build passes
+
+### 2026-02-23 — Session 10: Add Use-Case Tags to All Tools
+
+**Summary**: Added activity-based keyword tags to all 62 tool markdown files across 8 category subfolders. Tags enable search by what users DO with each tool (e.g. "write", "code", "terminal", "calendar") rather than just the tool name.
+
+**Changes Made**:
+- All 62 files in `content/tools/*/` — added `tags` field after `url` in frontmatter with 3-6 use-case keywords each
+- `atom.md` (only file with pre-existing tags) — expanded from 2 tags to 5, keeping original "editor" and "deprecated" tags
+- Tags are lowercase, hyphenated for multi-word (e.g. "video-conferencing", "screen-recording", "knowledge-base")
+- Build verified passing after all changes
+
+**Tag Design Approach**:
+- Activity-based: what the user DOES with the tool ("write", "code", "streaming", "scheduling")
+- Function-based: what kind of tool it IS ("browser", "terminal", "launcher", "editor")
+- Domain-based: what field it belongs to ("office", "security", "networking")
+- Avoided: generic tags like "app" or "software"; tool names as tags; redundant category names
+
+**Key Decisions**:
+- Tags placed after `url` field in frontmatter for consistency across all 62 files
+- 3-6 tags per tool — enough for searchability without tag inflation
+- Existing tags on atom.md preserved and augmented rather than replaced
+
+**Files Modified**: All 62 files in `content/tools/{ai,communication,development,media,productivity,security,specialized,system}/`
