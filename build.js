@@ -49,8 +49,8 @@ async function loadTools() {
       const content = await fs.readFile(path.join(toolsDir, file), 'utf-8');
       const tool = parseFrontmatter(content);
       tool.slug = path.basename(file, '.md');
-      // Tina uses relativePath for document editing URLs
-      tool.tinaPath = file.replace(/\//g, '~').replace(/\.md$/, '');
+      // Tina edit URL: /collections/edit/tool/<category>/<slug>
+      tool.tinaPath = file.replace(/\.md$/, '');
       tools.push(tool);
     }
   }
