@@ -9,7 +9,7 @@ export default defineConfig({
 
   build: {
     outputFolder: "admin",
-    publicFolder: "public",
+    publicFolder: process.env.BUILD_DIR || "public",
   },
   media: {
     tina: {
