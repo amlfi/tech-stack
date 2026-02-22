@@ -41,7 +41,7 @@ async function loadTools() {
     return [];
   }
 
-  const files = await fs.readdir(toolsDir);
+  const files = await fs.readdir(toolsDir, { recursive: true });
   const tools = [];
 
   for (const file of files) {

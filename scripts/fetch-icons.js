@@ -65,7 +65,7 @@ function setIconInFrontmatter(yaml, iconUrl) {
 }
 
 async function main() {
-  const files = (await fs.readdir(TOOLS_DIR)).filter((f) => f.endsWith('.md'));
+  const files = (await fs.readdir(TOOLS_DIR, { recursive: true })).filter((f) => f.endsWith('.md'));
   console.log(`Found ${files.length} tool files\n`);
 
   let updated = 0;
