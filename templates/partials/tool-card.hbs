@@ -109,16 +109,22 @@
           </div>
         {{/if}}
 
-        {{#if url}}
-          <div class="tool-modal-actions">
+        <div class="tool-modal-actions">
+          {{#if url}}
             <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="tool-modal-link">
               Visit Website
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </a>
-          </div>
-        {{/if}}
+          {{/if}}
+          <a href="./admin/index.html#/collections/tool/{{tinaPath}}" class="tool-modal-link tool-modal-edit">
+            Edit
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>

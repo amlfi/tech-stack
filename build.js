@@ -49,6 +49,8 @@ async function loadTools() {
       const content = await fs.readFile(path.join(toolsDir, file), 'utf-8');
       const tool = parseFrontmatter(content);
       tool.slug = path.basename(file, '.md');
+      // Tina edit path: content/tools/category/slug (no .md, ~ separated)
+      tool.tinaPath = `content/tools/${file.replace(/\.md$/, '').replace(/\//g, '~')}`;
       tools.push(tool);
     }
   }
@@ -66,18 +68,36 @@ function parseFrontmatter(content) {
 
   const frontmatter = {};
   const yamlLines = match[1].split('\n');
+  let currentKey = null;
 
   for (const line of yamlLines) {
+    // YAML list item (e.g. "  - mbp")
+    if (/^\s+-\s+/.test(line) && currentKey) {
+      const item = line.replace(/^\s+-\s+/, '').trim().replace(/^["']|["']$/g, '');
+      if (!Array.isArray(frontmatter[currentKey])) {
+        frontmatter[currentKey] = [];
+      }
+      frontmatter[currentKey].push(item);
+      continue;
+    }
+
     const [key, ...valueParts] = line.split(':');
     if (key && valueParts.length > 0) {
       let value = valueParts.join(':').trim();
+      currentKey = key.trim();
+
+      // Empty value means upcoming YAML list
+      if (value === '') {
+        frontmatter[currentKey] = [];
+        continue;
+      }
 
       // Remove quotes
       if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
         value = value.slice(1, -1);
       }
 
-      // Parse arrays
+      // Parse inline arrays
       if (value.startsWith('[') && value.endsWith(']')) {
         value = value
           .slice(1, -1)
@@ -89,7 +109,7 @@ function parseFrontmatter(content) {
       if (value === 'true') value = true;
       if (value === 'false') value = false;
 
-      frontmatter[key.trim()] = value;
+      frontmatter[currentKey] = value;
     }
   }
 

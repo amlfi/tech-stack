@@ -704,9 +704,12 @@ body {
 }
 
 .tool-modal-link:hover {
-  background: var(--color-primary);
-  opacity: 0.9;
-  transform: translateY(-1px);
+  opacity: 0.85;
+}
+
+.tool-modal-edit {
+  background: var(--color-surface-hover);
+  color: var(--color-text-secondary);
 }
 
 /* Scrollbar Styling */
