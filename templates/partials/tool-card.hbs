@@ -60,12 +60,14 @@
 
       <div class="tool-modal-body">
         {{#if content}}
-          <div class="tool-modal-section">
-            <h3>Why I Use It</h3>
-            <div class="tool-modal-text">
-              {{{markdown content}}}
+          {{#if (neq content description)}}
+            <div class="tool-modal-section">
+              <h3>Why I Use It</h3>
+              <div class="tool-modal-text">
+                {{{markdown content}}}
+              </div>
             </div>
-          </div>
+          {{/if}}
         {{/if}}
 
         {{#if notes}}

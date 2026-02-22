@@ -21,6 +21,10 @@ Handlebars.registerHelper('substring', (str, start, end) => {
   if (!str) return '';
   return str.substring(start, end);
 });
+Handlebars.registerHelper('neq', (a, b) => {
+  if (!a || !b) return true;
+  return a.trim().toLowerCase() !== b.trim().toLowerCase();
+});
 Handlebars.registerHelper('iconSrc', (icon) => {
   if (!icon) return '';
   if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;

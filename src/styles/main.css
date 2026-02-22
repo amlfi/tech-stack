@@ -673,13 +673,14 @@ body {
 
 .tool-modal-migration {
   background: var(--color-surface);
-  padding: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
   border-left: 3px solid var(--color-primary);
 }
 
 .tool-modal-migration p {
   margin: 0;
+  font-size: 0.8125rem;
   color: var(--color-text);
 }
 
