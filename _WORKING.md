@@ -22,8 +22,8 @@ Inspired by `calebleigh_stack.html` (a reference design included in the repo).
 ## Site Structure
 
 ```
-content/tools/*.md     → 60+ tool entries with frontmatter (name, category, status, etc.)
-content/categories.json → 8 categories with icons and subcategories
+content/tools/<category>/*.md → 60+ tool entries organized by category subfolder
+content/categories.json       → 8 categories with icons and subcategories
 content/settings.json   → Site title, author, theme preference
 templates/index.hbs     → Main page layout
 templates/partials/     → Reusable components (tool-card.hbs)
@@ -128,14 +128,16 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 ## Current Status
 
 - **Site live and editable** — deployed on Netlify, Tina Cloud CMS editing confirmed working
-- **47 active tools** across 8 categories, fully populated with real content
+- **47 active tools** across 8 categories, organized into category subfolders
 - **Build works** locally via `node build.js` and on Netlify via `node build.js && tinacms build`
 - **Tina config synced** — `tina/config.ts`, `tina-lock.json`, and Tina Cloud schema all in agreement
+- **TinaCMS search enabled** — search bar works in admin, indexed via `TINA_SEARCH_TOKEN`
+- **Icons via macosicons.com CDN** — 46 tools have macOS-style icons loaded from external CDN, no files in repo
+- **Category folders** — tools organized into `content/tools/<category>/` subfolders, browsable in TinaCMS admin
+- **Category labels** — TinaCMS dropdown shows friendly names (e.g. "Creative & Media") while storing short IDs
 - **All Decap CMS references removed** — code, docs, package metadata all cleaned up
-- **Remote pushed to GitHub** via SSH (`git@github.com`)
-- **Netlify env vars set** — `TINA_CLIENT_ID` and `TINA_TOKEN` configured
-- **`--skip-cloud-checks` removed** — lock file is in sync, testing without the flag
-- **Documentation consolidated** — deleted SETUP.md, QUICKSTART.md, NETLIFY_DEPLOYMENT.md, PROJECT-SUMMARY.md; README rewritten for TinaCMS
+- **Netlify env vars set** — `TINA_CLIENT_ID`, `TINA_TOKEN`, `TINA_SEARCH_TOKEN` configured
+- **Biome linting** — configured with `biome.json`, available via `npm run lint` / `npm run lint:fix`
 
 ## TODO (Next Session)
 
@@ -157,9 +159,9 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 - [x] ~~Fix placeholder URLs~~ — Updated settings.json with real URLs, updated build.js fallback (session 8)
 - [x] ~~Rewrite documentation~~ — README rewritten for TinaCMS, deleted 4 obsolete Decap-focused docs (session 8)
 - [x] ~~Fix dev-server error handling~~ — process.exit(1) on initial build failure (session 8)
-- [ ] **Resolve Netlify secrets scanner**: Dismiss the TINA_TOKEN finding in Netlify dashboard (it's an intentional read-only content token)
+- [ ] **Fetch remaining 12 tool icons** — run `MACOSICONS_API_KEY=... npm run fetch-icons` when API quota resets (50/month limit). Missing: steermouse, sublime-merge, sublime-text, tailscale, testflight, things-3, timing, touchportal, typora, vectorworks-cloud-services, whatsapp, zoom
+- [ ] **4 tools not in macosicons.com** — inyourface, itermai, itermbrowserplugin, snappynotes (manually find icons or keep placeholders)
 - [ ] **Review site content** for accuracy across all 47 tools
-- [ ] **Verify `--skip-cloud-checks` removal** — if Netlify build fails without it, add it back
 
 ---
 
@@ -306,3 +308,36 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 **Learnings**:
 - The CSS media query for dark theme is not duplicate code — it's FOUC prevention. The JS-based theme system sets `data-theme` but there's a brief window before JS runs where only CSS applies
 - `isBody: true` in TinaCMS means the field maps to the markdown body (after `---`), not a frontmatter key. So it doesn't matter that the field is named `body` in Tina while build.js calls it `content` — they both refer to the same chunk of text
+
+### 2026-02-23 — Session 9: Icons, Search, and Content Organization
+
+**Summary**: Set up tool icons via macosicons.com CDN (no files in repo), enabled TinaCMS search, organized tools into category subfolders, and added friendly category labels to the CMS dropdown.
+
+**Changes Made**:
+- `scripts/fetch-icons.js` — rewritten to use macosicons.com API instead of logo.dev; stores CDN URLs in frontmatter
+- `build.js` — added `iconSrc` Handlebars helper (handles both URLs and local paths); changed `readdir` to recursive for subfolder support
+- `templates/partials/tool-card.hbs` — updated to use `{{iconSrc icon}}` for both card and modal icons
+- `src/styles/main.css` — removed `border-radius`, `box-shadow`, `padding`, `background` from `.tool-icon` and `.tool-modal-icon` (macOS icons have their own squircle shape); moved `border-radius` to `.tool-icon-placeholder` only
+- `tina/config.ts` — changed icon field from `type: 'image'` to `type: 'string'` (text input for URLs); added search config with indexer token; added `value`/`label` pairs to category options for friendly names
+- `content/tools/` — moved 62 files into 8 category subfolders (ai, communication, development, media, productivity, security, specialized, system)
+- `netlify.toml` — temporarily added then removed `--skip-cloud-checks` for breaking schema change
+- Deleted: `scripts/extract-macos-icons.sh`, all `src/images/tools/*.png` files (56 icons removed from repo)
+
+**Challenges & Solutions**:
+- **Copyright concern with bundled icons** — initially extracted macOS app icons via `sips` (51 icons), but distributing Apple's app artwork in the repo raises copyright issues. Switched to macosicons.com CDN — icons load from their servers at runtime, no files in repo
+- **macosicons.com API rate limit** — free tier allows 50 queries/month. Got 46 icons before hitting the limit. Remaining 12 need to wait for quota reset. Increased delay to 2s between requests
+- **Breaking schema change** — changing icon from `image` to `string` removed `ImageFilter` type. Tina Cloud rejected the build until the new schema was synced. Temporarily used `--skip-cloud-checks`, then removed after Tina Cloud re-indexed
+- **logo.dev icons looked wrong** — they're website logos (small brand marks on transparent backgrounds), not macOS app icons. Didn't fill the rounded container consistently
+
+**Key Decisions**:
+- **CDN over local files** — macosicons.com CDN URLs stored in frontmatter; browser fetches icons at runtime. API only called once to discover URLs, not on every page load
+- **Category subfolders** — tools organized by category for easier browsing in TinaCMS admin. `build.js` and `fetch-icons.js` updated to read recursively
+- **Friendly category labels** — TinaCMS dropdown shows "System & Utilities", "Creative & Media" etc. while storing short IDs (`system`, `media`) in frontmatter
+
+**Learnings**:
+- macosicons.com API is separate from CDN — the API (50/month limit) returns S3 URLs; the CDN images are public and unlimited
+- TinaCMS `type: 'image'` is for file uploads; use `type: 'string'` for external URLs
+- TinaCMS options support `{ value, label }` pairs for friendly dropdown labels while keeping short stored values
+- TinaCMS search requires a separate indexer token from the dashboard (different from `TINA_TOKEN`)
+- `fs.readdir({ recursive: true })` (Node 18+) works for reading subdirectories without additional dependencies
+- Changing a field type in TinaCMS is a breaking schema change — requires `--skip-cloud-checks` or manual Tina Cloud re-index before the next build passes
