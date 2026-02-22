@@ -194,13 +194,6 @@ export type StringFilter = {
   in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
 };
 
-export type ImageFilter = {
-  startsWith?: InputMaybe<Scalars['String']['input']>;
-  eq?: InputMaybe<Scalars['String']['input']>;
-  exists?: InputMaybe<Scalars['Boolean']['input']>;
-  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
-};
-
 export type BooleanFilter = {
   eq?: InputMaybe<Scalars['Boolean']['input']>;
   exists?: InputMaybe<Scalars['Boolean']['input']>;
@@ -217,7 +210,7 @@ export type ToolFilter = {
   description?: InputMaybe<StringFilter>;
   category?: InputMaybe<StringFilter>;
   subcategory?: InputMaybe<StringFilter>;
-  icon?: InputMaybe<ImageFilter>;
+  icon?: InputMaybe<StringFilter>;
   url?: InputMaybe<StringFilter>;
   tags?: InputMaybe<StringFilter>;
   devices?: InputMaybe<StringFilter>;

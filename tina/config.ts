@@ -70,9 +70,10 @@ export default defineConfig({
             label: 'Subcategory',
           },
           {
-            type: 'image',
+            type: 'string',
             name: 'icon',
-            label: 'Icon',
+            label: 'Icon URL',
+            description: 'macOS icon URL from macosicons.com (paste the image URL)',
           },
           {
             type: 'string',

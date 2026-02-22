@@ -115,13 +115,6 @@ input StringFilter {
   in: [String]
 }
 
-input ImageFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
-  in: [String]
-}
-
 input BooleanFilter {
   eq: Boolean
   exists: Boolean
@@ -138,7 +131,7 @@ input ToolFilter {
   description: StringFilter
   category: StringFilter
   subcategory: StringFilter
-  icon: ImageFilter
+  icon: StringFilter
   url: StringFilter
   tags: StringFilter
   devices: StringFilter
