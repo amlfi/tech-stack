@@ -30,5 +30,8 @@ npm-debug.log*
 .cache/
 .temp/
 
+# Claude Code workspace
+.claude/
+
 # Archive
 calebleigh_stack.html

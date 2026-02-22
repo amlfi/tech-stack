@@ -117,26 +117,6 @@
   }
 }
 
-/* Alternative Theme: Gradient */
-[data-theme="gradient"] {
-  --color-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --color-text: #ffffff;
-  --color-heading: #ffffff;
-  --color-surface: rgba(255, 255, 255, 0.1);
-  --color-border: rgba(255, 255, 255, 0.2);
-}
-
-/* Alternative Theme: Minimal */
-[data-theme="minimal"] {
-  --color-bg: #fefefe;
-  --color-surface: #ffffff;
-  --color-text: #2d3748;
-  --color-heading: #1a202c;
-  --color-border: #e2e8f0;
-  --color-primary: #2d3748;
-  --gradient-text: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
-}
-
 /* Theme Transition */
 * {
   transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;

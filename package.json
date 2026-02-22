@@ -4,10 +4,9 @@
   "description": "A tech stack showcase website with TinaCMS integration for Netlify",
   "main": "build.js",
   "scripts": {
-    "build": "tinacms build && node build.js",
+    "build": "node build.js && tinacms build",
     "dev": "tinacms dev -c \"node dev-server.js\"",
     "dev:tina": "tinacms dev",
-    "deploy": "npm run build && gh-pages -d public",
     "init-content": "node scripts/init-content.js"
   },
   "keywords": [
@@ -15,7 +14,7 @@
     "portfolio",
     "tinacms",
     "static-site",
-    "github-pages"
+    "netlify"
   ],
   "author": "Moana",
   "license": "MIT",
@@ -28,7 +27,5 @@
     "markdown-it": "^14.1.1",
     "tinacms": "^2.9.0"
   },
-  "devDependencies": {
-    "gh-pages": "^6.1.1"
-  }
+  "devDependencies": {}
 }
