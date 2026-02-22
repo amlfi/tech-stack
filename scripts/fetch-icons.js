@@ -136,8 +136,8 @@ async function main() {
       console.log(`  + ${slug}: ${iconUrl.slice(0, 80)}...`);
       updated++;
 
-      // Rate limit
-      await new Promise((r) => setTimeout(r, 300));
+      // Rate limit — macosicons.com free tier has strict limits
+      await new Promise((r) => setTimeout(r, 2000));
     } catch (err) {
       console.log(`  x ${slug}: ${err.message}`);
       failed++;
