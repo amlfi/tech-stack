@@ -128,12 +128,6 @@ async function copyAssets() {
     await fs.copy(srcImages, publicImages);
   }
 
-  // Copy admin folder for Decap CMS
-  const adminSrc = path.join(SRC_DIR, 'admin');
-  const adminDest = path.join(PUBLIC_DIR, 'admin');
-  if (await fs.pathExists(adminSrc)) {
-    await fs.copy(adminSrc, adminDest);
-  }
 }
 
 async function build() {

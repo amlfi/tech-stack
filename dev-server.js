@@ -37,8 +37,7 @@ exec('node build.js', (error, stdout, stderr) => {
   const watcher = chokidar.watch([
     'content/**/*',
     'templates/**/*',
-    'src/**/*',
-    'admin/**/*'
+    'src/**/*'
   ], {
     ignored: /(^|[\/\\])\../, // ignore dotfiles
     persistent: true

@@ -1,15 +1,11 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
   branch,
-  clientId: process.env.TINA_CLIENT_ID || null, // Get this from tina.io
-  token: process.env.TINA_TOKEN || null, // Get this from tina.io
-
-  // Add authorized origins for local development and production
-  contentApiUrlOverride: "/api/tina/gql",
+  clientId: process.env.TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
 
   build: {
     outputFolder: "admin",
@@ -58,12 +54,14 @@ export default defineConfig({
             label: "Category",
             required: true,
             options: [
+              "system",
               "development",
-              "design",
               "productivity",
-              "infrastructure",
-              "collaboration",
-              "other",
+              "communication",
+              "media",
+              "security",
+              "specialized",
+              "ai",
             ],
           },
           {
@@ -90,6 +88,20 @@ export default defineConfig({
           },
           {
             type: "string",
+            name: "devices",
+            label: "Devices",
+            list: true,
+            options: ["mbp", "studio", "ios"],
+            description: "Which devices do you use this on?",
+          },
+          {
+            type: "boolean",
+            name: "display",
+            label: "Display on Site",
+            description: "Show this tool on the site?",
+          },
+          {
+            type: "string",
             name: "status",
             label: "Status",
             options: ["active", "retired"],
@@ -101,24 +113,30 @@ export default defineConfig({
           },
           {
             type: "rich-text",
-            name: "content",
-            label: "Content (Why I Use It)",
+            name: "body",
+            label: "Why I Use It",
             isBody: true,
           },
           {
-            type: "rich-text",
+            type: "string",
             name: "notes",
             label: "Notes",
+            ui: {
+              component: "textarea",
+            },
+            description: "Additional details shown in modal (supports markdown)",
           },
           {
             type: "string",
             name: "previouslyUsed",
             label: "Previously Used",
+            description: "What tool did you use before this one?",
           },
           {
             type: "string",
             name: "replacedBy",
             label: "Replaced By",
+            description: "If retired, what tool replaced this?",
           },
         ],
       },
