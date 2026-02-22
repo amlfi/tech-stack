@@ -3,7 +3,6 @@ name: "Atom"
 category: "development"
 description: "GitHub's hackable text editor"
 url: "https://github.blog/2022-06-08-sunsetting-atom/"
-icon: "atom.png"
 tags: ["editor", "deprecated"]
 featured: false
 status: "retired"

@@ -4,7 +4,6 @@ category: "media"
 subcategory: "music"
 description: "Sonos speaker control app"
 url: "https://www.sonos.com/"
-icon: "sonos-s1-controller.png"
 devices: ["mbp"]
 display: false
 status: "active"

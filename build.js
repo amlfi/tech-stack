@@ -21,6 +21,11 @@ Handlebars.registerHelper('substring', (str, start, end) => {
   if (!str) return '';
   return str.substring(start, end);
 });
+Handlebars.registerHelper('iconSrc', (icon) => {
+  if (!icon) return '';
+  if (icon.startsWith('http://') || icon.startsWith('https://')) return icon;
+  return `./images/tools/${icon}`;
+});
 
 async function loadCategories() {
   const categoriesPath = path.join(CONTENT_DIR, 'categories.json');

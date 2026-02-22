@@ -4,7 +4,6 @@ category: "development"
 subcategory: "design-tools"
 description: "Apple icon and symbol library"
 url: "https://developer.apple.com/sf-symbols/"
-icon: "sf-symbols.png"
 devices: ["mbp"]
 display: true
 status: "active"

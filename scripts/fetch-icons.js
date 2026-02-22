@@ -3,62 +3,72 @@
 const fs = require('fs-extra');
 const path = require('node:path');
 const https = require('node:https');
-const http = require('node:http');
 
 const TOOLS_DIR = path.join(__dirname, '..', 'content', 'tools');
-const ICONS_DIR = path.join(__dirname, '..', 'src', 'images', 'tools');
-const LOGO_DEV_TOKEN = process.env.LOGO_DEV_TOKEN || 'pk_fctNp1NYTZmRknBPTNcziA';
+const API_KEY = process.env.MACOSICONS_API_KEY;
 
-function extractDomain(url) {
-  try {
-    const parsed = new URL(url);
-    return parsed.hostname.replace(/^www\./, '');
-  } catch {
-    return null;
-  }
+if (!API_KEY) {
+  console.error('Error: MACOSICONS_API_KEY environment variable is required');
+  console.error('Get your key at https://macosicons.com (sign in → API Management)');
+  process.exit(1);
 }
 
-function fetchFile(url) {
+function postJSON(url, data, headers) {
   return new Promise((resolve, reject) => {
-    const client = url.startsWith('https') ? https : http;
-    client
-      .get(url, { headers: { 'User-Agent': 'txstack-icon-fetcher/1.0' } }, (res) => {
-        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-          return fetchFile(res.headers.location).then(resolve).catch(reject);
-        }
-        if (res.statusCode !== 200) {
-          return reject(new Error(`HTTP ${res.statusCode} for ${url}`));
-        }
+    const body = JSON.stringify(data);
+    const parsed = new URL(url);
+    const req = https.request(
+      {
+        hostname: parsed.hostname,
+        path: parsed.pathname,
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Content-Length': Buffer.byteLength(body),
+          ...headers,
+        },
+      },
+      (res) => {
         const chunks = [];
         res.on('data', (chunk) => chunks.push(chunk));
-        res.on('end', () => resolve(Buffer.concat(chunks)));
+        res.on('end', () => {
+          const text = Buffer.concat(chunks).toString();
+          if (res.statusCode !== 200) {
+            return reject(new Error(`HTTP ${res.statusCode}: ${text}`));
+          }
+          try {
+            resolve(JSON.parse(text));
+          } catch {
+            reject(new Error(`Invalid JSON: ${text.slice(0, 200)}`));
+          }
+        });
         res.on('error', reject);
-      })
-      .on('error', reject);
+      },
+    );
+    req.on('error', reject);
+    req.write(body);
+    req.end();
   });
 }
 
 function parseFrontmatter(content) {
   const match = content.match(/^---\n([\s\S]+?)\n---\n([\s\S]*)$/);
   if (!match) return null;
-  return { yaml: match[1], body: match[2], raw: content };
+  return { yaml: match[1], body: match[2] };
 }
 
-function addIconToFrontmatter(yaml, iconFilename) {
+function setIconInFrontmatter(yaml, iconUrl) {
   if (/^icon:/m.test(yaml)) {
-    return yaml.replace(/^icon:.*$/m, `icon: "${iconFilename}"`);
+    return yaml.replace(/^icon:.*$/m, `icon: "${iconUrl}"`);
   }
-  // Add after url field
-  return yaml.replace(/^(url:.*$)/m, `$1\nicon: "${iconFilename}"`);
+  return yaml.replace(/^(url:.*$)/m, `$1\nicon: "${iconUrl}"`);
 }
 
 async function main() {
-  await fs.ensureDir(ICONS_DIR);
-
   const files = (await fs.readdir(TOOLS_DIR)).filter((f) => f.endsWith('.md'));
   console.log(`Found ${files.length} tool files\n`);
 
-  let fetched = 0;
+  let updated = 0;
   let skipped = 0;
   let failed = 0;
 
@@ -69,66 +79,72 @@ async function main() {
     const parsed = parseFrontmatter(content);
 
     if (!parsed) {
-      console.log(`  ⚠ ${slug}: no frontmatter, skipping`);
+      console.log(`  - ${slug}: no frontmatter, skipping`);
       skipped++;
       continue;
     }
 
-    // Check if icon already exists locally
-    const iconPath = path.join(ICONS_DIR, `${slug}.png`);
-    if (await fs.pathExists(iconPath)) {
-      console.log(`  ✓ ${slug}: icon already exists`);
+    // Check if icon already set to a URL
+    const existingIcon = parsed.yaml.match(/^icon:\s*['"]?(https?:\/\/[^'"\n]+)['"]?/m);
+    if (existingIcon) {
+      console.log(`  . ${slug}: already has CDN URL`);
       skipped++;
       continue;
     }
 
-    // Extract domain from url field
-    const urlMatch = parsed.yaml.match(/^url:\s*['"]?([^'"\n]+)['"]?/m);
-    if (!urlMatch) {
-      console.log(`  ⚠ ${slug}: no URL field, skipping`);
+    // Get app name from frontmatter
+    const nameMatch = parsed.yaml.match(/^name:\s*['"]?([^'"\n]+)['"]?/m);
+    if (!nameMatch) {
+      console.log(`  - ${slug}: no name field, skipping`);
       skipped++;
       continue;
     }
 
-    const domain = extractDomain(urlMatch[1].trim());
-    if (!domain) {
-      console.log(`  ⚠ ${slug}: invalid URL, skipping`);
-      skipped++;
-      continue;
-    }
-
-    // Fetch from logo.dev
-    const logoUrl = `https://img.logo.dev/${domain}?token=${LOGO_DEV_TOKEN}&size=128&format=png`;
+    const appName = nameMatch[1].trim();
 
     try {
-      const buffer = await fetchFile(logoUrl);
+      const result = await postJSON(
+        'https://api.macosicons.com/api/search',
+        { query: appName },
+        { 'x-api-key': API_KEY },
+      );
 
-      // Check we got a real image (not an error page)
-      if (buffer.length < 100) {
-        console.log(`  ✗ ${slug}: response too small (${buffer.length} bytes), skipping`);
+      // Find best match - prefer exact name match
+      const hits = Array.isArray(result) ? result : result.hits || result.results || [];
+      if (!hits.length) {
+        console.log(`  x ${slug}: no results for "${appName}"`);
         failed++;
         continue;
       }
 
-      await fs.writeFile(iconPath, buffer);
+      // Pick the best result (first match, highest downloads)
+      const best =
+        hits.find((h) => h.appName?.toLowerCase() === appName.toLowerCase()) || hits[0];
+      const iconUrl = best.lowResPngUrl || best.iOSUrl || best.icnsUrl;
 
-      // Update frontmatter with icon field
-      const updatedYaml = addIconToFrontmatter(parsed.yaml, `${slug}.png`);
+      if (!iconUrl) {
+        console.log(`  x ${slug}: no icon URL in result for "${appName}"`);
+        failed++;
+        continue;
+      }
+
+      // Update frontmatter with CDN URL
+      const updatedYaml = setIconInFrontmatter(parsed.yaml, iconUrl);
       const updatedContent = `---\n${updatedYaml}\n---\n${parsed.body}`;
       await fs.writeFile(filePath, updatedContent);
 
-      console.log(`  ✓ ${slug}: fetched from ${domain}`);
-      fetched++;
+      console.log(`  + ${slug}: ${iconUrl.slice(0, 80)}...`);
+      updated++;
 
-      // Rate limit: small delay between requests
-      await new Promise((r) => setTimeout(r, 200));
+      // Rate limit
+      await new Promise((r) => setTimeout(r, 300));
     } catch (err) {
-      console.log(`  ✗ ${slug}: ${err.message}`);
+      console.log(`  x ${slug}: ${err.message}`);
       failed++;
     }
   }
 
-  console.log(`\nDone: ${fetched} fetched, ${skipped} skipped, ${failed} failed`);
+  console.log(`\nDone: ${updated} updated, ${skipped} skipped, ${failed} failed`);
 }
 
 main().catch((err) => {
