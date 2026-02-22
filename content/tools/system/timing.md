@@ -4,6 +4,7 @@ category: "system"
 subcategory: "monitoring"
 description: "Automatic time tracking"
 url: "https://timingapp.com/"
+tags: ["time-tracking", "productivity", "billing", "reports"]
 devices: ["mbp"]
 display: true
 status: "active"
