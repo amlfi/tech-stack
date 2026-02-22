@@ -60,14 +60,14 @@ var config_default = defineConfig({
             label: "Category",
             required: true,
             options: [
-              "system",
-              "development",
-              "productivity",
-              "communication",
-              "media",
-              "security",
-              "specialized",
-              "ai"
+              { value: "system", label: "System & Utilities" },
+              { value: "development", label: "Development" },
+              { value: "productivity", label: "Productivity" },
+              { value: "communication", label: "Communication" },
+              { value: "media", label: "Creative & Media" },
+              { value: "security", label: "Security" },
+              { value: "specialized", label: "Specialized Tools" },
+              { value: "ai", label: "AI & Automation" }
             ]
           },
           {
