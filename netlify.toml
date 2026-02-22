@@ -2,7 +2,7 @@
 
 [build]
   # Build command - generates the site
-  command = "BUILD_DIR=dist node build.js && tinacms build"
+  command = "BUILD_DIR=dist node build.js && tinacms build --skip-cloud-checks"
 
   # Output directory - where the built files are
   publish = "dist"
