@@ -302,8 +302,19 @@ body {
 }
 
 .tool-card[data-featured="true"] .tool-card-button {
-  border-left: 3px solid var(--color-primary);
+  border-left: none;
   border-radius: 0;
+  position: relative;
+}
+
+.tool-card[data-featured="true"] .tool-card-button::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: var(--color-primary);
 }
 
 .tool-card-retired {
