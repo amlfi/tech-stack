@@ -3,10 +3,8 @@ import { defineConfig } from "tinacms";
 var branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 var config_default = defineConfig({
   branch,
-  clientId: process.env.TINA_CLIENT_ID || null,
-  // Get this from tina.io
-  token: process.env.TINA_TOKEN || null,
-  // Get this from tina.io
+  clientId: process.env.TINA_CLIENT_ID,
+  token: process.env.TINA_TOKEN,
   build: {
     outputFolder: "admin",
     publicFolder: "public"
@@ -54,12 +52,14 @@ var config_default = defineConfig({
             label: "Category",
             required: true,
             options: [
+              "system",
               "development",
-              "design",
               "productivity",
-              "infrastructure",
-              "collaboration",
-              "other"
+              "communication",
+              "media",
+              "security",
+              "specialized",
+              "ai"
             ]
           },
           {
@@ -86,6 +86,20 @@ var config_default = defineConfig({
           },
           {
             type: "string",
+            name: "devices",
+            label: "Devices",
+            list: true,
+            options: ["mbp", "studio", "ios"],
+            description: "Which devices do you use this on?"
+          },
+          {
+            type: "boolean",
+            name: "display",
+            label: "Display on Site",
+            description: "Show this tool on the site?"
+          },
+          {
+            type: "string",
             name: "status",
             label: "Status",
             options: ["active", "retired"]
@@ -97,24 +111,30 @@ var config_default = defineConfig({
           },
           {
             type: "rich-text",
-            name: "content",
-            label: "Content (Why I Use It)",
+            name: "body",
+            label: "Why I Use It",
             isBody: true
           },
           {
-            type: "rich-text",
+            type: "string",
             name: "notes",
-            label: "Notes"
+            label: "Notes",
+            ui: {
+              component: "textarea"
+            },
+            description: "Additional details shown in modal (supports markdown)"
           },
           {
             type: "string",
             name: "previouslyUsed",
-            label: "Previously Used"
+            label: "Previously Used",
+            description: "What tool did you use before this one?"
           },
           {
             type: "string",
             name: "replacedBy",
-            label: "Replaced By"
+            label: "Replaced By",
+            description: "If retired, what tool replaced this?"
           }
         ]
       }

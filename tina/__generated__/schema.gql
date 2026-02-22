@@ -95,10 +95,12 @@ type Tool implements Node & Document {
   icon: String
   url: String!
   tags: [String]
+  devices: [String]
+  display: Boolean
   status: String
   featured: Boolean
-  content: JSON
-  notes: JSON
+  body: JSON
+  notes: String
   previouslyUsed: String
   replacedBy: String
   id: ID!
@@ -139,10 +141,12 @@ input ToolFilter {
   icon: ImageFilter
   url: StringFilter
   tags: StringFilter
+  devices: StringFilter
+  display: BooleanFilter
   status: StringFilter
   featured: BooleanFilter
-  content: RichTextFilter
-  notes: RichTextFilter
+  body: RichTextFilter
+  notes: StringFilter
   previouslyUsed: StringFilter
   replacedBy: StringFilter
 }
@@ -185,10 +189,12 @@ input ToolMutation {
   icon: String
   url: String
   tags: [String]
+  devices: [String]
+  display: Boolean
   status: String
   featured: Boolean
-  content: JSON
-  notes: JSON
+  body: JSON
+  notes: String
   previouslyUsed: String
   replacedBy: String
 }
