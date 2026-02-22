@@ -4,6 +4,7 @@ description: Password manager and secure vault..
 category: security
 subcategory: password-managers
 url: 'https://1password.com/'
+icon: "1password.png"
 devices:
   - mbp
   - ios

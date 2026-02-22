@@ -4,6 +4,7 @@ category: "system"
 subcategory: "screenshots"
 description: "Screenshot and screen recording tool"
 url: "https://cleanshot.com/"
+icon: "cleanshot-x.png"
 devices: ["mbp"]
 display: true
 status: "active"

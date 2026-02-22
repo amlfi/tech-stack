@@ -4,6 +4,7 @@ category: "communication"
 subcategory: "browsers"
 description: "Apple web browser"
 url: "https://www.apple.com/safari/"
+icon: "safari.png"
 devices: ["mbp", "ios"]
 display: true
 status: "active"

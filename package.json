@@ -7,7 +7,10 @@
     "build": "node build.js && tinacms build",
     "dev": "tinacms dev -c \"node dev-server.js\"",
     "dev:tina": "tinacms dev",
-    "init-content": "node scripts/init-content.js"
+    "init-content": "node scripts/init-content.js",
+    "fetch-icons": "node scripts/fetch-icons.js",
+    "lint": "npx @biomejs/biome check .",
+    "lint:fix": "npx @biomejs/biome check . --write"
   },
   "keywords": [
     "tech-stack",
@@ -27,5 +30,7 @@
     "markdown-it": "^14.1.1",
     "tinacms": "^2.9.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.4"
+  }
 }

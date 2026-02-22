@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs-extra');
-const path = require('path');
+const path = require('node:path');
 const Handlebars = require('handlebars');
 const MarkdownIt = require('markdown-it');
 
@@ -68,14 +68,16 @@ function parseFrontmatter(content) {
       let value = valueParts.join(':').trim();
 
       // Remove quotes
-      if ((value.startsWith('"') && value.endsWith('"')) ||
-          (value.startsWith("'") && value.endsWith("'"))) {
+      if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
         value = value.slice(1, -1);
       }
 
       // Parse arrays
       if (value.startsWith('[') && value.endsWith(']')) {
-        value = value.slice(1, -1).split(',').map(v => v.trim().replace(/["']/g, ''));
+        value = value
+          .slice(1, -1)
+          .split(',')
+          .map((v) => v.trim().replace(/["']/g, ''));
       }
 
       // Parse booleans
@@ -127,7 +129,6 @@ async function copyAssets() {
   if (await fs.pathExists(srcImages)) {
     await fs.copy(srcImages, publicImages);
   }
-
 }
 
 async function build() {
@@ -146,24 +147,24 @@ async function build() {
   const allTools = await loadTools();
 
   // Filter out tools with display: false
-  const tools = allTools.filter(tool => tool.display !== false);
+  const tools = allTools.filter((tool) => tool.display !== false);
 
   // Group tools by category and subcategory
   const toolsByCategory = {};
   const toolsBySubcategory = {};
   const retiredToolsByCategory = {};
 
-  categories.forEach(cat => {
-    toolsByCategory[cat.id] = tools.filter(tool => tool.category === cat.id);
-    const retiredTools = tools.filter(tool => tool.category === cat.id && tool.status === 'retired');
+  categories.forEach((cat) => {
+    toolsByCategory[cat.id] = tools.filter((tool) => tool.category === cat.id);
+    const retiredTools = tools.filter((tool) => tool.category === cat.id && tool.status === 'retired');
     if (retiredTools.length > 0) {
       retiredToolsByCategory[cat.id] = retiredTools;
     }
 
     // Group by subcategory within this category
-    const categoryTools = tools.filter(tool => tool.category === cat.id && tool.status !== 'retired');
+    const categoryTools = tools.filter((tool) => tool.category === cat.id && tool.status !== 'retired');
     const subcategoryGroups = {};
-    categoryTools.forEach(tool => {
+    categoryTools.forEach((tool) => {
       const subcat = tool.subcategory || 'other';
       if (!subcategoryGroups[subcat]) {
         subcategoryGroups[subcat] = [];
@@ -173,8 +174,8 @@ async function build() {
     toolsBySubcategory[cat.id] = subcategoryGroups;
   });
 
-  const activeTools = tools.filter(t => t.status !== 'retired');
-  const retiredTools = tools.filter(t => t.status === 'retired');
+  const activeTools = tools.filter((t) => t.status !== 'retired');
+  const retiredTools = tools.filter((t) => t.status === 'retired');
 
   console.log(`   ✓ Loaded ${categories.length} categories`);
   console.log(`   ✓ Loaded ${activeTools.length} active tools`);
@@ -196,8 +197,8 @@ async function build() {
     site: {
       title: 'My Tech Stack',
       description: 'The tools and applications I use daily',
-      url: process.env.SITE_URL || 'https://amlfi-tech-stack.netlify.app'
-    }
+      url: process.env.SITE_URL || 'https://amlfi-tech-stack.netlify.app',
+    },
   });
 
   // Write output
@@ -214,7 +215,7 @@ async function build() {
 }
 
 // Run build
-build().catch(err => {
+build().catch((err) => {
   console.error('❌ Build failed:', err);
   process.exit(1);
 });

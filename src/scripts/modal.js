@@ -1,5 +1,5 @@
 // Modal functionality for tool details
-(function() {
+(function () {
   let currentModal = null;
 
   // Open modal

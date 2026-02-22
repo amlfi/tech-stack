@@ -1,5 +1,5 @@
 // Theme Management
-(function() {
+(function () {
   const THEME_KEY = 'tech-stack-theme';
   const themeToggle = document.getElementById('theme-toggle');
 
@@ -9,7 +9,7 @@
   }
 
   // Get effective theme (resolves 'auto' to 'light' or 'dark')
-  function getEffectiveTheme() {
+  function _getEffectiveTheme() {
     const stored = getStoredTheme();
     if (stored !== 'auto') return stored;
 
@@ -19,9 +19,8 @@
 
   // Apply theme
   function applyTheme(theme) {
-    const effective = theme === 'auto'
-      ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-      : theme;
+    const effective =
+      theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
 
     document.documentElement.setAttribute('data-theme', effective);
   }
@@ -45,7 +44,7 @@
   }
 
   // Listen for system theme changes (when theme is 'auto')
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (_e) => {
     if (getStoredTheme() === 'auto') {
       applyTheme('auto');
     }

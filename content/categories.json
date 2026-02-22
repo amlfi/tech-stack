@@ -61,11 +61,7 @@
       "icon": "💬",
       "description": "Browsers and communication tools",
       "order": 4,
-      "subcategories": [
-        "browsers",
-        "messaging",
-        "video-conferencing"
-      ]
+      "subcategories": ["browsers", "messaging", "video-conferencing"]
     },
     {
       "id": "media",
@@ -73,11 +69,7 @@
       "icon": "🎨",
       "description": "Media players and creative tools",
       "order": 5,
-      "subcategories": [
-        "video-players",
-        "music",
-        "design-tools"
-      ]
+      "subcategories": ["video-players", "music", "design-tools"]
     },
     {
       "id": "security",
@@ -85,9 +77,7 @@
       "icon": "🔒",
       "description": "Security and privacy tools",
       "order": 6,
-      "subcategories": [
-        "password-managers"
-      ]
+      "subcategories": ["password-managers"]
     },
     {
       "id": "specialized",
@@ -95,14 +85,7 @@
       "icon": "🔧",
       "description": "Specialized and niche applications",
       "order": 7,
-      "subcategories": [
-        "input-devices",
-        "automation",
-        "calculators",
-        "design-tools",
-        "security-cameras",
-        "clipboard"
-      ]
+      "subcategories": ["input-devices", "automation", "calculators", "design-tools", "security-cameras", "clipboard"]
     },
     {
       "id": "ai",
@@ -110,9 +93,7 @@
       "icon": "🤖",
       "description": "AI assistants and automation tools",
       "order": 8,
-      "subcategories": [
-        "ai-assistants"
-      ]
+      "subcategories": ["ai-assistants"]
     }
   ]
 }

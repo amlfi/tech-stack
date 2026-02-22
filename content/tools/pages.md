@@ -4,6 +4,7 @@ category: "productivity"
 subcategory: "office-suite"
 description: "Apple word processor"
 url: "https://www.apple.com/pages/"
+icon: "pages.png"
 devices: ["mbp"]
 display: false
 status: "active"

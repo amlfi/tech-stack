@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const express = require('express');
-const path = require('path');
+const path = require('node:path');
 const chokidar = require('chokidar');
-const { exec } = require('child_process');
+const { exec } = require('node:child_process');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -13,7 +13,7 @@ const PUBLIC_DIR = path.join(__dirname, 'public');
 app.use(express.static(PUBLIC_DIR));
 
 // Serve index.html for all routes (SPA support)
-app.get('*', (req, res) => {
+app.get('*', (_req, res) => {
   res.sendFile(path.join(PUBLIC_DIR, 'index.html'));
 });
 
@@ -34,13 +34,9 @@ exec('node build.js', (error, stdout, stderr) => {
   });
 
   // Watch for changes
-  const watcher = chokidar.watch([
-    'content/**/*',
-    'templates/**/*',
-    'src/**/*'
-  ], {
-    ignored: /(^|[\/\\])\../, // ignore dotfiles
-    persistent: true
+  const watcher = chokidar.watch(['content/**/*', 'templates/**/*', 'src/**/*'], {
+    ignored: /(^|[/\\])\../, // ignore dotfiles
+    persistent: true,
   });
 
   let buildTimeout;
