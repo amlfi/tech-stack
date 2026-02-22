@@ -19,7 +19,7 @@ txstack is a single-page static site that displays 47+ tools across 8 categories
 ## Project Structure
 
 ```
-content/tools/*.md        → Tool entries (name, category, status, icon, etc.)
+content/tools/<category>/*.md → Tool entries organized by category subfolder
 content/categories.json   → 8 categories with icons and subcategories
 content/settings.json     → Site title, author, theme preference
 templates/index.hbs       → Main page layout (Handlebars)
@@ -78,7 +78,7 @@ The `tina-lock.json` must stay in sync with `tina/config.ts`. If schema checks f
 | Site settings | `content/settings.json` |
 | Categories | `content/categories.json` |
 | Git remote | SSH (`git@github.com`) |
-| Env vars (Netlify) | `TINA_CLIENT_ID`, `TINA_TOKEN` |
+| Env vars (Netlify) | `TINA_CLIENT_ID`, `TINA_TOKEN`, `TINA_SEARCH_TOKEN` |
 
 ---
 
@@ -145,13 +145,13 @@ Manual deploy: `npm run build` locally, then push
 
 ## Content Schema (Tool Frontmatter)
 
-Each tool markdown file in `content/tools/` has these fields:
+Each tool markdown file in `content/tools/<category>/` has these fields:
 
 ```yaml
 name: "Tool Name"
 category: "development"          # One of 8 categories
 subcategory: "IDE"               # Free-text subcategory
-icon: "tool-icon.png"            # Icon filename
+icon: "https://s3.macosicons.com/..."  # macOS icon CDN URL (from macosicons.com)
 url: "https://example.com"       # Tool website
 tags: ["tag1", "tag2"]           # Searchable tags
 status: "active"                 # active | retired
@@ -227,7 +227,7 @@ The `_WORKING.md` has these persistent sections that should be updated as things
 
 - **Never commit `.env` files** — secrets managed via 1Password/environment
 - **Never commit `tina/__generated__/client.ts` with real tokens** — `tinacms build` regenerates it
-- Netlify env vars: `TINA_CLIENT_ID`, `TINA_TOKEN` (set in dashboard, not code)
+- Netlify env vars: `TINA_CLIENT_ID`, `TINA_TOKEN`, `TINA_SEARCH_TOKEN` (set in dashboard, not code)
 
 ---
 

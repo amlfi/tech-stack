@@ -34,7 +34,7 @@ BUILD_DIR=dist node build.js && tinacms build
 ## Project Structure
 
 ```
-content/tools/*.md        Tool entries (markdown with YAML frontmatter)
+content/tools/<category>/  Tool entries organized by category subfolder
 content/categories.json   8 categories with icons and subcategories
 content/settings.json     Site title, author, URLs
 templates/index.hbs       Main page layout (Handlebars)
@@ -58,7 +58,7 @@ dev-server.js             Express + Chokidar dev server (port 3000)
 
 ### Manual Editing
 
-Create a markdown file in `content/tools/`:
+Create a markdown file in `content/tools/<category>/`:
 
 ```markdown
 ---
@@ -67,6 +67,7 @@ category: "development"
 subcategory: "IDE"
 description: "Short description of the tool"
 url: "https://example.com"
+icon: "https://s3.macosicons.com/..."
 tags: ["tag1", "tag2"]
 devices: ["mbp", "studio", "ios"]
 display: true
@@ -79,6 +80,8 @@ Why I use this tool (optional markdown body).
 
 **Categories**: system, development, productivity, communication, media, security, specialized, ai
 
+**Icons**: macOS-style icons from [macosicons.com](https://macosicons.com) CDN. Run `MACOSICONS_API_KEY=<key> npm run fetch-icons` to auto-populate icon URLs.
+
 ## Deployment
 
 The site is deployed on **Netlify** with automatic builds on push to `main`.
@@ -86,6 +89,7 @@ The site is deployed on **Netlify** with automatic builds on push to `main`.
 **Required Netlify environment variables**:
 - `TINA_CLIENT_ID` — from Tina Cloud dashboard
 - `TINA_TOKEN` — read-only content token from Tina Cloud
+- `TINA_SEARCH_TOKEN` — search indexer token from Tina Cloud
 
 ## Tech Stack
 
