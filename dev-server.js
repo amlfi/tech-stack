@@ -22,7 +22,7 @@ console.log('🔨 Running initial build...\n');
 exec('node build.js', (error, stdout, stderr) => {
   if (error) {
     console.error('Build error:', error);
-    return;
+    process.exit(1);
   }
   console.log(stdout);
   if (stderr) console.error(stderr);

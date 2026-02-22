@@ -5,8 +5,6 @@
   const searchInput = document.getElementById('search-input');
 
   function filterByCategory(categoryId) {
-    console.log('Filtering by category:', categoryId);
-
     if (categoryId === 'all') {
       // Show all sections
       categorySections.forEach(section => {
@@ -18,7 +16,6 @@
         const sectionCategory = section.getAttribute('data-category');
         const shouldShow = sectionCategory === categoryId;
         section.style.display = shouldShow ? 'block' : 'none';
-        console.log('Section:', sectionCategory, 'Show:', shouldShow);
       });
     }
 

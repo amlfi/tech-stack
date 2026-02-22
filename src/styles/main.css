@@ -373,26 +373,6 @@ body {
   color: var(--color-primary);
 }
 
-.external-link-icon {
-  display: none;
-}
-
-.tool-description {
-  display: none;
-}
-
-.tool-details {
-  display: none;
-}
-
-.tool-tags {
-  display: none;
-}
-
-.featured-badge {
-  display: none;
-}
-
 /* Footer */
 .footer {
   text-align: center;

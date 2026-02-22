@@ -1,10 +1,9 @@
 {
   "title": "My Tech Stack",
   "description": "The tools and applications I use daily for development and productivity",
-  "url": "https://yourusername.github.io/tech-stack",
-  "author": "Your Name",
-  "github": "https://github.com/yourusername",
-  "twitter": "https://twitter.com/yourusername",
-  "linkedin": "https://linkedin.com/in/yourusername",
+  "url": "https://amlfi-tech-stack.netlify.app",
+  "author": "Anthony",
+  "github": "https://github.com/amlfi",
+  "linkedin": "https://www.linkedin.com/in/anthonymfitzgerald/",
   "theme": "auto"
 }

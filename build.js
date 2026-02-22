@@ -196,7 +196,7 @@ async function build() {
     site: {
       title: 'My Tech Stack',
       description: 'The tools and applications I use daily',
-      url: process.env.SITE_URL || 'https://yourusername.github.io/tech-stack'
+      url: process.env.SITE_URL || 'https://amlfi-tech-stack.netlify.app'
     }
   });
 
