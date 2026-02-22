@@ -91,6 +91,24 @@
           </div>
         {{/if}}
 
+        {{#if tags.length}}
+          <div class="tool-modal-section">
+            <h3>Tags</h3>
+            <div class="tool-modal-tags">
+              {{#each tags}}<span class="tool-modal-tag">{{this}}</span>{{/each}}
+            </div>
+          </div>
+        {{/if}}
+
+        {{#if devices.length}}
+          <div class="tool-modal-section">
+            <h3>Devices</h3>
+            <div class="tool-modal-tags">
+              {{#each devices}}<span class="tool-modal-tag">{{this}}</span>{{/each}}
+            </div>
+          </div>
+        {{/if}}
+
         {{#if url}}
           <div class="tool-modal-actions">
             <a href="{{url}}" target="_blank" rel="noopener noreferrer" class="tool-modal-link">
