@@ -2,7 +2,7 @@
 
 [build]
   # Build command - generates the site
-  command = "BUILD_DIR=dist TINA_PUBLIC_IS_LOCAL=false npm run build"
+  command = "tinacms build --skip-cloud-checks && BUILD_DIR=dist node build.js"
 
   # Output directory - where the built files are
   publish = "dist"
@@ -45,7 +45,6 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Netlify Identity (for Decap CMS authentication)
 [dev]
   command = "npm run dev"
   port = 8080
