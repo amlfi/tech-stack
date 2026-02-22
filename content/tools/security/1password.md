@@ -14,6 +14,7 @@ tags:
 devices:
   - mbp
   - ios
+  - studio
 display: true
 status: active
 notes: test
