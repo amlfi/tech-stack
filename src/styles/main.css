@@ -303,6 +303,7 @@ body {
 
 .tool-card[data-featured="true"] .tool-card-button {
   border-left: 3px solid var(--color-primary);
+  border-radius: 0;
 }
 
 .tool-card-retired {
