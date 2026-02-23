@@ -12,6 +12,7 @@ tags:
   - presentations
 devices:
   - mbp
+  - studio
 display: true
 status: active
 ---
