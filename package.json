@@ -22,13 +22,13 @@
   "author": "Moana",
   "license": "MIT",
   "dependencies": {
-    "@tinacms/cli": "^1.11.0",
+    "@tinacms/cli": "^2.1.6",
     "chokidar": "^3.6.0",
     "express": "^4.22.1",
     "fs-extra": "^11.3.3",
     "handlebars": "^4.7.8",
     "markdown-it": "^14.1.1",
-    "tinacms": "^2.9.0"
+    "tinacms": "^3.5.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4"

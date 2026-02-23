@@ -5,6 +5,7 @@ var config_default = defineConfig({
   branch,
   clientId: process.env.TINA_CLIENT_ID,
   token: process.env.TINA_TOKEN,
+  telemetry: false,
   build: {
     outputFolder: "admin",
     publicFolder: process.env.BUILD_DIR || "public"

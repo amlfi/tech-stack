@@ -364,3 +364,25 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 - Existing tags on atom.md preserved and augmented rather than replaced
 
 **Files Modified**: All 62 files in `content/tools/{ai,communication,development,media,productivity,security,specialized,system}/`
+
+### 2026-02-23 — Session 11: TinaCMS Upgrade v2.9.0 → v3.5.0
+
+**Summary**: Upgraded TinaCMS from v2.9.0 to v3.5.0 (major version bump through v3.0.0). Updated both `tinacms` and `@tinacms/cli` packages. Build verified passing.
+
+**Changes Made**:
+- `package.json` — `tinacms`: `^2.9.0` → `^3.5.0`, `@tinacms/cli`: `^1.11.0` → `^2.1.6`
+- `tina/config.ts` — added `telemetry: false` to opt out of anonymous telemetry (new in v3.5.0)
+
+**Challenges & Solutions**:
+- **Peer dependency warning** — `@tinacms/metrics@2.0.1` wants `fs-extra@^9` but project has `^11`. npm resolved it automatically; warning only, no functional issue
+
+**Key Decisions**:
+- Opted out of telemetry by default
+- No config schema changes needed — `defineConfig`, collections, fields API unchanged between v2 and v3
+- Build scripts unaffected — `build.js` reads markdown directly, doesn't use TinaCMS GraphQL API
+
+**Risk Assessment**:
+- Low risk because `build.js` bypasses TinaCMS's GraphQL layer (the main breaking change area)
+- `tina-lock.json` will need regeneration via `tinacms dev` (Dropbox symlink workaround) before Tina Cloud editing works with v3
+
+**Note**: `tina-lock.json` was NOT regenerated in this session (requires `tinacms dev` which needs the symlink workaround). CMS editing via Tina Cloud may not work until the lock file is regenerated with the v3 schema format. The static site build is unaffected.
