@@ -15,6 +15,7 @@ devices:
   - mbp
 display: true
 status: active
+notes: ''
 ---
 
 Mac cleaning and optimization
