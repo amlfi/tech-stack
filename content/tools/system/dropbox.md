@@ -3,7 +3,7 @@ name: Dropbox
 description: Cloud file storage and sync
 category: system
 subcategory: cloud-storage
-icon: 'https://s3.macosicons.com/macosicons/icons/srdtIbxVqX/lowResPngFile_dc0bdc0bb350eaabd31ec5ee4e09b712_srdtIbxVqX.png'
+icon: 'https://s3.macosicons.com/macosicons/icons/BHG0IEkFy4/lowResPngFile_4a646cac82911a5ce80af87b75b865d7_low_res_Dropbox.png'
 url: 'https://www.dropbox.com/'
 tags:
   - cloud-storage
@@ -12,7 +12,6 @@ tags:
   - sharing
 devices:
   - mbp
-  - studio
   - ios
 display: true
 status: active
