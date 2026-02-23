@@ -13,7 +13,7 @@ tags:
 devices:
   - mbp
   - studio
-display: false
+display: true
 status: retired
 ---
 
