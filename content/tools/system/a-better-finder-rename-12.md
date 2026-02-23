@@ -12,6 +12,7 @@ tags:
   - organizing
 devices:
   - mbp
+  - studio
 display: true
 status: active
 ---
