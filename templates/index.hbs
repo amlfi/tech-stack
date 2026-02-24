@@ -76,12 +76,15 @@
             {{this.name}}
           </h2>
 
-          <!-- Active Tools -->
+          <!-- Active Tools (grouped by subcategory) -->
           <div class="tools-list">
-            {{#each (lookup ../toolsByCategory this.id)}}
-              {{#unless (eq this.status 'retired')}}
-                {{> tool-card}}
-              {{/unless}}
+            {{#each (lookup ../toolsBySubcategory this.id)}}
+              <div class="subcategory-group">
+                <h3 class="subcategory-title">{{@key}}</h3>
+                {{#each this}}
+                  {{> tool-card}}
+                {{/each}}
+              </div>
             {{/each}}
           </div>
 

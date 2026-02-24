@@ -238,31 +238,23 @@ body {
 }
 
 .subcategory-group {
-  grid-column: 1 / -1;
-  display: contents;
 }
 
 .subcategory-title {
-  grid-column: 1 / -1;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-text-secondary);
-  margin-top: var(--spacing-md);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: 0.25rem;
   opacity: 0.7;
-}
-
-.subcategory-group:first-child .subcategory-title {
-  margin-top: 0;
 }
 
 .tools-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--spacing-xs);
-  max-width: 1200px;
+  gap: var(--spacing-sm);
+  align-items: start;
 }
 
 /* Tool Card */
@@ -353,19 +345,6 @@ body {
   min-width: 0;
 }
 
-.tool-subcategory {
-  font-size: 0.625rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  color: var(--color-text-secondary);
-  opacity: 0.5;
-  margin-bottom: 0.125rem;
-  display: block;
-  line-height: 1.3;
-  word-break: break-word;
-  hyphens: auto;
-}
 
 .tool-name {
   font-size: 0.875rem;

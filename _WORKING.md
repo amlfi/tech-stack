@@ -386,3 +386,19 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 - `tina-lock.json` will need regeneration via `tinacms dev` (Dropbox symlink workaround) before Tina Cloud editing works with v3
 
 **Note**: `tina-lock.json` was NOT regenerated in this session (requires `tinacms dev` which needs the symlink workaround). CMS editing via Tina Cloud may not work until the lock file is regenerated with the v3 schema format. The static site build is unaffected.
+
+### 2026-02-24 — Session 12: Activate Subcategory Grouping
+
+**Summary**: Wired up the subcategory grouping that was previously architectured but never activated. Tools now display under subcategory headings within each category section.
+
+**Changes Made**:
+- `templates/index.hbs` — replaced flat `toolsByCategory` loop with `toolsBySubcategory` iteration; each subcategory gets a `<div class="subcategory-group">` with an `<h3 class="subcategory-title">` heading
+- `build.js` — added sorting of subcategory keys to match the order defined in `content/categories.json` subcategories arrays; unlisted subcategories appended at the end
+
+**Key Decisions**:
+- Removed the `{{#unless (eq this.status 'retired')}}` guard from the template since `toolsBySubcategory` already filters out retired tools in `build.js` (line 194)
+- Retired tools section remains unchanged — still uses `retiredToolsByCategory`
+
+**Learnings**:
+- Handlebars `{{#each (lookup ../obj key)}}` iterates object keys with `@key` — works well for subcategory grouping without needing a custom helper
+- JavaScript object key insertion order is preserved, so sorting the keys before assignment to `sortedGroups` ensures correct display order

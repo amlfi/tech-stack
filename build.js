@@ -190,17 +190,22 @@ async function build() {
       retiredToolsByCategory[cat.id] = retiredTools;
     }
 
-    // Group by subcategory within this category
+    // Group by subcategory within this category, sorted by item count (descending)
     const categoryTools = tools.filter((tool) => tool.category === cat.id && tool.status !== 'retired');
-    const subcategoryGroups = {};
+    const unsorted = {};
     categoryTools.forEach((tool) => {
       const subcat = tool.subcategory || 'other';
-      if (!subcategoryGroups[subcat]) {
-        subcategoryGroups[subcat] = [];
+      if (!unsorted[subcat]) {
+        unsorted[subcat] = [];
       }
-      subcategoryGroups[subcat].push(tool);
+      unsorted[subcat].push(tool);
     });
-    toolsBySubcategory[cat.id] = subcategoryGroups;
+    const sortedKeys = Object.keys(unsorted).sort((a, b) => unsorted[b].length - unsorted[a].length);
+    const sortedGroups = {};
+    sortedKeys.forEach((key) => {
+      sortedGroups[key] = unsorted[key];
+    });
+    toolsBySubcategory[cat.id] = sortedGroups;
   });
 
   const activeTools = tools.filter((t) => t.status !== 'retired');
