@@ -3,7 +3,7 @@ name: CleanMyMac
 description: Mac cleaning and optimization
 category: system
 subcategory: maintenance
-icon: 'https://s3.macosicons.com/macosicons/icons/o7OAMzJHLf/lowResPngFile_cebf5b06779df24210a279730b1eff33_low_res_CleanMyMac__Light_.png'
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107014/CleanMyMac-1024_ruei3g.png"
 url: 'https://macpaw.com/cleanmymac'
 tags:
   - cleaning

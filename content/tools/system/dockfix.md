@@ -3,7 +3,7 @@ name: DockFix
 description: Dock customization tool
 category: system
 subcategory: utilities
-icon: 'https://s3.macosicons.com/macosicons/icons/8XKVq1R86q/lowResPngFile_c3edba9b053f1e8502e463cb826abd52_low_res_DockFix.png'
+icon: 'https://res.cloudinary.com/dk3rktqns/image/upload/v1772108867/DockFix-1024_m9bwlp.png'
 url: 'https://www.dockfix.app'
 tags:
   - dock

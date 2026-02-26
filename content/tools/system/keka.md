@@ -3,7 +3,7 @@ name: Keka
 description: File archiver for macOS
 category: system
 subcategory: compression
-icon: 'https://s3.macosicons.com/macosicons/icons/3AD2sDojnf/lowResPngFile_72e944a68178c2645adff398914ac200_low_res_Keka.png'
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107104/Keka-1024_o8lhdb.png"
 url: 'https://www.keka.io/'
 tags:
   - compression

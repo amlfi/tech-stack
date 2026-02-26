@@ -5,7 +5,7 @@ subcategory: "cloud-storage"
 description: "Microsoft cloud storage"
 url: "https://www.microsoft.com/onedrive"
 tags: ["cloud-storage", "file-sync", "backup", "office"]
-icon: "https://s3.macosicons.com/macosicons/icons/qcynHz3xCD/lowResPngFile_d3889d4b0a38e2696b3c7a2006d26777_qcynHz3xCD.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107083/OneDrive-1024_logf0w.png"
 devices: ["mbp"]
 display: true
 status: "active"

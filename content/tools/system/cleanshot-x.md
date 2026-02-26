@@ -3,7 +3,7 @@ name: CleanShot X
 description: Screenshot and screen recording tool
 category: system
 subcategory: screenshots
-icon: 'https://s3.macosicons.com/macosicons/icons/ae2a87AJD8/lowResPngFile_688dfc8e0de8b44422f648c2a49bec3e_low_res_CleanShot_X__Liquid_Glass_.png'
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107003/CleanShotX-1024_wjsymw.png"
 url: 'https://cleanshot.com/'
 tags:
   - screenshots

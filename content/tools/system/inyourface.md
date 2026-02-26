@@ -3,7 +3,7 @@ name: InYourFace
 description: Event reminders on screen
 category: system
 subcategory: utilities
-icon: 'https://www.inyourface.app/images/icon@2x.png'
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107152/InYourFace-1024_xqecyy.png"
 url: 'https://inyourface.app/'
 tags:
   - reminders

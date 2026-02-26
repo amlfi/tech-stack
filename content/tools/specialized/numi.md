@@ -5,7 +5,7 @@ subcategory: "calculators"
 description: "Beautiful calculator with text support"
 url: "https://numi.app/"
 tags: ["calculator", "math", "unit-conversion", "notepad"]
-icon: "https://s3.macosicons.com/macosicons/icons/coA70RPKg0/lowResPngFile_108a69dec46d7bc45a3513d733c46fd9_coA70RPKg0.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107089/Numi-1024_ygdkdn.png"
 devices: ["mbp"]
 display: true
 status: "active"

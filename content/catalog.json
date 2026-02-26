@@ -1,8 +1,8 @@
 {
-  "generated": "2026-02-26T07:02:37.687Z",
-  "totalTools": 85,
+  "generated": "2026-02-26T12:46:58.955Z",
+  "totalTools": 87,
   "activeTools": 46,
-  "retiredTools": 2,
+  "retiredTools": 0,
   "categories": [
     {
       "id": "system",
@@ -164,6 +164,53 @@
       "dateAdded": null
     },
     {
+      "name": "Mail",
+      "slug": "mail",
+      "category": "communication",
+      "subcategory": "email",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "iphone"
+      ],
+      "tags": [
+        "email",
+        "mail",
+        "communication",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://www.apple.com/macos/mail/",
+      "description": "Apple's built-in email client",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Messages",
+      "slug": "messages",
+      "category": "communication",
+      "subcategory": "messaging",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "iphone"
+      ],
+      "tags": [
+        "messaging",
+        "imessage",
+        "sms",
+        "chat",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://support.apple.com/messages",
+      "description": "Apple iMessage and SMS",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "Microsoft Teams",
       "slug": "microsoft-teams",
       "category": "communication",
@@ -252,6 +299,97 @@
       "description": "Video conferencing platform",
       "startedUsing": null,
       "dateAdded": null
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "slug": "adobe-creative-cloud",
+      "category": "design",
+      "subcategory": "Suite Management",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "adobe",
+        "app-management",
+        "cloud-storage",
+        "creative-suite"
+      ],
+      "display": false,
+      "url": "https://www.adobe.com/creativecloud.html",
+      "description": "Adobe app manager and cloud storage",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Adobe Illustrator",
+      "slug": "adobe-illustrator",
+      "category": "design",
+      "subcategory": "Vector Graphics",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "vector-graphics",
+        "illustration",
+        "design",
+        "svg",
+        "adobe"
+      ],
+      "display": false,
+      "url": "https://www.adobe.com/products/illustrator.html",
+      "description": "Vector graphics editor",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Adobe InDesign",
+      "slug": "adobe-indesign",
+      "category": "design",
+      "subcategory": "Layout",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "layout",
+        "publishing",
+        "print-design",
+        "typography",
+        "adobe"
+      ],
+      "display": false,
+      "url": "https://www.adobe.com/products/indesign.html",
+      "description": "Page layout and publishing design",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Adobe Photoshop",
+      "slug": "adobe-photoshop",
+      "category": "design",
+      "subcategory": "Image Editing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "image-editing",
+        "photo-retouching",
+        "compositing",
+        "design",
+        "adobe"
+      ],
+      "display": false,
+      "url": "https://www.adobe.com/products/photoshop.html",
+      "description": "Professional image editing and compositing",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
     },
     {
       "name": "ColorSlurp",
@@ -432,6 +570,29 @@
       "description": "CAD cloud collaboration",
       "startedUsing": null,
       "dateAdded": null
+    },
+    {
+      "name": "Vectorworks",
+      "slug": "vectorworks",
+      "category": "design",
+      "subcategory": "3D/CAD",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "cad",
+        "bim",
+        "3d-modeling",
+        "architecture",
+        "design"
+      ],
+      "display": false,
+      "url": "https://www.vectorworks.net/",
+      "description": "BIM and CAD design software",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
     },
     {
       "name": "Geekbench 6",
@@ -700,6 +861,50 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "WinBox",
+      "slug": "winbox",
+      "category": "development",
+      "subcategory": "networking",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "networking",
+        "router",
+        "mikrotik",
+        "network-management"
+      ],
+      "display": false,
+      "url": "https://mikrotik.com/software/winbox",
+      "description": "MikroTik router management utility",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "ZeroTier",
+      "slug": "zerotier",
+      "category": "development",
+      "subcategory": "networking",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "vpn",
+        "networking",
+        "virtual-network",
+        "peer-to-peer"
+      ],
+      "display": false,
+      "url": "https://www.zerotier.com/",
+      "description": "Virtual network overlay for secure connectivity",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "IINA",
       "slug": "iina",
       "category": "media",
@@ -720,6 +925,30 @@
       "description": "Modern media player for macOS",
       "startedUsing": null,
       "dateAdded": null
+    },
+    {
+      "name": "Music",
+      "slug": "music",
+      "category": "media",
+      "subcategory": "music",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "iphone"
+      ],
+      "tags": [
+        "music",
+        "streaming",
+        "apple-music",
+        "audio",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://www.apple.com/apple-music/",
+      "description": "Apple Music player and streaming",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
     },
     {
       "name": "Sonos S1 Controller",
@@ -766,6 +995,29 @@
       "description": "Music streaming service",
       "startedUsing": null,
       "dateAdded": null
+    },
+    {
+      "name": "Adobe Acrobat",
+      "slug": "adobe-acrobat",
+      "category": "productivity",
+      "subcategory": "documents",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "pdf",
+        "documents",
+        "editing",
+        "forms",
+        "adobe"
+      ],
+      "display": false,
+      "url": "https://www.adobe.com/acrobat.html",
+      "description": "PDF editor and document management",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
     },
     {
       "name": "Agenda",
@@ -853,28 +1105,6 @@
       "display": true,
       "url": "https://flexibits.com/fantastical",
       "description": "Powerful calendar app",
-      "startedUsing": null,
-      "dateAdded": null
-    },
-    {
-      "name": "Focus 2",
-      "slug": "focus-2",
-      "category": "productivity",
-      "subcategory": "focus-tools",
-      "status": "retired",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "focus",
-        "pomodoro",
-        "timer",
-        "distraction-blocking"
-      ],
-      "display": true,
-      "url": null,
-      "description": "Focus and productivity timer",
       "startedUsing": null,
       "dateAdded": null
     },
@@ -1033,6 +1263,30 @@
       "description": "Apple word processor",
       "startedUsing": null,
       "dateAdded": null
+    },
+    {
+      "name": "Preview",
+      "slug": "preview",
+      "category": "productivity",
+      "subcategory": "documents",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "pdf",
+        "images",
+        "viewer",
+        "markup",
+        "annotation",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://support.apple.com/guide/preview/",
+      "description": "Image and PDF viewer with markup tools",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
     },
     {
       "name": "SnappyNotes",
@@ -1284,6 +1538,29 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "SteelSeries GG",
+      "slug": "steelseries-gg",
+      "category": "specialized",
+      "subcategory": "peripherals",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "gaming",
+        "peripherals",
+        "keyboard",
+        "mouse",
+        "settings"
+      ],
+      "display": false,
+      "url": "https://steelseries.com/gg",
+      "description": "SteelSeries peripheral management",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "SteerMouse",
       "slug": "steermouse",
       "category": "specialized",
@@ -1488,6 +1765,30 @@
       "dateAdded": null
     },
     {
+      "name": "Find My",
+      "slug": "find-my",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "iphone"
+      ],
+      "tags": [
+        "location",
+        "tracking",
+        "airtag",
+        "devices",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://www.apple.com/icloud/find-my/",
+      "description": "Locate devices, people, and AirTags",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "HEIC Converter",
       "slug": "heic-converter",
       "category": "system",
@@ -1556,6 +1857,29 @@
       "dateAdded": null
     },
     {
+      "name": "iPhone Mirroring",
+      "slug": "iphone-mirroring",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "iphone",
+        "mirroring",
+        "remote-control",
+        "continuity",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://support.apple.com/en-us/105112",
+      "description": "Mirror and control iPhone from Mac",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "iStat Menus",
       "slug": "istat-menus",
       "category": "system",
@@ -1598,29 +1922,6 @@
       "display": true,
       "url": "https://www.keka.io/",
       "description": "File archiver for macOS",
-      "startedUsing": null,
-      "dateAdded": null
-    },
-    {
-      "name": "LookAway",
-      "slug": "lookaway",
-      "category": "system",
-      "subcategory": "health",
-      "status": "retired",
-      "featured": false,
-      "devices": [
-        "mbp",
-        "studio"
-      ],
-      "tags": [
-        "eye-health",
-        "break-reminders",
-        "wellness",
-        "screen-time"
-      ],
-      "display": true,
-      "url": "https://lookaway.app/",
-      "description": "Break reminder for eye health",
       "startedUsing": null,
       "dateAdded": null
     },
@@ -1714,6 +2015,30 @@
       "dateAdded": null
     },
     {
+      "name": "Shortcuts",
+      "slug": "shortcuts",
+      "category": "system",
+      "subcategory": "automation",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "iphone"
+      ],
+      "tags": [
+        "automation",
+        "workflows",
+        "shortcuts",
+        "scripting",
+        "apple"
+      ],
+      "display": false,
+      "url": "https://support.apple.com/shortcuts",
+      "description": "Visual automation and workflow builder",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
       "name": "Timing",
       "slug": "timing",
       "category": "system",
@@ -1755,234 +2080,6 @@
       "display": false,
       "url": "https://eternalstorms.at/yoink/mac/",
       "description": "Drag-and-drop shelf for files",
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "AnkerWork",
-      "slug": "ankerwork",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "BetterTouchTool",
-      "slug": "bettertouchtool",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "setapp"
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "HEIC Converter",
-      "slug": "heic-converter",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "iMazing",
-      "slug": "imazing",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "MetaImage",
-      "slug": "metaimage",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "setapp"
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "MsgFiler 4",
-      "slug": "msgfiler-4",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "NordVPN",
-      "slug": "nordvpn",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "Paprika Recipe Manager 3",
-      "slug": "paprika-recipe-manager-3",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "PixelSnap",
-      "slug": "pixelsnap",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "setapp"
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "Typeface",
-      "slug": "typeface",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "setapp"
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "UTM",
-      "slug": "utm",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        ""
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
-      "startedUsing": null,
-      "dateAdded": "2026-02-26"
-    },
-    {
-      "name": "Yoink",
-      "slug": "yoink",
-      "category": "",
-      "subcategory": null,
-      "status": "active",
-      "featured": false,
-      "devices": [
-        "mbp"
-      ],
-      "tags": [
-        "setapp"
-      ],
-      "display": false,
-      "url": null,
-      "description": null,
       "startedUsing": null,
       "dateAdded": "2026-02-26"
     }

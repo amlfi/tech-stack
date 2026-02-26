@@ -5,7 +5,7 @@ subcategory: "office-suite"
 description: "Spreadsheet application"
 url: "https://www.microsoft.com/microsoft-365/excel"
 tags: ["spreadsheet", "data-analysis", "formulas", "office"]
-icon: "https://s3.macosicons.com/macosicons/icons/rfZsLCPsSR/lowResPngFile_ef2c214adf99fb70e9927140ac21ebf4_rfZsLCPsSR.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107103/MicrosoftExcel-1024_pn7pxg.png"
 devices: ["mbp"]
 display: true
 status: "active"

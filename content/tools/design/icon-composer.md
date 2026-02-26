@@ -5,7 +5,7 @@ subcategory: "icons"
 description: "Mac icon creation tool"
 url: ""
 tags: ["icons", "design", "app-development", "graphics"]
-icon: "https://s3.macosicons.com/macosicons/icons/NXEfujPajN/lowResPngFile_e78880d6b95f5f450a1c8b1ebd6c857f_low_res_Icon_Composer.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107707/IconComposer-1024_c2heub.png"
 devices: ["mbp"]
 display: false
 status: "active"

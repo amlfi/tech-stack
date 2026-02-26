@@ -5,7 +5,7 @@ subcategory: "email"
 description: "Email and calendar client"
 url: "https://www.microsoft.com/microsoft-365/outlook"
 tags: ["email", "calendar", "contacts", "office"]
-icon: "https://s3.macosicons.com/macosicons/icons/TApZQNBNlP/lowResPngFile_ee8599bd30f7b959066c8bfa03826808_TApZQNBNlP.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107098/MicrosoftOutlook-1024_om8hqb.png"
 devices: ["mbp"]
 display: true
 status: "active"

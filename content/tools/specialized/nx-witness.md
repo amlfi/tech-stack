@@ -5,7 +5,7 @@ subcategory: "security-cameras"
 description: "Video surveillance platform"
 url: "https://www.networkoptix.com/"
 tags: ["surveillance", "security-cameras", "video", "monitoring"]
-icon: "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/1fe55b386085b66c45450dd54f84e626_OM9U8hhhFm.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107030/NxWitness-1024_wnxzo5.png"
 devices: ["mbp"]
 display: false
 status: "active"

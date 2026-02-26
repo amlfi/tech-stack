@@ -3,7 +3,7 @@ name: 1Password
 description: Password manager and secure vault
 category: security
 subcategory: password-managers
-icon: 'https://s3.macosicons.com/macosicons/icons/OtK5wDgEVD/lowResPngFile_dba6f492c08381dfb0c60973dd01b0d2_OtK5wDgEVD.png'
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107144/1Password-1024_xaddag.png"
 url: 'https://1password.com/'
 tags:
   - passwords

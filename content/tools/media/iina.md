@@ -5,7 +5,7 @@ subcategory: "video-players"
 description: "Modern media player for macOS"
 url: "https://iina.io/"
 tags: ["video-player", "media", "streaming", "playback"]
-icon: "https://s3.macosicons.com/macosicons/icons/N2OeCBHK4Q/lowResPngFile_ce0a5785af9184222dc58587bf1ee199_N2OeCBHK4Q.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107107/IINA-1024_ecwafy.png"
 devices: ["mbp"]
 display: true
 status: "active"

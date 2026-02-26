@@ -5,7 +5,7 @@ subcategory: "menu-bar"
 description: "Menu bar organization tool"
 url: "https://www.macbartender.com/"
 tags: ["menu-bar", "organization", "declutter", "customization"]
-icon: "https://s3.macosicons.com/macosicons/icons/GstoAWrNIw/lowResPngFile_a64aa635639d8d945d50e9bc6918edc2_GstoAWrNIw.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107022/Bartender5-1024_njcsrt.png"
 devices: ["mbp"]
 display: true
 status: "active"

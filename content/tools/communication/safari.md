@@ -5,7 +5,7 @@ subcategory: "browsers"
 description: "Apple web browser"
 url: "https://www.apple.com/safari/"
 tags: ["browser", "web-browsing", "privacy", "reading"]
-icon: "https://s3.macosicons.com/macosicons/icons/LWzZ6l63vI/lowResPngFile_a1dd6c2143868c36ab74dc1129da983b_LWzZ6l63vI.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107076/Safari-1024_kebfkf.png"
 devices: ["mbp", "ios"]
 display: true
 status: "active"

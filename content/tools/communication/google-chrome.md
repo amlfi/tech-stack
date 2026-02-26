@@ -5,7 +5,7 @@ subcategory: "browsers"
 description: "Google web browser"
 url: "https://www.google.com/chrome/"
 tags: ["browser", "web-browsing", "extensions", "dev-tools"]
-icon: "https://s3.macosicons.com/macosicons/icons/PHhqrUbITm/lowResPngFile_7d32b7fc5864b5acfdff27dec2219cbe_PHhqrUbITm.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107113/GoogleChrome-1024_b7cjhx.png"
 devices: ["mbp"]
 display: true
 status: "active"

@@ -5,7 +5,7 @@ subcategory: "notes"
 description: "Date-focused note taking"
 url: "https://agenda.com/"
 tags: ["notes", "calendar", "planning", "meetings"]
-icon: "https://s3.macosicons.com/macosicons/icons/zlS022rgzf/lowResPngFile_96bce0c27ed553e5bcafa223e615cc55_zlS022rgzf.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107142/Agenda-1024_csyw72.png"
 devices: ["mbp"]
 display: true
 status: "active"

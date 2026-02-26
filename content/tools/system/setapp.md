@@ -5,7 +5,7 @@ subcategory: "utilities"
 description: "Mac app subscription platform"
 url: "https://setapp.com/"
 tags: ["app-store", "subscription", "mac-apps", "discovery"]
-icon: "https://s3.macosicons.com/macosicons/icons/1PgP1eBEO2/lowResPngFile_5ce59c10131c7079decd6b3f101ffbbc_1PgP1eBEO2.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107071/Setapp-1024_hghg64.png"
 devices: ["mbp"]
 display: true
 status: "active"

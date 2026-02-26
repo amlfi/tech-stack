@@ -5,7 +5,7 @@ subcategory: "music"
 description: "Music streaming service"
 url: "https://www.spotify.com/"
 tags: ["music", "streaming", "audio", "listening", "podcasts"]
-icon: "https://s3.macosicons.com/macosicons/icons/AiVIJCBk89/lowResPngFile_8d99b5f5dec64894fe0f92479fd69be2_AiVIJCBk89.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107069/Spotify-1024_hyvwob.png"
 devices: ["mbp", "ios"]
 display: true
 status: "active"

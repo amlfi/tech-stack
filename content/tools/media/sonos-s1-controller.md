@@ -5,7 +5,7 @@ subcategory: "music"
 description: "Sonos speaker control app"
 url: "https://www.sonos.com/"
 tags: ["audio", "speakers", "music", "smart-home"]
-icon: "https://s3.macosicons.com/macosicons/icons/GAr1CrUmK1/lowResPngFile_c21e0ff9d74cc7f8259b6228978c7d6a_GAr1CrUmK1.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107040/SonosS1-1024_tywffr.png"
 devices: ["mbp"]
 display: false
 status: "active"

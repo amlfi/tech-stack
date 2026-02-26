@@ -5,7 +5,7 @@ subcategory: "launcher"
 description: "Lightning-fast launcher and productivity tool"
 url: "https://raycast.com/"
 tags: ["launcher", "productivity", "search", "automation", "snippets"]
-icon: "https://parsefiles.back4app.com/JPaQcFfEEQ1ePBxbf6wvzkPMEqKYHhPYv8boI1Rc/10af798f6d02cef173b43602ec9d0dc4_BzWWlzK7wh.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107023/Raycast-1024_igfx3g.png"
 devices: ["mbp"]
 display: true
 status: "active"

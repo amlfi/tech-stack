@@ -5,7 +5,7 @@ subcategory: "monitoring"
 description: "System monitoring in menu bar"
 url: "https://bjango.com/mac/istatmenus/"
 tags: ["system-monitor", "cpu", "memory", "temperature", "menu-bar"]
-icon: "https://s3.macosicons.com/macosicons/icons/EIU77ayFXh/lowResPngFile_20c2e3cbd9a783ded34924d145b47c1f_low_res_iStat_Menus__Liquid_Glass_.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107156/iStatMenus-1024_nyomza.png"
 devices: ["mbp"]
 display: true
 status: "active"

@@ -1,21 +1,21 @@
 {
-  "scannedAt": "2026-02-26T07:02:42.963Z",
-  "installedCount": 70,
+  "scannedAt": "2026-02-26T12:31:57.339Z",
+  "installedCount": 72,
   "setappCount": 15,
-  "catalogCount": 85,
-  "newApps": [],
-  "missing": [
+  "catalogCount": 71,
+  "newApps": [
     {
-      "name": "Focus 2",
-      "category": "productivity",
-      "subcategory": "focus-tools",
-      "status": "retired"
+      "name": "WinBox",
+      "version": "4.0.102001",
+      "source": "applications",
+      "knownMetadata": false
     },
     {
-      "name": "LookAway",
-      "category": "system",
-      "subcategory": "health",
-      "status": "retired"
+      "name": "ZeroTier",
+      "version": "1.16.1",
+      "source": "applications",
+      "knownMetadata": false
     }
-  ]
+  ],
+  "missing": []
 }

@@ -5,7 +5,7 @@ subcategory: "icons"
 description: "Icon organizer and manager"
 url: "https://geticonjar.com/"
 tags: ["icons", "design-assets", "organizing", "library"]
-icon: "https://s3.macosicons.com/macosicons/icons/AFtN0WFkK3/lowResPngFile_347ed685f11789c941fbadca728ff552_low_res_IconJar.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107112/IconJar-1024_uou6hz.png"
 devices: ["mbp"]
 display: true
 status: "active"

@@ -5,7 +5,7 @@ subcategory: "remote-access"
 description: "Remote desktop access"
 url: "https://www.realvnc.com/"
 tags: ["remote-desktop", "screen-sharing", "remote-access", "vnc"]
-icon: "https://s3.macosicons.com/macosicons/icons/YpAVFrCzD1/lowResPngFile_962d7fbce2da3929d8489d267075c462_low_res_Real_VNC_Viewer.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772107082/RealVNCConnect-1024_s5qhsj.png"
 devices: ["mbp"]
 display: true
 status: "active"
