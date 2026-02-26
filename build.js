@@ -215,6 +215,33 @@ async function build() {
   console.log(`   ✓ Loaded ${activeTools.length} active tools`);
   console.log(`   ✓ Loaded ${retiredTools.length} retired tools\n`);
 
+  // Generate catalog index for quick lookups
+  console.log('📇 Generating catalog index...');
+  const catalog = {
+    generated: new Date().toISOString(),
+    totalTools: allTools.length,
+    activeTools: activeTools.length,
+    retiredTools: retiredTools.length,
+    categories: categories.map((c) => ({ id: c.id, name: c.name, icon: c.icon, subcategories: c.subcategories })),
+    tools: allTools.map((t) => ({
+      name: t.name,
+      slug: t.slug,
+      category: t.category,
+      subcategory: t.subcategory || null,
+      status: t.status || 'active',
+      featured: t.featured || false,
+      devices: t.devices || [],
+      tags: t.tags || [],
+      display: t.display !== false,
+      url: t.url || null,
+      description: t.description || null,
+      startedUsing: t.startedUsing || null,
+      dateAdded: t.dateAdded || null,
+    })),
+  };
+  await fs.writeJSON(path.join(CONTENT_DIR, 'catalog.json'), catalog, { spaces: 2 });
+  console.log('   ✓ Generated content/catalog.json\n');
+
   // Load and compile template
   console.log('🎨 Compiling templates...');
   const templatePath = path.join(TEMPLATES_DIR, 'index.hbs');

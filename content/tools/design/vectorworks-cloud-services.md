@@ -1,7 +1,7 @@
 ---
 name: "Vectorworks Cloud Services"
-category: "media"
-subcategory: "design-tools"
+category: "design"
+subcategory: "cad"
 description: "CAD cloud collaboration"
 url: "https://www.vectorworks.net/"
 tags: ["cad", "design", "architecture", "3d-modeling", "collaboration"]

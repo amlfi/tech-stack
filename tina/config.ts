@@ -65,9 +65,10 @@ export default defineConfig({
             options: [
               { value: 'system', label: 'System & Utilities' },
               { value: 'development', label: 'Development' },
+              { value: 'design', label: 'Design & Architecture' },
               { value: 'productivity', label: 'Productivity' },
               { value: 'communication', label: 'Communication' },
-              { value: 'media', label: 'Creative & Media' },
+              { value: 'media', label: 'Media' },
               { value: 'security', label: 'Security' },
               { value: 'specialized', label: 'Specialized Tools' },
               { value: 'ai', label: 'AI & Automation' },
@@ -148,6 +149,21 @@ export default defineConfig({
             name: 'replacedBy',
             label: 'Replaced By',
             description: 'If retired, what tool replaced this?',
+          },
+          {
+            type: 'string',
+            name: 'startedUsing',
+            label: 'Started Using',
+            description: 'Year you started using this tool (e.g. 2012)',
+          },
+          {
+            type: 'datetime',
+            name: 'dateAdded',
+            label: 'Date Added',
+            description: 'When this tool was added to the stack',
+            ui: {
+              dateFormat: 'YYYY-MM-DD',
+            },
           },
         ],
       },

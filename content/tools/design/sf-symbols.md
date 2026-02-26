@@ -1,7 +1,7 @@
 ---
 name: "SF Symbols"
-category: "development"
-subcategory: "design-tools"
+category: "design"
+subcategory: "icons"
 description: "Apple icon and symbol library"
 url: "https://developer.apple.com/sf-symbols/"
 tags: ["icons", "design", "ui-design", "apple-development"]

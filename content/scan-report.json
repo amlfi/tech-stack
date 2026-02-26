@@ -1,0 +1,21 @@
+{
+  "scannedAt": "2026-02-26T07:02:42.963Z",
+  "installedCount": 70,
+  "setappCount": 15,
+  "catalogCount": 85,
+  "newApps": [],
+  "missing": [
+    {
+      "name": "Focus 2",
+      "category": "productivity",
+      "subcategory": "focus-tools",
+      "status": "retired"
+    },
+    {
+      "name": "LookAway",
+      "category": "system",
+      "subcategory": "health",
+      "status": "retired"
+    }
+  ]
+}

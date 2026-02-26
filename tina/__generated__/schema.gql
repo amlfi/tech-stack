@@ -103,6 +103,8 @@ type Tool implements Node & Document {
   notes: String
   previouslyUsed: String
   replacedBy: String
+  startedUsing: String
+  dateAdded: String
   id: ID!
   _sys: SystemInfo!
   _values: JSON!
@@ -126,6 +128,14 @@ input RichTextFilter {
   exists: Boolean
 }
 
+input DatetimeFilter {
+  after: String
+  before: String
+  eq: String
+  exists: Boolean
+  in: [String]
+}
+
 input ToolFilter {
   name: StringFilter
   description: StringFilter
@@ -142,6 +152,8 @@ input ToolFilter {
   notes: StringFilter
   previouslyUsed: StringFilter
   replacedBy: StringFilter
+  startedUsing: StringFilter
+  dateAdded: DatetimeFilter
 }
 
 type ToolConnectionEdges {
@@ -190,6 +202,8 @@ input ToolMutation {
   notes: String
   previouslyUsed: String
   replacedBy: String
+  startedUsing: String
+  dateAdded: String
 }
 
 schema {

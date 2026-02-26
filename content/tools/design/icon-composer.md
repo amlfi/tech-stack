@@ -1,7 +1,7 @@
 ---
 name: "Icon Composer"
-category: "development"
-subcategory: "design-tools"
+category: "design"
+subcategory: "icons"
 description: "Mac icon creation tool"
 url: ""
 tags: ["icons", "design", "app-development", "graphics"]

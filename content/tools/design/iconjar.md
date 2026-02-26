@@ -1,7 +1,7 @@
 ---
 name: "IconJar"
-category: "specialized"
-subcategory: "design-tools"
+category: "design"
+subcategory: "icons"
 description: "Icon organizer and manager"
 url: "https://geticonjar.com/"
 tags: ["icons", "design-assets", "organizing", "library"]

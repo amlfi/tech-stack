@@ -182,6 +182,8 @@ export type Tool = Node & Document & {
   notes?: Maybe<Scalars['String']['output']>;
   previouslyUsed?: Maybe<Scalars['String']['output']>;
   replacedBy?: Maybe<Scalars['String']['output']>;
+  startedUsing?: Maybe<Scalars['String']['output']>;
+  dateAdded?: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
   _sys: SystemInfo;
   _values: Scalars['JSON']['output'];
@@ -205,6 +207,14 @@ export type RichTextFilter = {
   exists?: InputMaybe<Scalars['Boolean']['input']>;
 };
 
+export type DatetimeFilter = {
+  after?: InputMaybe<Scalars['String']['input']>;
+  before?: InputMaybe<Scalars['String']['input']>;
+  eq?: InputMaybe<Scalars['String']['input']>;
+  exists?: InputMaybe<Scalars['Boolean']['input']>;
+  in?: InputMaybe<Array<InputMaybe<Scalars['String']['input']>>>;
+};
+
 export type ToolFilter = {
   name?: InputMaybe<StringFilter>;
   description?: InputMaybe<StringFilter>;
@@ -221,6 +231,8 @@ export type ToolFilter = {
   notes?: InputMaybe<StringFilter>;
   previouslyUsed?: InputMaybe<StringFilter>;
   replacedBy?: InputMaybe<StringFilter>;
+  startedUsing?: InputMaybe<StringFilter>;
+  dateAdded?: InputMaybe<DatetimeFilter>;
 };
 
 export type ToolConnectionEdges = {
@@ -317,6 +329,8 @@ export type ToolMutation = {
   notes?: InputMaybe<Scalars['String']['input']>;
   previouslyUsed?: InputMaybe<Scalars['String']['input']>;
   replacedBy?: InputMaybe<Scalars['String']['input']>;
+  startedUsing?: InputMaybe<Scalars['String']['input']>;
+  dateAdded?: InputMaybe<Scalars['String']['input']>;
 };
 
 

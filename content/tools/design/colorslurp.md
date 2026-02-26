@@ -1,7 +1,7 @@
 ---
 name: "ColorSlurp"
-category: "media"
-subcategory: "design-tools"
+category: "design"
+subcategory: "color"
 description: "Color picker and manager"
 url: "https://colorslurp.com/"
 tags: ["color-picker", "design", "palettes", "eyedropper"]

@@ -31,10 +31,25 @@
         "version-control",
         "markdown",
         "terminal",
-        "design-tools",
         "networking",
         "remote-access",
-        "testing"
+        "testing",
+        "virtualization"
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design & Architecture",
+      "icon": "📐",
+      "description": "Design tools, CAD, and creative production",
+      "order": 3,
+      "subcategories": [
+        "cad",
+        "color",
+        "fonts",
+        "icons",
+        "measurement",
+        "image-editing"
       ]
     },
     {
@@ -42,7 +57,7 @@
       "name": "Productivity",
       "icon": "📝",
       "description": "Productivity and office applications",
-      "order": 3,
+      "order": 4,
       "subcategories": [
         "task-management",
         "notes",
@@ -60,39 +75,39 @@
       "name": "Communication",
       "icon": "💬",
       "description": "Browsers and communication tools",
-      "order": 4,
+      "order": 5,
       "subcategories": ["browsers", "messaging", "video-conferencing"]
     },
     {
       "id": "media",
-      "name": "Creative & Media",
-      "icon": "🎨",
-      "description": "Media players and creative tools",
-      "order": 5,
-      "subcategories": ["video-players", "music", "design-tools"]
+      "name": "Media",
+      "icon": "🎵",
+      "description": "Media players and entertainment",
+      "order": 6,
+      "subcategories": ["video-players", "music"]
     },
     {
       "id": "security",
       "name": "Security",
       "icon": "🔒",
       "description": "Security and privacy tools",
-      "order": 6,
-      "subcategories": ["password-managers"]
+      "order": 7,
+      "subcategories": ["password-managers", "vpn"]
     },
     {
       "id": "specialized",
       "name": "Specialized Tools",
       "icon": "🔧",
       "description": "Specialized and niche applications",
-      "order": 7,
-      "subcategories": ["input-devices", "automation", "calculators", "design-tools", "security-cameras", "clipboard"]
+      "order": 8,
+      "subcategories": ["input-devices", "automation", "calculators", "security-cameras", "clipboard", "peripherals", "lifestyle"]
     },
     {
       "id": "ai",
       "name": "AI & Automation",
       "icon": "🤖",
       "description": "AI assistants and automation tools",
-      "order": 8,
+      "order": 9,
       "subcategories": ["ai-assistants"]
     }
   ]

@@ -1,0 +1,1990 @@
+{
+  "generated": "2026-02-26T07:02:37.687Z",
+  "totalTools": 85,
+  "activeTools": 46,
+  "retiredTools": 2,
+  "categories": [
+    {
+      "id": "system",
+      "name": "System & Utilities",
+      "icon": "⚙️",
+      "subcategories": [
+        "launcher",
+        "menu-bar",
+        "utilities",
+        "monitoring",
+        "compression",
+        "cloud-storage",
+        "file-management",
+        "screenshots",
+        "maintenance",
+        "networking",
+        "health"
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Development",
+      "icon": "💻",
+      "subcategories": [
+        "code-editor",
+        "version-control",
+        "markdown",
+        "terminal",
+        "networking",
+        "remote-access",
+        "testing",
+        "virtualization"
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design & Architecture",
+      "icon": "📐",
+      "subcategories": [
+        "cad",
+        "color",
+        "fonts",
+        "icons",
+        "measurement",
+        "image-editing"
+      ]
+    },
+    {
+      "id": "productivity",
+      "name": "Productivity",
+      "icon": "📝",
+      "subcategories": [
+        "task-management",
+        "notes",
+        "database",
+        "calendar",
+        "contacts",
+        "office-suite",
+        "email",
+        "focus-tools",
+        "file-management"
+      ]
+    },
+    {
+      "id": "communication",
+      "name": "Communication",
+      "icon": "💬",
+      "subcategories": [
+        "browsers",
+        "messaging",
+        "video-conferencing"
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "icon": "🎵",
+      "subcategories": [
+        "video-players",
+        "music"
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "icon": "🔒",
+      "subcategories": [
+        "password-managers",
+        "vpn"
+      ]
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized Tools",
+      "icon": "🔧",
+      "subcategories": [
+        "input-devices",
+        "automation",
+        "calculators",
+        "security-cameras",
+        "clipboard",
+        "peripherals",
+        "lifestyle"
+      ]
+    },
+    {
+      "id": "ai",
+      "name": "AI & Automation",
+      "icon": "🤖",
+      "subcategories": [
+        "ai-assistants"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "name": "Claude",
+      "slug": "claude",
+      "category": "ai",
+      "subcategory": "ai-assistants",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "ai-assistant",
+        "chat",
+        "writing",
+        "coding",
+        "research"
+      ],
+      "display": true,
+      "url": "https://claude.ai/",
+      "description": "AI assistant by Anthropic",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Google Chrome",
+      "slug": "google-chrome",
+      "category": "communication",
+      "subcategory": "browsers",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "browser",
+        "web-browsing",
+        "extensions",
+        "dev-tools"
+      ],
+      "display": true,
+      "url": "https://www.google.com/chrome/",
+      "description": "Google web browser",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Microsoft Teams",
+      "slug": "microsoft-teams",
+      "category": "communication",
+      "subcategory": "messaging",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "messaging",
+        "video-conferencing",
+        "collaboration",
+        "meetings"
+      ],
+      "display": true,
+      "url": "https://www.microsoft.com/microsoft-teams",
+      "description": "Team collaboration platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Safari",
+      "slug": "safari",
+      "category": "communication",
+      "subcategory": "browsers",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "browser",
+        "web-browsing",
+        "privacy",
+        "reading"
+      ],
+      "display": true,
+      "url": "https://www.apple.com/safari/",
+      "description": "Apple web browser",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "WhatsApp",
+      "slug": "whatsapp",
+      "category": "communication",
+      "subcategory": "messaging",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "messaging",
+        "chat",
+        "voice-calls",
+        "video-calls"
+      ],
+      "display": true,
+      "url": "https://www.whatsapp.com/",
+      "description": "Messaging application",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Zoom",
+      "slug": "zoom",
+      "category": "communication",
+      "subcategory": "video-conferencing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "video-conferencing",
+        "meetings",
+        "screen-sharing",
+        "webinars"
+      ],
+      "display": true,
+      "url": "https://zoom.us/",
+      "description": "Video conferencing platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "ColorSlurp",
+      "slug": "colorslurp",
+      "category": "design",
+      "subcategory": "color",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "color-picker",
+        "design",
+        "palettes",
+        "eyedropper"
+      ],
+      "display": true,
+      "url": "https://colorslurp.com/",
+      "description": "Color picker and manager",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Icon Composer",
+      "slug": "icon-composer",
+      "category": "design",
+      "subcategory": "icons",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "icons",
+        "design",
+        "app-development",
+        "graphics"
+      ],
+      "display": false,
+      "url": null,
+      "description": "Mac icon creation tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "IconJar",
+      "slug": "iconjar",
+      "category": "design",
+      "subcategory": "icons",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "icons",
+        "design-assets",
+        "organizing",
+        "library"
+      ],
+      "display": true,
+      "url": "https://geticonjar.com/",
+      "description": "Icon organizer and manager",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "MetaImage",
+      "slug": "metaimage",
+      "category": "design",
+      "subcategory": "image-editing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "metadata",
+        "exif",
+        "photos",
+        "batch-editing",
+        "setapp"
+      ],
+      "display": false,
+      "url": "https://neededapps.com/metaimage/",
+      "description": "Image metadata editor",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "PixelSnap",
+      "slug": "pixelsnap",
+      "category": "design",
+      "subcategory": "measurement",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "measurement",
+        "design",
+        "ui-design",
+        "pixel-perfect",
+        "setapp"
+      ],
+      "display": false,
+      "url": "https://getpixelsnap.com/",
+      "description": "Measure anything on screen",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "SF Symbols",
+      "slug": "sf-symbols",
+      "category": "design",
+      "subcategory": "icons",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "icons",
+        "design",
+        "ui-design",
+        "apple-development"
+      ],
+      "display": true,
+      "url": "https://developer.apple.com/sf-symbols/",
+      "description": "Apple icon and symbol library",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Typeface",
+      "slug": "typeface",
+      "category": "design",
+      "subcategory": "fonts",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "fonts",
+        "typography",
+        "design",
+        "font-management",
+        "setapp"
+      ],
+      "display": false,
+      "url": "https://typefaceapp.com/",
+      "description": "Font manager and preview tool",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Vectorworks Cloud Services",
+      "slug": "vectorworks-cloud-services",
+      "category": "design",
+      "subcategory": "cad",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "cad",
+        "design",
+        "architecture",
+        "3d-modeling",
+        "collaboration"
+      ],
+      "display": false,
+      "url": "https://www.vectorworks.net/",
+      "description": "CAD cloud collaboration",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Geekbench 6",
+      "slug": "geekbench-6",
+      "category": "development",
+      "subcategory": "testing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "benchmarking",
+        "performance",
+        "testing",
+        "hardware"
+      ],
+      "display": false,
+      "url": "https://www.geekbench.com/",
+      "description": "Cross-platform benchmark tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "iTerm",
+      "slug": "iterm",
+      "category": "development",
+      "subcategory": "terminal",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "terminal",
+        "command-line",
+        "shell",
+        "ssh"
+      ],
+      "display": true,
+      "url": "https://iterm2.com/",
+      "description": "Terminal emulator for macOS",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "iTermAI",
+      "slug": "itermai",
+      "category": "development",
+      "subcategory": "terminal",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "terminal",
+        "ai-assistant",
+        "command-line",
+        "automation"
+      ],
+      "display": false,
+      "url": null,
+      "description": "AI-powered terminal assistant",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "iTermBrowserPlugin",
+      "slug": "itermbrowserplugin",
+      "category": "development",
+      "subcategory": "terminal",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "terminal",
+        "browser-extension",
+        "integration",
+        "development"
+      ],
+      "display": false,
+      "url": null,
+      "description": "Browser integration for iTerm",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "RealVNC Connect",
+      "slug": "realvnc-connect",
+      "category": "development",
+      "subcategory": "remote-access",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "remote-desktop",
+        "screen-sharing",
+        "remote-access",
+        "vnc"
+      ],
+      "display": true,
+      "url": "https://www.realvnc.com/",
+      "description": "Remote desktop access",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Remote Desktop",
+      "slug": "remote-desktop",
+      "category": "development",
+      "subcategory": "remote-access",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "remote-desktop",
+        "rdp",
+        "windows",
+        "remote-access"
+      ],
+      "display": true,
+      "url": "https://apps.apple.com/app/microsoft-remote-desktop/id1295203466",
+      "description": "Microsoft Remote Desktop",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Sublime Merge",
+      "slug": "sublime-merge",
+      "category": "development",
+      "subcategory": "version-control",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "git",
+        "version-control",
+        "diff",
+        "merge",
+        "code-review"
+      ],
+      "display": true,
+      "url": "https://www.sublimemerge.com/",
+      "description": "Git client from Sublime",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Sublime Text",
+      "slug": "sublime-text",
+      "category": "development",
+      "subcategory": "code-editor",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "code",
+        "editor",
+        "text",
+        "programming",
+        "syntax-highlighting"
+      ],
+      "display": true,
+      "url": "https://www.sublimetext.com/",
+      "description": "Sophisticated text editor for code",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Tailscale",
+      "slug": "tailscale",
+      "category": "development",
+      "subcategory": "networking",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "vpn",
+        "networking",
+        "remote-access",
+        "security"
+      ],
+      "display": true,
+      "url": "https://tailscale.com/",
+      "description": "Secure network connectivity",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "TestFlight",
+      "slug": "testflight",
+      "category": "development",
+      "subcategory": "testing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "beta-testing",
+        "ios-development",
+        "app-testing",
+        "deployment"
+      ],
+      "display": true,
+      "url": "https://testflight.apple.com/",
+      "description": "iOS beta testing platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Typora",
+      "slug": "typora",
+      "category": "development",
+      "subcategory": "markdown",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "markdown",
+        "writing",
+        "editor",
+        "documentation"
+      ],
+      "display": true,
+      "url": "https://typora.io/",
+      "description": "Minimalist markdown editor",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "UTM",
+      "slug": "utm",
+      "category": "development",
+      "subcategory": "virtualization",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "virtual-machines",
+        "emulation",
+        "linux",
+        "windows"
+      ],
+      "display": false,
+      "url": "https://mac.getutm.app/",
+      "description": "Virtual machines for macOS",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "IINA",
+      "slug": "iina",
+      "category": "media",
+      "subcategory": "video-players",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "video-player",
+        "media",
+        "streaming",
+        "playback"
+      ],
+      "display": true,
+      "url": "https://iina.io/",
+      "description": "Modern media player for macOS",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Sonos S1 Controller",
+      "slug": "sonos-s1-controller",
+      "category": "media",
+      "subcategory": "music",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "audio",
+        "speakers",
+        "music",
+        "smart-home"
+      ],
+      "display": false,
+      "url": "https://www.sonos.com/",
+      "description": "Sonos speaker control app",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Spotify",
+      "slug": "spotify",
+      "category": "media",
+      "subcategory": "music",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "music",
+        "streaming",
+        "audio",
+        "listening",
+        "podcasts"
+      ],
+      "display": true,
+      "url": "https://www.spotify.com/",
+      "description": "Music streaming service",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Agenda",
+      "slug": "agenda",
+      "category": "productivity",
+      "subcategory": "notes",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "notes",
+        "calendar",
+        "planning",
+        "meetings"
+      ],
+      "display": true,
+      "url": "https://agenda.com/",
+      "description": "Date-focused note taking",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Airtable",
+      "slug": "airtable",
+      "category": "productivity",
+      "subcategory": "database",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "database",
+        "spreadsheet",
+        "project-management",
+        "collaboration"
+      ],
+      "display": true,
+      "url": "https://airtable.com/",
+      "description": "Collaborative database platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Cardhop",
+      "slug": "cardhop",
+      "category": "productivity",
+      "subcategory": "contacts",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "contacts",
+        "address-book",
+        "networking",
+        "crm"
+      ],
+      "display": true,
+      "url": "https://flexibits.com/cardhop",
+      "description": "Contact management by Flexibits",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Fantastical",
+      "slug": "fantastical",
+      "category": "productivity",
+      "subcategory": "calendar",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "calendar",
+        "scheduling",
+        "events",
+        "reminders"
+      ],
+      "display": true,
+      "url": "https://flexibits.com/fantastical",
+      "description": "Powerful calendar app",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Focus 2",
+      "slug": "focus-2",
+      "category": "productivity",
+      "subcategory": "focus-tools",
+      "status": "retired",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "focus",
+        "pomodoro",
+        "timer",
+        "distraction-blocking"
+      ],
+      "display": true,
+      "url": null,
+      "description": "Focus and productivity timer",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "ForkLift",
+      "slug": "forklift",
+      "category": "productivity",
+      "subcategory": "file-management",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "file-manager",
+        "ftp",
+        "sftp",
+        "file-transfer",
+        "dual-pane"
+      ],
+      "display": true,
+      "url": "https://binarynights.com/",
+      "description": "Advanced file manager and FTP client",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Microsoft Excel",
+      "slug": "microsoft-excel",
+      "category": "productivity",
+      "subcategory": "office-suite",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "spreadsheet",
+        "data-analysis",
+        "formulas",
+        "office"
+      ],
+      "display": true,
+      "url": "https://www.microsoft.com/microsoft-365/excel",
+      "description": "Spreadsheet application",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Microsoft Outlook",
+      "slug": "microsoft-outlook",
+      "category": "productivity",
+      "subcategory": "email",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "email",
+        "calendar",
+        "contacts",
+        "office"
+      ],
+      "display": true,
+      "url": "https://www.microsoft.com/microsoft-365/outlook",
+      "description": "Email and calendar client",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Microsoft Word",
+      "slug": "microsoft-word",
+      "category": "productivity",
+      "subcategory": "office-suite",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "write",
+        "documents",
+        "word-processing",
+        "office"
+      ],
+      "display": true,
+      "url": "https://www.microsoft.com/microsoft-365/word",
+      "description": "Word processing application",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "MsgFiler 4",
+      "slug": "msgfiler-4",
+      "category": "productivity",
+      "subcategory": "email",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "email",
+        "filing",
+        "organization",
+        "apple-mail"
+      ],
+      "display": false,
+      "url": "https://www.mothersruin.com/software/msgfiler/",
+      "description": "Quick email filing for Apple Mail",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Obsidian",
+      "slug": "obsidian",
+      "category": "productivity",
+      "subcategory": "notes",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "notes",
+        "knowledge-base",
+        "markdown",
+        "writing",
+        "linking"
+      ],
+      "display": true,
+      "url": "https://obsidian.md/",
+      "description": "Knowledge base and note-taking",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Pages",
+      "slug": "pages",
+      "category": "productivity",
+      "subcategory": "office-suite",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "write",
+        "documents",
+        "word-processing",
+        "templates"
+      ],
+      "display": false,
+      "url": "https://www.apple.com/pages/",
+      "description": "Apple word processor",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "SnappyNotes",
+      "slug": "snappynotes",
+      "category": "productivity",
+      "subcategory": "notes",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "notes",
+        "quick-capture",
+        "writing",
+        "snippets"
+      ],
+      "display": false,
+      "url": null,
+      "description": "Quick capture notes app",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Things 3",
+      "slug": "things-3",
+      "category": "productivity",
+      "subcategory": "task-management",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "tasks",
+        "todo",
+        "project-management",
+        "gtd"
+      ],
+      "display": true,
+      "url": "https://culturedcode.com/things/",
+      "description": "Award-winning task manager",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "1Password for Safari",
+      "slug": "1password-for-safari",
+      "category": "security",
+      "subcategory": "password-managers",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "passwords",
+        "autofill",
+        "browser-extension",
+        "security"
+      ],
+      "display": false,
+      "url": "https://1password.com/",
+      "description": "Safari browser extension",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "1Password",
+      "slug": "1password",
+      "category": "security",
+      "subcategory": "password-managers",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "ios",
+        "studio"
+      ],
+      "tags": [
+        "passwords",
+        "security",
+        "vault",
+        "credentials",
+        "two-factor-auth"
+      ],
+      "display": true,
+      "url": "https://1password.com/",
+      "description": "Password manager and secure vault",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "NordVPN",
+      "slug": "nordvpn",
+      "category": "security",
+      "subcategory": "vpn",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "vpn",
+        "privacy",
+        "security",
+        "networking",
+        "encryption"
+      ],
+      "display": false,
+      "url": "https://nordvpn.com/",
+      "description": "VPN service for privacy and security",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "AnkerWork",
+      "slug": "ankerwork",
+      "category": "specialized",
+      "subcategory": "peripherals",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "webcam",
+        "peripherals",
+        "video",
+        "settings"
+      ],
+      "display": false,
+      "url": "https://www.anker.com/pages/ankerwork-software",
+      "description": "Anker webcam and accessory management",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "BetterTouchTool",
+      "slug": "bettertouchtool",
+      "category": "specialized",
+      "subcategory": "input-devices",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "trackpad",
+        "keyboard",
+        "shortcuts",
+        "automation",
+        "gestures",
+        "setapp"
+      ],
+      "display": false,
+      "url": "https://folivora.ai/",
+      "description": "Input device customization and automation",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Copy Em",
+      "slug": "copy-em",
+      "category": "specialized",
+      "subcategory": "clipboard",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "clipboard",
+        "copy-paste",
+        "snippets",
+        "history"
+      ],
+      "display": true,
+      "url": "https://apprywhere.com/ce-mac.html",
+      "description": "Clipboard manager",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Numi",
+      "slug": "numi",
+      "category": "specialized",
+      "subcategory": "calculators",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "calculator",
+        "math",
+        "unit-conversion",
+        "notepad"
+      ],
+      "display": true,
+      "url": "https://numi.app/",
+      "description": "Beautiful calculator with text support",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Nx Witness",
+      "slug": "nx-witness",
+      "category": "specialized",
+      "subcategory": "security-cameras",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "surveillance",
+        "security-cameras",
+        "video",
+        "monitoring"
+      ],
+      "display": false,
+      "url": "https://www.networkoptix.com/",
+      "description": "Video surveillance platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Paprika Recipe Manager 3",
+      "slug": "paprika-recipe-manager-3",
+      "category": "specialized",
+      "subcategory": "lifestyle",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "recipes",
+        "cooking",
+        "meal-planning",
+        "grocery-list"
+      ],
+      "display": false,
+      "url": "https://www.paprikaapp.com/",
+      "description": "Recipe manager and meal planner",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "SteerMouse",
+      "slug": "steermouse",
+      "category": "specialized",
+      "subcategory": "input-devices",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "mouse",
+        "input-device",
+        "customization",
+        "buttons"
+      ],
+      "display": true,
+      "url": "https://plentycom.jp/en/steermouse/",
+      "description": "Mouse customization utility",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "TouchPortal",
+      "slug": "touchportal",
+      "category": "specialized",
+      "subcategory": "automation",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "macro-pad",
+        "automation",
+        "streaming",
+        "shortcuts"
+      ],
+      "display": false,
+      "url": "https://www.touch-portal.com/",
+      "description": "Stream deck alternative",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "A Better Finder Rename 12",
+      "slug": "a-better-finder-rename-12",
+      "category": "system",
+      "subcategory": "file-management",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "batch-rename",
+        "file-management",
+        "automation",
+        "organizing"
+      ],
+      "display": true,
+      "url": "https://www.publicspace.net/ABetterFinderRename/",
+      "description": "Batch file renaming tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Amphetamine",
+      "slug": "amphetamine",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "keep-awake",
+        "sleep-prevention",
+        "utility",
+        "presentations"
+      ],
+      "display": true,
+      "url": "https://apps.apple.com/app/amphetamine/id937984704",
+      "description": "Keep your Mac awake",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Bartender 5",
+      "slug": "bartender-5",
+      "category": "system",
+      "subcategory": "menu-bar",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "menu-bar",
+        "organization",
+        "declutter",
+        "customization"
+      ],
+      "display": true,
+      "url": "https://www.macbartender.com/",
+      "description": "Menu bar organization tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "CleanMyMac",
+      "slug": "cleanmymac",
+      "category": "system",
+      "subcategory": "maintenance",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "cleaning",
+        "optimization",
+        "disk-space",
+        "maintenance",
+        "uninstaller"
+      ],
+      "display": true,
+      "url": "https://macpaw.com/cleanmymac",
+      "description": "Mac cleaning and optimization",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "CleanShot X",
+      "slug": "cleanshot-x",
+      "category": "system",
+      "subcategory": "screenshots",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "screenshots",
+        "screen-recording",
+        "annotation",
+        "capture"
+      ],
+      "display": true,
+      "url": "https://cleanshot.com/",
+      "description": "Screenshot and screen recording tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "DockFix",
+      "slug": "dockfix",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "retired",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "dock",
+        "customization",
+        "utility",
+        "macos"
+      ],
+      "display": false,
+      "url": "https://www.dockfix.app",
+      "description": "Dock customization tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Dropbox",
+      "slug": "dropbox",
+      "category": "system",
+      "subcategory": "cloud-storage",
+      "status": "active",
+      "featured": true,
+      "devices": [
+        "mbp",
+        "ios"
+      ],
+      "tags": [
+        "cloud-storage",
+        "file-sync",
+        "backup",
+        "sharing"
+      ],
+      "display": true,
+      "url": "https://www.dropbox.com/",
+      "description": "Cloud file storage and sync",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "HEIC Converter",
+      "slug": "heic-converter",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "image-conversion",
+        "heic",
+        "photos",
+        "utility"
+      ],
+      "display": false,
+      "url": "https://imazing.com/heic",
+      "description": "Convert HEIC images to JPEG or PNG",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "iMazing",
+      "slug": "imazing",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "ios",
+        "backup",
+        "device-management",
+        "iphone",
+        "transfer"
+      ],
+      "display": false,
+      "url": "https://imazing.com/",
+      "description": "iOS device manager and backup tool",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "InYourFace",
+      "slug": "inyourface",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "reminders",
+        "calendar",
+        "notifications",
+        "meetings"
+      ],
+      "display": true,
+      "url": "https://inyourface.app/",
+      "description": "Event reminders on screen",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "iStat Menus",
+      "slug": "istat-menus",
+      "category": "system",
+      "subcategory": "monitoring",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "system-monitor",
+        "cpu",
+        "memory",
+        "temperature",
+        "menu-bar"
+      ],
+      "display": true,
+      "url": "https://bjango.com/mac/istatmenus/",
+      "description": "System monitoring in menu bar",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Keka",
+      "slug": "keka",
+      "category": "system",
+      "subcategory": "compression",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "compression",
+        "archive",
+        "zip",
+        "extract"
+      ],
+      "display": true,
+      "url": "https://www.keka.io/",
+      "description": "File archiver for macOS",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "LookAway",
+      "slug": "lookaway",
+      "category": "system",
+      "subcategory": "health",
+      "status": "retired",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "eye-health",
+        "break-reminders",
+        "wellness",
+        "screen-time"
+      ],
+      "display": true,
+      "url": "https://lookaway.app/",
+      "description": "Break reminder for eye health",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "NetSpot",
+      "slug": "netspot",
+      "category": "system",
+      "subcategory": "networking",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "wifi",
+        "network-analysis",
+        "signal-strength",
+        "troubleshooting"
+      ],
+      "display": false,
+      "url": "https://www.netspotapp.com/",
+      "description": "WiFi analyzer and survey tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "OneDrive",
+      "slug": "onedrive",
+      "category": "system",
+      "subcategory": "cloud-storage",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "cloud-storage",
+        "file-sync",
+        "backup",
+        "office"
+      ],
+      "display": true,
+      "url": "https://www.microsoft.com/onedrive",
+      "description": "Microsoft cloud storage",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Raycast",
+      "slug": "raycast",
+      "category": "system",
+      "subcategory": "launcher",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "launcher",
+        "productivity",
+        "search",
+        "automation",
+        "snippets"
+      ],
+      "display": true,
+      "url": "https://raycast.com/",
+      "description": "Lightning-fast launcher and productivity tool",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Setapp",
+      "slug": "setapp",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "app-store",
+        "subscription",
+        "mac-apps",
+        "discovery"
+      ],
+      "display": true,
+      "url": "https://setapp.com/",
+      "description": "Mac app subscription platform",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Timing",
+      "slug": "timing",
+      "category": "system",
+      "subcategory": "monitoring",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "time-tracking",
+        "productivity",
+        "billing",
+        "reports"
+      ],
+      "display": true,
+      "url": "https://timingapp.com/",
+      "description": "Automatic time tracking",
+      "startedUsing": null,
+      "dateAdded": null
+    },
+    {
+      "name": "Yoink",
+      "slug": "yoink",
+      "category": "system",
+      "subcategory": "utilities",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "drag-drop",
+        "file-management",
+        "shelf",
+        "utility",
+        "setapp"
+      ],
+      "display": false,
+      "url": "https://eternalstorms.at/yoink/mac/",
+      "description": "Drag-and-drop shelf for files",
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "AnkerWork",
+      "slug": "ankerwork",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "BetterTouchTool",
+      "slug": "bettertouchtool",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "setapp"
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "HEIC Converter",
+      "slug": "heic-converter",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "iMazing",
+      "slug": "imazing",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "MetaImage",
+      "slug": "metaimage",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "setapp"
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "MsgFiler 4",
+      "slug": "msgfiler-4",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "NordVPN",
+      "slug": "nordvpn",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Paprika Recipe Manager 3",
+      "slug": "paprika-recipe-manager-3",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "PixelSnap",
+      "slug": "pixelsnap",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "setapp"
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Typeface",
+      "slug": "typeface",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "setapp"
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "UTM",
+      "slug": "utm",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        ""
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    },
+    {
+      "name": "Yoink",
+      "slug": "yoink",
+      "category": "",
+      "subcategory": null,
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp"
+      ],
+      "tags": [
+        "setapp"
+      ],
+      "display": false,
+      "url": null,
+      "description": null,
+      "startedUsing": null,
+      "dateAdded": "2026-02-26"
+    }
+  ]
+}
