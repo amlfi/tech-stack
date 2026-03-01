@@ -53,8 +53,6 @@ async function loadTools() {
       const content = await fs.readFile(path.join(toolsDir, file), 'utf-8');
       const tool = parseFrontmatter(content);
       tool.slug = path.basename(file, '.md');
-      // Tina edit URL: /collections/edit/tool/<category>/<slug>
-      tool.tinaPath = file.replace(/\.md$/, '');
       tools.push(tool);
     }
   }
@@ -175,6 +173,27 @@ async function build() {
   const { categories } = await loadCategories();
   const allTools = await loadTools();
 
+  // Default missing type to 'mac'
+  allTools.forEach((tool) => {
+    if (!tool.type) tool.type = 'mac';
+  });
+
+  // Build slug→name lookup for tool cross-references
+  const nameBySlug = {};
+  allTools.forEach((tool) => {
+    nameBySlug[tool.slug] = tool.name;
+  });
+
+  // Resolve previouslyUsed and replacedBy slugs to display names
+  allTools.forEach((tool) => {
+    if (tool.previouslyUsed) {
+      tool.previouslyUsedName = nameBySlug[tool.previouslyUsed] || tool.previouslyUsed;
+    }
+    if (tool.replacedBy) {
+      tool.replacedByName = nameBySlug[tool.replacedBy] || tool.replacedBy;
+    }
+  });
+
   // Filter out tools with display: false
   const tools = allTools.filter((tool) => tool.display !== false);
 
@@ -211,6 +230,14 @@ async function build() {
   const activeTools = tools.filter((t) => t.status !== 'retired');
   const retiredTools = tools.filter((t) => t.status === 'retired');
 
+  // Platform counts for filter bar
+  const platformCounts = {
+    all: activeTools.length,
+    mac: activeTools.filter((t) => t.type === 'mac').length,
+    ios: activeTools.filter((t) => t.type === 'ios').length,
+    web: activeTools.filter((t) => t.type === 'web').length,
+  };
+
   console.log(`   ✓ Loaded ${categories.length} categories`);
   console.log(`   ✓ Loaded ${activeTools.length} active tools`);
   console.log(`   ✓ Loaded ${retiredTools.length} retired tools\n`);
@@ -226,6 +253,7 @@ async function build() {
     tools: allTools.map((t) => ({
       name: t.name,
       slug: t.slug,
+      type: t.type || 'mac',
       category: t.category,
       subcategory: t.subcategory || null,
       status: t.status || 'active',
@@ -255,6 +283,7 @@ async function build() {
     toolsByCategory,
     toolsBySubcategory,
     retiredToolsByCategory,
+    platformCounts,
     site: {
       title: 'My Tech Stack',
       description: 'The tools and applications I use daily',

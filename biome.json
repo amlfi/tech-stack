@@ -63,9 +63,6 @@
       "!.cache",
       "!.temp",
       "!package-lock.json",
-      "!tina/__generated__",
-      "!tina/tina-lock.json",
-      "!tina-lock.json",
       "!*.min.js",
       "!*.min.css",
       "!calebleigh_stack.html"

@@ -15,10 +15,7 @@ devices:
   - studio
 display: false
 status: retired
-notes: |-
-  Resource Hog
-  Buggy - Sometimes dock disappears
 replacedBy: ''
 ---
 
-Dock customization tool
+Resource Hog. Buggy - sometimes dock disappears.

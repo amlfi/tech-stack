@@ -183,7 +183,7 @@ async function init() {
   console.log('1. Run "npm run build" to generate the site');
   console.log('2. Run "npm run dev" to preview locally');
   console.log('3. Edit content files in content/ directory');
-  console.log('4. Add your own tools using TinaCMS at /admin/ or by creating .md files\n');
+  console.log('4. Add your own tools by creating .md files in content/tools/<category>/\n');
 }
 
 init().catch((err) => {

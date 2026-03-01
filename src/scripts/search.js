@@ -8,13 +8,21 @@
 
   let searchTimeout;
 
+  function getActivePlatform() {
+    const activeBtn = document.querySelector('.platform-btn.active');
+    return activeBtn ? activeBtn.getAttribute('data-platform') : 'all';
+  }
+
   function performSearch(query) {
     const normalizedQuery = query.toLowerCase().trim();
+    const activePlatform = getActivePlatform();
 
     if (!normalizedQuery) {
-      // Show all cards and sections
+      // Restore platform filter visibility (don't show platform-hidden cards)
       toolCards.forEach((card) => {
-        card.style.display = '';
+        const cardType = card.getAttribute('data-type') || 'mac';
+        const platformMatch = activePlatform === 'all' || cardType === activePlatform;
+        card.style.display = platformMatch ? '' : 'none';
       });
       categorySection.forEach((section) => {
         section.style.display = '';
@@ -26,6 +34,14 @@
     const hasVisibleCards = new Set();
 
     toolCards.forEach((card) => {
+      const cardType = card.getAttribute('data-type') || 'mac';
+      const platformMatch = activePlatform === 'all' || cardType === activePlatform;
+
+      if (!platformMatch) {
+        card.style.display = 'none';
+        return;
+      }
+
       const name = card.getAttribute('data-name')?.toLowerCase() || '';
       const tags = card.getAttribute('data-tags')?.toLowerCase() || '';
       const description = card.querySelector('.tool-description')?.textContent.toLowerCase() || '';

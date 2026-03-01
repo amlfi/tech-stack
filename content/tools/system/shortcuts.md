@@ -6,7 +6,7 @@ description: "Visual automation and workflow builder"
 url: "https://support.apple.com/shortcuts"
 icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772109647/Shortcuts-1024_f2zzyv.png"
 tags: ["automation", "workflows", "shortcuts", "scripting", "apple"]
-devices: ["mbp", "iphone"]
+devices: ["mbp", "ios"]
 display: false
 status: "active"
 startedUsing: ""

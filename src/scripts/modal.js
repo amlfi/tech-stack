@@ -36,6 +36,7 @@
     const trigger = e.target.closest('[data-modal-trigger]');
     if (trigger) {
       e.preventDefault();
+      if (currentModal) closeModal();
       const modalId = trigger.getAttribute('data-modal-trigger');
       openModal(modalId);
     }

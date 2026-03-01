@@ -1,6 +1,6 @@
 {
-  "generated": "2026-02-26T12:46:58.955Z",
-  "totalTools": 87,
+  "generated": "2026-03-01T09:34:38.613Z",
+  "totalTools": 119,
   "activeTools": 46,
   "retiredTools": 0,
   "categories": [
@@ -34,7 +34,8 @@
         "networking",
         "remote-access",
         "testing",
-        "virtualization"
+        "virtualization",
+        "cloud-platforms"
       ]
     },
     {
@@ -47,7 +48,8 @@
         "fonts",
         "icons",
         "measurement",
-        "image-editing"
+        "image-editing",
+        "mapping"
       ]
     },
     {
@@ -63,7 +65,19 @@
         "office-suite",
         "email",
         "focus-tools",
-        "file-management"
+        "file-management",
+        "scheduling",
+        "forms"
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "icon": "💰",
+      "subcategories": [
+        "accounting",
+        "banking",
+        "investing"
       ]
     },
     {
@@ -73,16 +87,16 @@
       "subcategories": [
         "browsers",
         "messaging",
-        "video-conferencing"
+        "video-conferencing",
+        "social-media"
       ]
     },
     {
-      "id": "media",
-      "name": "Media",
-      "icon": "🎵",
+      "id": "ai",
+      "name": "AI & Automation",
+      "icon": "🤖",
       "subcategories": [
-        "video-players",
-        "music"
+        "ai-assistants"
       ]
     },
     {
@@ -91,7 +105,28 @@
       "icon": "🔒",
       "subcategories": [
         "password-managers",
-        "vpn"
+        "vpn",
+        "authentication"
+      ]
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "icon": "🎵",
+      "subcategories": [
+        "video-players",
+        "music",
+        "podcasts",
+        "photos"
+      ]
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "icon": "🎮",
+      "subcategories": [
+        "strategy",
+        "casual"
       ]
     },
     {
@@ -105,22 +140,39 @@
         "security-cameras",
         "clipboard",
         "peripherals",
-        "lifestyle"
-      ]
-    },
-    {
-      "id": "ai",
-      "name": "AI & Automation",
-      "icon": "🤖",
-      "subcategories": [
-        "ai-assistants"
+        "lifestyle",
+        "navigation"
       ]
     }
   ],
   "tools": [
     {
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "type": "ios",
+      "category": "ai",
+      "subcategory": "ai-assistants",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "ai",
+        "chat",
+        "openai",
+        "gpt"
+      ],
+      "display": false,
+      "url": "https://chat.openai.com/",
+      "description": "OpenAI AI assistant",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Claude",
       "slug": "claude",
+      "type": "mac",
       "category": "ai",
       "subcategory": "ai-assistants",
       "status": "active",
@@ -142,8 +194,31 @@
       "dateAdded": null
     },
     {
+      "name": "Facebook",
+      "slug": "facebook",
+      "type": "ios",
+      "category": "communication",
+      "subcategory": "social-media",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "social",
+        "messaging",
+        "groups"
+      ],
+      "display": false,
+      "url": "https://www.facebook.com/",
+      "description": "Social networking platform",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Google Chrome",
       "slug": "google-chrome",
+      "type": "mac",
       "category": "communication",
       "subcategory": "browsers",
       "status": "active",
@@ -164,15 +239,63 @@
       "dateAdded": null
     },
     {
+      "name": "Instagram",
+      "slug": "instagram",
+      "type": "ios",
+      "category": "communication",
+      "subcategory": "social-media",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "social",
+        "photos",
+        "video",
+        "stories"
+      ],
+      "display": false,
+      "url": "https://www.instagram.com/",
+      "description": "Photo and video social network",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "LinkedIn",
+      "slug": "linkedin",
+      "type": "web",
+      "category": "communication",
+      "subcategory": "social-media",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "professional",
+        "networking",
+        "jobs",
+        "social"
+      ],
+      "display": false,
+      "url": "https://www.linkedin.com/",
+      "description": "Professional networking platform",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Mail",
       "slug": "mail",
+      "type": "mac",
       "category": "communication",
       "subcategory": "email",
       "status": "active",
       "featured": false,
       "devices": [
         "mbp",
-        "iphone"
+        "ios"
       ],
       "tags": [
         "email",
@@ -189,13 +312,14 @@
     {
       "name": "Messages",
       "slug": "messages",
+      "type": "mac",
       "category": "communication",
       "subcategory": "messaging",
       "status": "active",
       "featured": false,
       "devices": [
         "mbp",
-        "iphone"
+        "ios"
       ],
       "tags": [
         "messaging",
@@ -213,6 +337,7 @@
     {
       "name": "Microsoft Teams",
       "slug": "microsoft-teams",
+      "type": "mac",
       "category": "communication",
       "subcategory": "messaging",
       "status": "active",
@@ -233,8 +358,33 @@
       "dateAdded": null
     },
     {
+      "name": "Reddit",
+      "slug": "reddit",
+      "type": "web",
+      "category": "communication",
+      "subcategory": "social-media",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "forums",
+        "community",
+        "social",
+        "discussions"
+      ],
+      "display": false,
+      "url": "https://www.reddit.com/",
+      "description": "Forums and community discussions",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Safari",
       "slug": "safari",
+      "type": "mac",
       "category": "communication",
       "subcategory": "browsers",
       "status": "active",
@@ -258,6 +408,7 @@
     {
       "name": "WhatsApp",
       "slug": "whatsapp",
+      "type": "mac",
       "category": "communication",
       "subcategory": "messaging",
       "status": "active",
@@ -281,6 +432,7 @@
     {
       "name": "Zoom",
       "slug": "zoom",
+      "type": "mac",
       "category": "communication",
       "subcategory": "video-conferencing",
       "status": "active",
@@ -303,6 +455,7 @@
     {
       "name": "Adobe Creative Cloud",
       "slug": "adobe-creative-cloud",
+      "type": "mac",
       "category": "design",
       "subcategory": "Suite Management",
       "status": "active",
@@ -323,8 +476,33 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "Adobe Fonts",
+      "slug": "adobe-fonts",
+      "type": "web",
+      "category": "design",
+      "subcategory": "fonts",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "fonts",
+        "typography",
+        "adobe",
+        "creative-cloud"
+      ],
+      "display": false,
+      "url": "https://fonts.adobe.com/",
+      "description": "Font library from Adobe Creative Cloud",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Adobe Illustrator",
       "slug": "adobe-illustrator",
+      "type": "mac",
       "category": "design",
       "subcategory": "Vector Graphics",
       "status": "active",
@@ -348,6 +526,7 @@
     {
       "name": "Adobe InDesign",
       "slug": "adobe-indesign",
+      "type": "mac",
       "category": "design",
       "subcategory": "Layout",
       "status": "active",
@@ -371,6 +550,7 @@
     {
       "name": "Adobe Photoshop",
       "slug": "adobe-photoshop",
+      "type": "mac",
       "category": "design",
       "subcategory": "Image Editing",
       "status": "active",
@@ -394,6 +574,7 @@
     {
       "name": "ColorSlurp",
       "slug": "colorslurp",
+      "type": "mac",
       "category": "design",
       "subcategory": "color",
       "status": "active",
@@ -414,8 +595,34 @@
       "dateAdded": null
     },
     {
+      "name": "Google Earth",
+      "slug": "google-earth",
+      "type": "web",
+      "category": "design",
+      "subcategory": "mapping",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "maps",
+        "satellite",
+        "3d",
+        "google",
+        "geography"
+      ],
+      "display": false,
+      "url": "https://earth.google.com/",
+      "description": "3D globe and satellite imagery",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Icon Composer",
       "slug": "icon-composer",
+      "type": "mac",
       "category": "design",
       "subcategory": "icons",
       "status": "active",
@@ -438,6 +645,7 @@
     {
       "name": "IconJar",
       "slug": "iconjar",
+      "type": "mac",
       "category": "design",
       "subcategory": "icons",
       "status": "active",
@@ -460,6 +668,7 @@
     {
       "name": "MetaImage",
       "slug": "metaimage",
+      "type": "mac",
       "category": "design",
       "subcategory": "image-editing",
       "status": "active",
@@ -481,8 +690,32 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "My Measures PRO",
+      "slug": "my-measures-pro",
+      "type": "ios",
+      "category": "design",
+      "subcategory": "measurement",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "measurement",
+        "ar",
+        "dimensions",
+        "annotation"
+      ],
+      "display": false,
+      "url": "https://www.mymeasuresapp.com/",
+      "description": "AR measurement and annotation tool",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "PixelSnap",
       "slug": "pixelsnap",
+      "type": "mac",
       "category": "design",
       "subcategory": "measurement",
       "status": "active",
@@ -506,6 +739,7 @@
     {
       "name": "SF Symbols",
       "slug": "sf-symbols",
+      "type": "mac",
       "category": "design",
       "subcategory": "icons",
       "status": "active",
@@ -528,6 +762,7 @@
     {
       "name": "Typeface",
       "slug": "typeface",
+      "type": "mac",
       "category": "design",
       "subcategory": "fonts",
       "status": "active",
@@ -551,6 +786,7 @@
     {
       "name": "Vectorworks Cloud Services",
       "slug": "vectorworks-cloud-services",
+      "type": "mac",
       "category": "design",
       "subcategory": "cad",
       "status": "active",
@@ -574,6 +810,7 @@
     {
       "name": "Vectorworks",
       "slug": "vectorworks",
+      "type": "mac",
       "category": "design",
       "subcategory": "3D/CAD",
       "status": "active",
@@ -595,8 +832,56 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "Cloudinary",
+      "slug": "cloudinary",
+      "type": "web",
+      "category": "development",
+      "subcategory": "cloud-platforms",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "images",
+        "cdn",
+        "media",
+        "optimization"
+      ],
+      "display": false,
+      "url": "https://cloudinary.com/",
+      "description": "Image and video management CDN",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "DWService",
+      "slug": "dwservice",
+      "type": "web",
+      "category": "development",
+      "subcategory": "remote-access",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "remote-access",
+        "remote-desktop",
+        "browser"
+      ],
+      "display": false,
+      "url": "https://www.dwservice.net/",
+      "description": "Browser-based remote access service",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Geekbench 6",
       "slug": "geekbench-6",
+      "type": "mac",
       "category": "development",
       "subcategory": "testing",
       "status": "active",
@@ -617,8 +902,33 @@
       "dateAdded": null
     },
     {
+      "name": "GitHub",
+      "slug": "github",
+      "type": "web",
+      "category": "development",
+      "subcategory": "version-control",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "git",
+        "code-hosting",
+        "open-source",
+        "collaboration"
+      ],
+      "display": false,
+      "url": "https://github.com/",
+      "description": "Code hosting and version control platform",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "iTerm",
       "slug": "iterm",
+      "type": "mac",
       "category": "development",
       "subcategory": "terminal",
       "status": "active",
@@ -641,6 +951,7 @@
     {
       "name": "iTermAI",
       "slug": "itermai",
+      "type": "mac",
       "category": "development",
       "subcategory": "terminal",
       "status": "active",
@@ -663,6 +974,7 @@
     {
       "name": "iTermBrowserPlugin",
       "slug": "itermbrowserplugin",
+      "type": "mac",
       "category": "development",
       "subcategory": "terminal",
       "status": "active",
@@ -683,8 +995,33 @@
       "dateAdded": null
     },
     {
+      "name": "Netlify",
+      "slug": "netlify",
+      "type": "web",
+      "category": "development",
+      "subcategory": "cloud-platforms",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "hosting",
+        "deployment",
+        "jamstack",
+        "ci-cd"
+      ],
+      "display": false,
+      "url": "https://www.netlify.com/",
+      "description": "Web hosting and deployment platform",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "RealVNC Connect",
       "slug": "realvnc-connect",
+      "type": "mac",
       "category": "development",
       "subcategory": "remote-access",
       "status": "active",
@@ -707,6 +1044,7 @@
     {
       "name": "Remote Desktop",
       "slug": "remote-desktop",
+      "type": "mac",
       "category": "development",
       "subcategory": "remote-access",
       "status": "active",
@@ -729,6 +1067,7 @@
     {
       "name": "Sublime Merge",
       "slug": "sublime-merge",
+      "type": "mac",
       "category": "development",
       "subcategory": "version-control",
       "status": "active",
@@ -752,6 +1091,7 @@
     {
       "name": "Sublime Text",
       "slug": "sublime-text",
+      "type": "mac",
       "category": "development",
       "subcategory": "code-editor",
       "status": "active",
@@ -773,8 +1113,34 @@
       "dateAdded": null
     },
     {
+      "name": "Supabase",
+      "slug": "supabase",
+      "type": "web",
+      "category": "development",
+      "subcategory": "cloud-platforms",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "database",
+        "postgres",
+        "backend",
+        "auth",
+        "realtime"
+      ],
+      "display": false,
+      "url": "https://supabase.com/",
+      "description": "Open-source Postgres backend platform",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Tailscale",
       "slug": "tailscale",
+      "type": "mac",
       "category": "development",
       "subcategory": "networking",
       "status": "active",
@@ -795,8 +1161,32 @@
       "dateAdded": null
     },
     {
+      "name": "Termius",
+      "slug": "termius",
+      "type": "ios",
+      "category": "development",
+      "subcategory": "remote-access",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "ssh",
+        "terminal",
+        "remote-access",
+        "server"
+      ],
+      "display": false,
+      "url": "https://termius.com/",
+      "description": "SSH client for mobile",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "TestFlight",
       "slug": "testflight",
+      "type": "mac",
       "category": "development",
       "subcategory": "testing",
       "status": "active",
@@ -817,8 +1207,33 @@
       "dateAdded": null
     },
     {
+      "name": "TinaCMS",
+      "slug": "tinacms",
+      "type": "web",
+      "category": "development",
+      "subcategory": "cloud-platforms",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "cms",
+        "git",
+        "headless",
+        "markdown"
+      ],
+      "display": false,
+      "url": "https://tina.io/",
+      "description": "Git-backed headless CMS",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Typora",
       "slug": "typora",
+      "type": "mac",
       "category": "development",
       "subcategory": "markdown",
       "status": "active",
@@ -841,6 +1256,7 @@
     {
       "name": "UTM",
       "slug": "utm",
+      "type": "mac",
       "category": "development",
       "subcategory": "virtualization",
       "status": "active",
@@ -863,6 +1279,7 @@
     {
       "name": "WinBox",
       "slug": "winbox",
+      "type": "mac",
       "category": "development",
       "subcategory": "networking",
       "status": "active",
@@ -885,6 +1302,7 @@
     {
       "name": "ZeroTier",
       "slug": "zerotier",
+      "type": "mac",
       "category": "development",
       "subcategory": "networking",
       "status": "active",
@@ -905,8 +1323,169 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "Coinbase",
+      "slug": "coinbase",
+      "type": "ios",
+      "category": "finance",
+      "subcategory": "investing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "crypto",
+        "bitcoin",
+        "investing",
+        "exchange"
+      ],
+      "display": false,
+      "url": "https://www.coinbase.com/",
+      "description": "Cryptocurrency exchange",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Stake",
+      "slug": "stake",
+      "type": "ios",
+      "category": "finance",
+      "subcategory": "investing",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "investing",
+        "stocks",
+        "shares",
+        "trading"
+      ],
+      "display": false,
+      "url": "https://hellostake.com/",
+      "description": "Stock investing and shares trading",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Wise",
+      "slug": "wise",
+      "type": "ios",
+      "category": "finance",
+      "subcategory": "banking",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "money-transfer",
+        "currency",
+        "international",
+        "banking"
+      ],
+      "display": false,
+      "url": "https://wise.com/",
+      "description": "International money transfers",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Xero",
+      "slug": "xero",
+      "type": "web",
+      "category": "finance",
+      "subcategory": "accounting",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "accounting",
+        "invoicing",
+        "bookkeeping",
+        "business"
+      ],
+      "display": false,
+      "url": "https://www.xero.com/",
+      "description": "Cloud accounting software",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Battle of Polytopia",
+      "slug": "battle-of-polytopia",
+      "type": "ios",
+      "category": "games",
+      "subcategory": "strategy",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "strategy",
+        "turn-based",
+        "civilization"
+      ],
+      "display": false,
+      "url": "https://polytopia.io/",
+      "description": "Turn-based strategy game",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Downcast",
+      "slug": "downcast",
+      "type": "ios",
+      "category": "media",
+      "subcategory": "podcasts",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "podcasts",
+        "audio",
+        "rss"
+      ],
+      "display": false,
+      "url": "https://www.downcastapp.com/",
+      "description": "Podcast player and manager",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Google Photos",
+      "slug": "google-photos",
+      "type": "ios",
+      "category": "media",
+      "subcategory": "photos",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "photos",
+        "backup",
+        "gallery",
+        "google"
+      ],
+      "display": false,
+      "url": "https://photos.google.com/",
+      "description": "Photo backup and gallery",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "IINA",
       "slug": "iina",
+      "type": "mac",
       "category": "media",
       "subcategory": "video-players",
       "status": "active",
@@ -929,13 +1508,14 @@
     {
       "name": "Music",
       "slug": "music",
+      "type": "mac",
       "category": "media",
       "subcategory": "music",
       "status": "active",
       "featured": false,
       "devices": [
         "mbp",
-        "iphone"
+        "ios"
       ],
       "tags": [
         "music",
@@ -953,6 +1533,7 @@
     {
       "name": "Sonos S1 Controller",
       "slug": "sonos-s1-controller",
+      "type": "mac",
       "category": "media",
       "subcategory": "music",
       "status": "active",
@@ -975,6 +1556,7 @@
     {
       "name": "Spotify",
       "slug": "spotify",
+      "type": "mac",
       "category": "media",
       "subcategory": "music",
       "status": "active",
@@ -997,8 +1579,31 @@
       "dateAdded": null
     },
     {
+      "name": "1Writer",
+      "slug": "1writer",
+      "type": "ios",
+      "category": "productivity",
+      "subcategory": "notes",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "markdown",
+        "writing",
+        "text-editor"
+      ],
+      "display": false,
+      "url": "https://1writerapp.com/",
+      "description": "Markdown text editor for iOS",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Adobe Acrobat",
       "slug": "adobe-acrobat",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "documents",
       "status": "active",
@@ -1022,6 +1627,7 @@
     {
       "name": "Agenda",
       "slug": "agenda",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "notes",
       "status": "active",
@@ -1044,6 +1650,7 @@
     {
       "name": "Airtable",
       "slug": "airtable",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "database",
       "status": "active",
@@ -1066,6 +1673,7 @@
     {
       "name": "Cardhop",
       "slug": "cardhop",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "contacts",
       "status": "active",
@@ -1086,8 +1694,33 @@
       "dateAdded": null
     },
     {
+      "name": "Deputy",
+      "slug": "deputy",
+      "type": "web",
+      "category": "productivity",
+      "subcategory": "scheduling",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "scheduling",
+        "roster",
+        "shifts",
+        "workforce"
+      ],
+      "display": false,
+      "url": "https://www.deputy.com/",
+      "description": "Staff rostering and shift management",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Fantastical",
       "slug": "fantastical",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "calendar",
       "status": "active",
@@ -1111,6 +1744,7 @@
     {
       "name": "ForkLift",
       "slug": "forklift",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "file-management",
       "status": "active",
@@ -1132,8 +1766,32 @@
       "dateAdded": null
     },
     {
+      "name": "JotForm",
+      "slug": "jotform",
+      "type": "web",
+      "category": "productivity",
+      "subcategory": "forms",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "mbp",
+        "studio"
+      ],
+      "tags": [
+        "forms",
+        "surveys",
+        "data-collection"
+      ],
+      "display": false,
+      "url": "https://www.jotform.com/",
+      "description": "Online form builder",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Microsoft Excel",
       "slug": "microsoft-excel",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "office-suite",
       "status": "active",
@@ -1156,6 +1814,7 @@
     {
       "name": "Microsoft Outlook",
       "slug": "microsoft-outlook",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "email",
       "status": "active",
@@ -1178,6 +1837,7 @@
     {
       "name": "Microsoft Word",
       "slug": "microsoft-word",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "office-suite",
       "status": "active",
@@ -1200,6 +1860,7 @@
     {
       "name": "MsgFiler 4",
       "slug": "msgfiler-4",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "email",
       "status": "active",
@@ -1222,6 +1883,7 @@
     {
       "name": "Obsidian",
       "slug": "obsidian",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "notes",
       "status": "active",
@@ -1245,6 +1907,7 @@
     {
       "name": "Pages",
       "slug": "pages",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "office-suite",
       "status": "active",
@@ -1267,6 +1930,7 @@
     {
       "name": "Preview",
       "slug": "preview",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "documents",
       "status": "active",
@@ -1291,6 +1955,7 @@
     {
       "name": "SnappyNotes",
       "slug": "snappynotes",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "notes",
       "status": "active",
@@ -1313,6 +1978,7 @@
     {
       "name": "Things 3",
       "slug": "things-3",
+      "type": "mac",
       "category": "productivity",
       "subcategory": "task-management",
       "status": "active",
@@ -1336,6 +2002,7 @@
     {
       "name": "1Password for Safari",
       "slug": "1password-for-safari",
+      "type": "mac",
       "category": "security",
       "subcategory": "password-managers",
       "status": "active",
@@ -1358,6 +2025,7 @@
     {
       "name": "1Password",
       "slug": "1password",
+      "type": "mac",
       "category": "security",
       "subcategory": "password-managers",
       "status": "active",
@@ -1381,8 +2049,55 @@
       "dateAdded": null
     },
     {
+      "name": "Authy",
+      "slug": "authy",
+      "type": "ios",
+      "category": "security",
+      "subcategory": "authentication",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "2fa",
+        "authentication",
+        "totp",
+        "security"
+      ],
+      "display": false,
+      "url": "https://authy.com/",
+      "description": "Two-factor authentication app",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Microsoft Authenticator",
+      "slug": "microsoft-authenticator",
+      "type": "ios",
+      "category": "security",
+      "subcategory": "authentication",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "2fa",
+        "authentication",
+        "microsoft",
+        "security"
+      ],
+      "display": false,
+      "url": "https://www.microsoft.com/en-us/security/mobile-authenticator-app",
+      "description": "Two-factor authentication for Microsoft",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "NordVPN",
       "slug": "nordvpn",
+      "type": "mac",
       "category": "security",
       "subcategory": "vpn",
       "status": "active",
@@ -1406,6 +2121,7 @@
     {
       "name": "AnkerWork",
       "slug": "ankerwork",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "peripherals",
       "status": "active",
@@ -1428,6 +2144,7 @@
     {
       "name": "BetterTouchTool",
       "slug": "bettertouchtool",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "input-devices",
       "status": "active",
@@ -1452,6 +2169,7 @@
     {
       "name": "Copy Em",
       "slug": "copy-em",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "clipboard",
       "status": "active",
@@ -1472,8 +2190,55 @@
       "dateAdded": null
     },
     {
+      "name": "Google Maps",
+      "slug": "google-maps",
+      "type": "ios",
+      "category": "specialized",
+      "subcategory": "navigation",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "maps",
+        "navigation",
+        "directions",
+        "google"
+      ],
+      "display": false,
+      "url": "https://maps.google.com/",
+      "description": "Maps and navigation",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "name": "Huckleberry",
+      "slug": "huckleberry",
+      "type": "ios",
+      "category": "specialized",
+      "subcategory": "lifestyle",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "baby",
+        "sleep",
+        "feeding",
+        "parenting"
+      ],
+      "display": false,
+      "url": "https://huckleberrycare.com/",
+      "description": "Baby sleep and feeding tracker",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "Numi",
       "slug": "numi",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "calculators",
       "status": "active",
@@ -1496,6 +2261,7 @@
     {
       "name": "Nx Witness",
       "slug": "nx-witness",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "security-cameras",
       "status": "active",
@@ -1518,6 +2284,7 @@
     {
       "name": "Paprika Recipe Manager 3",
       "slug": "paprika-recipe-manager-3",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "lifestyle",
       "status": "active",
@@ -1538,8 +2305,32 @@
       "dateAdded": "2026-02-26"
     },
     {
+      "name": "Polar Beat",
+      "slug": "polar-beat",
+      "type": "ios",
+      "category": "specialized",
+      "subcategory": "lifestyle",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "fitness",
+        "heart-rate",
+        "exercise",
+        "polar"
+      ],
+      "display": false,
+      "url": "https://www.polar.com/en/beat",
+      "description": "Fitness and heart rate tracker",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "SteelSeries GG",
       "slug": "steelseries-gg",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "peripherals",
       "status": "active",
@@ -1563,6 +2354,7 @@
     {
       "name": "SteerMouse",
       "slug": "steermouse",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "input-devices",
       "status": "active",
@@ -1583,8 +2375,32 @@
       "dateAdded": null
     },
     {
+      "name": "SuperCards",
+      "slug": "supercards",
+      "type": "ios",
+      "category": "specialized",
+      "subcategory": "lifestyle",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "loyalty",
+        "cards",
+        "wallet",
+        "rewards"
+      ],
+      "display": false,
+      "url": "https://apps.apple.com/app/supercards/id1441498038",
+      "description": "Store loyalty cards wallet",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "TouchPortal",
       "slug": "touchportal",
+      "type": "mac",
       "category": "specialized",
       "subcategory": "automation",
       "status": "active",
@@ -1605,8 +2421,31 @@
       "dateAdded": null
     },
     {
+      "name": "Waze",
+      "slug": "waze",
+      "type": "ios",
+      "category": "specialized",
+      "subcategory": "navigation",
+      "status": "active",
+      "featured": false,
+      "devices": [
+        "ios"
+      ],
+      "tags": [
+        "navigation",
+        "traffic",
+        "driving"
+      ],
+      "display": false,
+      "url": "https://www.waze.com/",
+      "description": "Community-driven navigation",
+      "startedUsing": null,
+      "dateAdded": "2026-02-28"
+    },
+    {
       "name": "A Better Finder Rename 12",
       "slug": "a-better-finder-rename-12",
+      "type": "mac",
       "category": "system",
       "subcategory": "file-management",
       "status": "active",
@@ -1630,6 +2469,7 @@
     {
       "name": "Amphetamine",
       "slug": "amphetamine",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -1653,6 +2493,7 @@
     {
       "name": "Bartender 5",
       "slug": "bartender-5",
+      "type": "mac",
       "category": "system",
       "subcategory": "menu-bar",
       "status": "active",
@@ -1675,6 +2516,7 @@
     {
       "name": "CleanMyMac",
       "slug": "cleanmymac",
+      "type": "mac",
       "category": "system",
       "subcategory": "maintenance",
       "status": "active",
@@ -1698,6 +2540,7 @@
     {
       "name": "CleanShot X",
       "slug": "cleanshot-x",
+      "type": "mac",
       "category": "system",
       "subcategory": "screenshots",
       "status": "active",
@@ -1721,6 +2564,7 @@
     {
       "name": "DockFix",
       "slug": "dockfix",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "retired",
@@ -1744,6 +2588,7 @@
     {
       "name": "Dropbox",
       "slug": "dropbox",
+      "type": "mac",
       "category": "system",
       "subcategory": "cloud-storage",
       "status": "active",
@@ -1767,13 +2612,14 @@
     {
       "name": "Find My",
       "slug": "find-my",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
       "featured": false,
       "devices": [
         "mbp",
-        "iphone"
+        "ios"
       ],
       "tags": [
         "location",
@@ -1791,6 +2637,7 @@
     {
       "name": "HEIC Converter",
       "slug": "heic-converter",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -1813,6 +2660,7 @@
     {
       "name": "iMazing",
       "slug": "imazing",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -1836,6 +2684,7 @@
     {
       "name": "InYourFace",
       "slug": "inyourface",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -1859,6 +2708,7 @@
     {
       "name": "iPhone Mirroring",
       "slug": "iphone-mirroring",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -1882,6 +2732,7 @@
     {
       "name": "iStat Menus",
       "slug": "istat-menus",
+      "type": "mac",
       "category": "system",
       "subcategory": "monitoring",
       "status": "active",
@@ -1905,6 +2756,7 @@
     {
       "name": "Keka",
       "slug": "keka",
+      "type": "mac",
       "category": "system",
       "subcategory": "compression",
       "status": "active",
@@ -1928,6 +2780,7 @@
     {
       "name": "NetSpot",
       "slug": "netspot",
+      "type": "mac",
       "category": "system",
       "subcategory": "networking",
       "status": "active",
@@ -1950,6 +2803,7 @@
     {
       "name": "OneDrive",
       "slug": "onedrive",
+      "type": "mac",
       "category": "system",
       "subcategory": "cloud-storage",
       "status": "active",
@@ -1972,6 +2826,7 @@
     {
       "name": "Raycast",
       "slug": "raycast",
+      "type": "mac",
       "category": "system",
       "subcategory": "launcher",
       "status": "active",
@@ -1995,6 +2850,7 @@
     {
       "name": "Setapp",
       "slug": "setapp",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",
@@ -2017,13 +2873,14 @@
     {
       "name": "Shortcuts",
       "slug": "shortcuts",
+      "type": "mac",
       "category": "system",
       "subcategory": "automation",
       "status": "active",
       "featured": false,
       "devices": [
         "mbp",
-        "iphone"
+        "ios"
       ],
       "tags": [
         "automation",
@@ -2041,6 +2898,7 @@
     {
       "name": "Timing",
       "slug": "timing",
+      "type": "mac",
       "category": "system",
       "subcategory": "monitoring",
       "status": "active",
@@ -2063,6 +2921,7 @@
     {
       "name": "Yoink",
       "slug": "yoink",
+      "type": "mac",
       "category": "system",
       "subcategory": "utilities",
       "status": "active",

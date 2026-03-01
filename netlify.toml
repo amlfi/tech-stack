@@ -2,7 +2,7 @@
 
 [build]
   # Build command - generates the site
-  command = "BUILD_DIR=dist node build.js && tinacms build"
+  command = "BUILD_DIR=dist node build.js"
 
   # Output directory - where the built files are
   publish = "dist"
@@ -11,7 +11,6 @@
   [build.environment]
     NODE_VERSION = "18"
     BUILD_DIR = "dist"
-    TINA_PUBLIC_IS_LOCAL = "false"
 
 # Redirect rules
 [[redirects]]

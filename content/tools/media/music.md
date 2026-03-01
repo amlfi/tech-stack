@@ -6,7 +6,7 @@ description: "Apple Music player and streaming"
 url: "https://www.apple.com/apple-music/"
 icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772109634/Music-1024_hr4igs.png"
 tags: ["music", "streaming", "apple-music", "audio", "apple"]
-devices: ["mbp", "iphone"]
+devices: ["mbp", "ios"]
 display: false
 status: "active"
 startedUsing: ""

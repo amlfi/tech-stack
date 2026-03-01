@@ -128,16 +128,18 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 ## Current Status
 
 - **Site live and editable** — deployed on Netlify, Tina Cloud CMS editing confirmed working
-- **47 active tools** across 8 categories, organized into category subfolders
+- **87 tools** (46 active, 41 with display:false) across 8 categories, organized into category subfolders
 - **Build works** locally via `node build.js` and on Netlify via `node build.js && tinacms build`
 - **Tina config synced** — `tina/config.ts`, `tina-lock.json`, and Tina Cloud schema all in agreement
 - **TinaCMS search enabled** — search bar works in admin, indexed via `TINA_SEARCH_TOKEN`
-- **Icons via macosicons.com CDN** — 46 tools have macOS-style icons loaded from external CDN, no files in repo
+- **Icons via Cloudinary CDN** — all 87 tools have Liquid Glass icons uploaded to Cloudinary (dk3rktqns), extracted from local macOS 26.3 app bundles
 - **Category folders** — tools organized into `content/tools/<category>/` subfolders, browsable in TinaCMS admin
 - **Category labels** — TinaCMS dropdown shows friendly names (e.g. "Creative & Media") while storing short IDs
 - **All Decap CMS references removed** — code, docs, package metadata all cleaned up
 - **Netlify env vars set** — `TINA_CLIENT_ID`, `TINA_TOKEN`, `TINA_SEARCH_TOKEN` configured
 - **Biome linting** — configured with `biome.json`, available via `npm run lint` / `npm run lint:fix`
+- **Platform types** — `type` field (mac/ios/web) added to schema; platform filter bar, type badges, and composed filtering implemented
+- **Tool cross-linking** — `previouslyUsed`/`replacedBy` render as clickable links that open the referenced tool's modal
 
 ## TODO (Next Session)
 
@@ -159,9 +161,19 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 - [x] ~~Fix placeholder URLs~~ — Updated settings.json with real URLs, updated build.js fallback (session 8)
 - [x] ~~Rewrite documentation~~ — README rewritten for TinaCMS, deleted 4 obsolete Decap-focused docs (session 8)
 - [x] ~~Fix dev-server error handling~~ — process.exit(1) on initial build failure (session 8)
-- [ ] **Fetch remaining 12 tool icons** — run `MACOSICONS_API_KEY=... npm run fetch-icons` when API quota resets (50/month limit). Missing: steermouse, sublime-merge, sublime-text, tailscale, testflight, things-3, timing, touchportal, typora, vectorworks-cloud-services, whatsapp, zoom
-- [ ] **4 tools not in macosicons.com** — inyourface, itermai, itermbrowserplugin, snappynotes (manually find icons or keep placeholders)
-- [ ] **Review site content** for accuracy across all 47 tools
+- [x] ~~Fetch remaining tool icons~~ — All icons migrated to Cloudinary from local app bundles (session 13)
+- [x] ~~4 tools not in macosicons.com~~ — Extracted directly from app bundles (session 13)
+- [x] ~~Implement tool cross-linking~~ — `previouslyUsed`/`replacedBy` as slug references with modal links (session 15)
+- [ ] **Retire TinaCMS** — remove dependencies, delete `tina/` dir, simplify `netlify.toml` build command
+- [ ] **Set up Airtable sync** — sync script to push/pull between Airtable and markdown files
+- [ ] **Netlify build hooks** — configure webhook URL for Airtable-triggered rebuilds
+- [ ] **Review site content** for accuracy across all 87 tools
+- [ ] **SnappyNotes icon** — needs manual icon (not found in app bundle extraction)
+- [ ] **Icon Composer icon** — .icns file shows wrong/stale icon vs what Finder displays
+- [ ] **Things 3, MsgFiler 4, UTM icons** — use Asset Catalog (Assets.car), not .icns; current Cloudinary uploads may be from macosicons.com
+- [ ] **Review new tool entries** — 16 new tools added with display:false; review metadata and flip display:true as needed
+- [ ] **Regenerate tina-lock.json** — `type` field added to schema in `tina/config.ts`; must run `tinacms dev` (via symlink) to update lock file before pushing
+- [ ] **Add iOS and web tool entries** — platform filter bar buttons for iOS/Web only appear when tools of that type exist
 
 ---
 
@@ -402,3 +414,82 @@ tina/                  → TinaCMS config (Tina Cloud mode)
 **Learnings**:
 - Handlebars `{{#each (lookup ../obj key)}}` iterates object keys with `@key` — works well for subcategory grouping without needing a custom helper
 - JavaScript object key insertion order is preserved, so sorting the keys before assignment to `sortedGroups` ensures correct display order
+
+### 2026-02-26 — Session 13: Full Icon Migration to Cloudinary & New Tool Entries
+
+**Summary**: Migrated all tool icons from macosicons.com to Cloudinary CDN using Liquid Glass icons extracted from local macOS 26.3 app bundles. Added 16 new tool entries (Adobe suite, Apple system apps, Vectorworks, SteelSeries GG, WinBox, ZeroTier). Deleted 2 retired tools (Focus 2, LookAway). Total: 92 files changed.
+
+**Changes Made**:
+- All 67+ tool markdown files — `icon:` field updated to Cloudinary URLs (`https://res.cloudinary.com/dk3rktqns/...`)
+- 16 new tool entries created in correct category folders with `display: false`
+- Deleted `content/tools/productivity/focus-2.md` and `content/tools/system/lookaway.md`
+- `src/styles/main.css` — fixed subcategory row alignment (`align-items: stretch`, bottom borders)
+- `ICON-URLS.md` — icon management template (iteratively updated)
+- `APPLE-APPS-CHECKLIST.md` — checklist for selecting Apple system apps to include
+
+**Challenges & Solutions**:
+- **Wrong icons extracted (document icons)** — First bulk extraction used `find -name "*.icns" | head -1` which grabbed document-type icons for Office apps. Fixed by reading `CFBundleIconFile` from `Info.plist` via `defaults read`
+- **`node -e` shell escaping** — `!==` and `!` in inline JS caused zsh history expansion errors. Fixed by writing scripts to temp files instead
+- **Asset Catalog apps** — Things 3, MsgFiler 4, UTM have no `.icns` file (icons in `Assets.car`). Kept existing Cloudinary uploads from earlier macosicons.com URLs
+- **Apps in /Applications subfolders** — Scanner missed Adobe suite, Vectorworks, SteelSeries GG in subdirectories. Created entries manually
+- **Git push rejected** — Remote had a TinaCMS content update. `git pull --rebase` blocked by Dropbox-caused catalog.json timestamp drift. Fixed with `git -c rebase.autoStash=true pull --rebase`, resolved one conflict in `typora.md` (took our Cloudinary icon version)
+
+**Key Decisions**:
+- Cloudinary (cloud: dk3rktqns) as permanent icon CDN — replaces macosicons.com for all tools
+- Extract icons from local macOS 26.3 app bundles — ensures Liquid Glass style consistency
+- New tools created with `display: false` — review in CMS before showing on site
+- Apple system apps selected by user: Find My, iPhone Mirroring, Mail, Messages, Music, Preview, Shortcuts
+
+**Learnings**:
+- `defaults read /path/to/Info.plist CFBundleIconFile` reliably gets the correct app icon filename
+- `sips -s format png -z 1024 1024 input.icns --out output.png` converts .icns to PNG at exact size
+- Cloudinary API: `curl https://key:secret@api.cloudinary.com/v1_1/cloud/resources/image` lists all uploads with URLs
+- Dropbox sync can modify files between git commands — use `git -c rebase.autoStash=true` to handle this
+- Adobe Creative Cloud has a non-standard bundle path: `/Applications/Adobe Creative Cloud/Adobe Creative Cloud/Contents/`
+
+### 2026-02-26 — Session 14: Platform Type Support (Mac/iOS/Web)
+
+**Summary**: Implemented full platform type support so txstack can catalog iOS-only apps and web services alongside Mac apps. Added `type` field (mac/ios/web) to schema, platform filter bar, type badges, and composed filtering.
+
+**Changes Made**:
+- `tina/config.ts` — added `type` field with Mac/iOS/Web options; updated icon field description
+- `build.js` — defaults missing `type` to `mac`, computes `platformCounts`, adds `type` to catalog.json output, passes counts to template
+- `templates/index.hbs` — added platform filter bar between search and category filter (iOS/Web buttons only render when tools of that type exist)
+- `templates/partials/tool-card.hbs` — added `data-type` attribute; iOS/Web badges on card name and modal title
+- `src/scripts/filter.js` — rewritten to compose platform + category filters; hides empty subcategory groups; persists to localStorage
+- `src/scripts/search.js` — respects active platform filter during search
+- `src/styles/main.css` — platform filter bar (compact pill buttons), type badges (iOS blue, Web green)
+- `src/styles/themes.css` — added badge color variables for light and dark themes
+- `scripts/scan-apps.js` — adds `type: "mac"` to generated markdown frontmatter
+- 5 content files — normalized `devices: ["iphone"]` to `devices: ["ios"]`
+
+**Key Decisions**:
+- Mac tools get no badge (clean default look unchanged); only iOS and Web tools show badges
+- Platform filter buttons are conditionally rendered — won't show iOS/Web buttons until tools of that type exist
+- Existing 87 tools don't need migration — build defaults missing `type` to `"mac"`
+- Badges use CSS custom properties from themes.css for dark mode support
+
+**Files Modified**: `tina/config.ts`, `build.js`, `templates/index.hbs`, `templates/partials/tool-card.hbs`, `src/scripts/filter.js`, `src/scripts/search.js`, `src/styles/main.css`, `src/styles/themes.css`, `scripts/scan-apps.js`, plus 5 content files
+
+### 2026-02-28 — Session 15: Linked Tool References & CMS Transition Planning
+
+**Summary**: Made `previouslyUsed` and `replacedBy` fields into cross-linked slug references that open the referenced tool's modal. Discussed Airtable field design for linked records vs single-select. Planned TinaCMS retirement and Netlify-only rebuild strategy.
+
+**Changes Made**:
+- `build.js` — added slug-to-name lookup (`nameBySlug` map); resolves `previouslyUsed` and `replacedBy` slugs to display names (`previouslyUsedName`, `replacedByName`) at build time
+- `templates/partials/tool-card.hbs` — renders `previouslyUsed`/`replacedBy` as clickable `<a>` links with `data-modal-trigger` pointing to the referenced tool's slug; shows contextual sentences ("Before X, I used Y" / "I now use Y instead")
+- `src/scripts/modal.js` — existing `data-modal-trigger` handler already closes the current modal before opening a new one (no changes needed)
+- `src/styles/main.css` — added `.tool-link` styles for inline tool reference links
+
+**Key Decisions**:
+- **Slugs over free text** — `previouslyUsed` and `replacedBy` store slugs (e.g. `"sublime-text"`) rather than display names. Build.js resolves them to names at compile time. This enables modal cross-linking without runtime lookups
+- **Keep as separate fields, not linked records** — Discussed making these Airtable linked record fields. Downside: Airtable linked records use opaque record IDs (e.g. `recABC123`), requiring the sync script to map between record IDs and slugs in both directions. Single-select or free-text slug fields are simpler and sufficient
+- **Airtable single-select colors** — customizable per-choice in Airtable UI (click field header → Edit field, or click color dot on any choice)
+- **TinaCMS retirement plan** — TinaCMS can be fully retired since `build.js` reads markdown directly, not via TinaCMS GraphQL. Steps: (1) remove `tinacms` and `@tinacms/cli` from dependencies, (2) delete `tina/` directory and `tina-lock.json`, (3) simplify `netlify.toml` build command to just `node build.js`, (4) remove Tina env vars from Netlify. Content editing moves to Airtable → sync script → git push → Netlify rebuild
+- **Netlify rebuild trigger** — without TinaCMS, Netlify rebuilds on git push to `main`. For Airtable-driven updates: sync script commits and pushes, or use Netlify build hooks (webhook URL that triggers a deploy)
+- **Local preview already works** — `node build.js && node dev-server.js` has always been independent of TinaCMS
+
+**Learnings**:
+- The existing `data-modal-trigger` pattern made cross-linking trivial — the modal system already handles open/close transitions, so linking between tools just required rendering the right `data-modal-trigger` attribute on an `<a>` tag
+- Airtable linked records add sync complexity disproportionate to their value for simple reference fields — slug-based text fields achieve the same UX in the built site
+- TinaCMS is a pure CMS layer with zero runtime dependencies in this project — `build.js` never imports or calls TinaCMS APIs, making retirement risk-free for the static site

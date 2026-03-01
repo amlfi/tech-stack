@@ -34,7 +34,8 @@
         "networking",
         "remote-access",
         "testing",
-        "virtualization"
+        "virtualization",
+        "cloud-platforms"
       ]
     },
     {
@@ -49,7 +50,8 @@
         "fonts",
         "icons",
         "measurement",
-        "image-editing"
+        "image-editing",
+        "mapping"
       ]
     },
     {
@@ -67,48 +69,66 @@
         "office-suite",
         "email",
         "focus-tools",
-        "file-management"
+        "file-management",
+        "scheduling",
+        "forms"
       ]
+    },
+    {
+      "id": "finance",
+      "name": "Finance",
+      "icon": "💰",
+      "description": "Accounting, banking, and financial tools",
+      "order": 5,
+      "subcategories": ["accounting", "banking", "investing"]
     },
     {
       "id": "communication",
       "name": "Communication",
       "icon": "💬",
       "description": "Browsers and communication tools",
-      "order": 5,
-      "subcategories": ["browsers", "messaging", "video-conferencing"]
-    },
-    {
-      "id": "media",
-      "name": "Media",
-      "icon": "🎵",
-      "description": "Media players and entertainment",
       "order": 6,
-      "subcategories": ["video-players", "music"]
-    },
-    {
-      "id": "security",
-      "name": "Security",
-      "icon": "🔒",
-      "description": "Security and privacy tools",
-      "order": 7,
-      "subcategories": ["password-managers", "vpn"]
-    },
-    {
-      "id": "specialized",
-      "name": "Specialized Tools",
-      "icon": "🔧",
-      "description": "Specialized and niche applications",
-      "order": 8,
-      "subcategories": ["input-devices", "automation", "calculators", "security-cameras", "clipboard", "peripherals", "lifestyle"]
+      "subcategories": ["browsers", "messaging", "video-conferencing", "social-media"]
     },
     {
       "id": "ai",
       "name": "AI & Automation",
       "icon": "🤖",
       "description": "AI assistants and automation tools",
-      "order": 9,
+      "order": 7,
       "subcategories": ["ai-assistants"]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "icon": "🔒",
+      "description": "Security and privacy tools",
+      "order": 8,
+      "subcategories": ["password-managers", "vpn", "authentication"]
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "icon": "🎵",
+      "description": "Media players and entertainment",
+      "order": 9,
+      "subcategories": ["video-players", "music", "podcasts", "photos"]
+    },
+    {
+      "id": "games",
+      "name": "Games",
+      "icon": "🎮",
+      "description": "Games and entertainment",
+      "order": 10,
+      "subcategories": ["strategy", "casual"]
+    },
+    {
+      "id": "specialized",
+      "name": "Specialized Tools",
+      "icon": "🔧",
+      "description": "Specialized and niche applications",
+      "order": 11,
+      "subcategories": ["input-devices", "automation", "calculators", "security-cameras", "clipboard", "peripherals", "lifestyle", "navigation"]
     }
   ]
 }

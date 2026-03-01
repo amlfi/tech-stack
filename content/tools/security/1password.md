@@ -17,9 +17,8 @@ devices:
   - studio
 display: true
 status: active
-notes: test
-previouslyUsed: test 12
-replacedBy: test 34
+previouslyUsed: ''
+replacedBy: ''
 ---
 
 Password manager and secure vault

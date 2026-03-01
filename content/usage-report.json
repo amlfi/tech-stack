@@ -1,0 +1,760 @@
+{
+  "scannedAt": "2026-02-26T14:00:21.212Z",
+  "source": "Timing App (Screen Time sync)",
+  "timingDB": "/Users/studio/Library/Application Support/info.eurocomp.Timing2/SQLite.db",
+  "iosApps": [
+    {
+      "name": "Instagram",
+      "bundleId": "com.burbn.instagram",
+      "hours": 117.8,
+      "sessions": 2185,
+      "knownMetadata": true
+    },
+    {
+      "name": "Netflix",
+      "bundleId": "com.netflix.Netflix",
+      "hours": 89.9,
+      "sessions": 520,
+      "knownMetadata": true
+    },
+    {
+      "name": "Google Maps",
+      "bundleId": "com.google.Maps",
+      "hours": 80.8,
+      "sessions": 1753,
+      "knownMetadata": true
+    },
+    {
+      "name": "Wild West: Farm Town Building",
+      "bundleId": "com.socialquantum2.west3dint",
+      "hours": 71,
+      "sessions": 876,
+      "knownMetadata": false
+    },
+    {
+      "name": "The Battle of Polytopia",
+      "bundleId": "com.felixrum.supertribes",
+      "hours": 40.9,
+      "sessions": 396,
+      "knownMetadata": false
+    },
+    {
+      "name": "Amazon Prime Video",
+      "bundleId": "com.amazon.aiv.AIVApp",
+      "hours": 39.8,
+      "sessions": 259,
+      "knownMetadata": true
+    },
+    {
+      "name": "HBO Max: Watch Movies & TV",
+      "bundleId": "com.wbd.stream",
+      "hours": 39.7,
+      "sessions": 151,
+      "knownMetadata": true
+    },
+    {
+      "name": "Facebook",
+      "bundleId": "com.facebook.Facebook",
+      "hours": 23.3,
+      "sessions": 609,
+      "knownMetadata": true
+    },
+    {
+      "name": "Disney+",
+      "bundleId": "com.disney.disneyplus",
+      "hours": 18.7,
+      "sessions": 103,
+      "knownMetadata": true
+    },
+    {
+      "name": "Termius - Modern SSH Client",
+      "bundleId": "com.crystalnix.ServerAuditor",
+      "hours": 17.7,
+      "sessions": 629,
+      "knownMetadata": true
+    },
+    {
+      "name": "Downcast",
+      "bundleId": "com.jamawkinaw.downcast",
+      "hours": 13.8,
+      "sessions": 335,
+      "knownMetadata": true
+    },
+    {
+      "name": "Messenger",
+      "bundleId": "com.facebook.Messenger",
+      "hours": 12.3,
+      "sessions": 929,
+      "knownMetadata": true
+    },
+    {
+      "name": "Microsoft Authenticator",
+      "bundleId": "com.microsoft.azureauthenticator",
+      "hours": 8.8,
+      "sessions": 77,
+      "knownMetadata": true
+    },
+    {
+      "name": "Stan.",
+      "bundleId": "au.com.stan",
+      "hours": 7.7,
+      "sessions": 32,
+      "knownMetadata": true
+    },
+    {
+      "name": "Lollipop - Smart baby monitor",
+      "bundleId": "com.aoitek.lollipop",
+      "hours": 7.4,
+      "sessions": 79,
+      "knownMetadata": true
+    },
+    {
+      "name": "Huckleberry: Baby & Child",
+      "bundleId": "com.huckleberry-labs.app",
+      "hours": 7.3,
+      "sessions": 160,
+      "knownMetadata": true
+    },
+    {
+      "name": "Amazon - Shopping made easy",
+      "bundleId": "com.amazon.Amazon",
+      "hours": 6.4,
+      "sessions": 159,
+      "knownMetadata": true
+    },
+    {
+      "name": "Waze Navigation & Live Traffic",
+      "bundleId": "com.waze.iphone",
+      "hours": 5,
+      "sessions": 73,
+      "knownMetadata": true
+    },
+    {
+      "name": "Booking.com Travel Deals",
+      "bundleId": "com.booking.BookingApp",
+      "hours": 5,
+      "sessions": 52,
+      "knownMetadata": true
+    },
+    {
+      "name": "YouTube",
+      "bundleId": "com.google.ios.youtube",
+      "hours": 4.1,
+      "sessions": 17,
+      "knownMetadata": true
+    },
+    {
+      "name": "Bloons TD 6",
+      "bundleId": "com.ninjakiwi.bloonstd6",
+      "hours": 3.3,
+      "sessions": 19,
+      "knownMetadata": false
+    },
+    {
+      "name": "MasterDex - complete guide",
+      "bundleId": "com.lorenzogreco.pokedexProvider",
+      "hours": 3.1,
+      "sessions": 660,
+      "knownMetadata": false
+    },
+    {
+      "name": "uk.co.bbc.iplayer",
+      "bundleId": "uk.co.bbc.iplayer",
+      "hours": 3.1,
+      "sessions": 13,
+      "knownMetadata": false
+    },
+    {
+      "name": "Reddit",
+      "bundleId": "com.reddit.Reddit",
+      "hours": 3,
+      "sessions": 137,
+      "knownMetadata": true
+    },
+    {
+      "name": "CommBank",
+      "bundleId": "au.com.commbank.commbank",
+      "hours": 2.1,
+      "sessions": 137,
+      "knownMetadata": false
+    },
+    {
+      "name": "LinkedIn: Network & Job Search",
+      "bundleId": "com.linkedin.LinkedIn",
+      "hours": 1.8,
+      "sessions": 19,
+      "knownMetadata": true
+    },
+    {
+      "name": "Twilio Authy",
+      "bundleId": "com.authy",
+      "hours": 1.7,
+      "sessions": 40,
+      "knownMetadata": true
+    },
+    {
+      "name": "Google Sheets",
+      "bundleId": "com.google.Sheets",
+      "hours": 1.6,
+      "sessions": 73,
+      "knownMetadata": true
+    },
+    {
+      "name": "Polar Beat: Running & Fitness",
+      "bundleId": "fi.polar.polarbeat",
+      "hours": 1.6,
+      "sessions": 27,
+      "knownMetadata": true
+    },
+    {
+      "name": "Airbnb",
+      "bundleId": "com.airbnb.app",
+      "hours": 1.5,
+      "sessions": 32,
+      "knownMetadata": true
+    },
+    {
+      "name": "Temu: Shop Like a Billionaire",
+      "bundleId": "com.einnovation.temu",
+      "hours": 1.5,
+      "sessions": 50,
+      "knownMetadata": true
+    },
+    {
+      "name": "ANZ Australia",
+      "bundleId": "com.anz.ANZGrow",
+      "hours": 1.4,
+      "sessions": 49,
+      "knownMetadata": false
+    },
+    {
+      "name": "Uber - Request a ride",
+      "bundleId": "com.ubercab.UberClient",
+      "hours": 1.4,
+      "sessions": 108,
+      "knownMetadata": false
+    },
+    {
+      "name": "SuperCards: Store Card",
+      "bundleId": "de.superapps.supercards",
+      "hours": 1.3,
+      "sessions": 30,
+      "knownMetadata": false
+    },
+    {
+      "name": "Enterprise Car Club",
+      "bundleId": "com.enterprisecarshare.mobile",
+      "hours": 1.2,
+      "sessions": 81,
+      "knownMetadata": false
+    },
+    {
+      "name": "ABC listen: Radio & Podcasts",
+      "bundleId": "au.net.abc.radio",
+      "hours": 1.1,
+      "sessions": 23,
+      "knownMetadata": false
+    },
+    {
+      "name": "Domain Real Estate & Property",
+      "bundleId": "au.com.fairfaxdigital.Domain",
+      "hours": 1,
+      "sessions": 46,
+      "knownMetadata": false
+    },
+    {
+      "name": "My Measures PRO + AR Measure",
+      "bundleId": "com.sis.si.My-Measures",
+      "hours": 1,
+      "sessions": 16,
+      "knownMetadata": false
+    },
+    {
+      "name": "eero Wi-Fi system",
+      "bundleId": "com.eero.eero-ios",
+      "hours": 1,
+      "sessions": 39,
+      "knownMetadata": false
+    },
+    {
+      "name": "The World Games LIVE",
+      "bundleId": "app.isb.twg.live",
+      "hours": 1,
+      "sessions": 11,
+      "knownMetadata": false
+    },
+    {
+      "name": "ABC News",
+      "bundleId": "au.net.abc.ABC",
+      "hours": 1,
+      "sessions": 43,
+      "knownMetadata": false
+    },
+    {
+      "name": "Stake – Invest & Build Wealth",
+      "bundleId": "com.stake.stake",
+      "hours": 1,
+      "sessions": 21,
+      "knownMetadata": false
+    },
+    {
+      "name": "Barclays",
+      "bundleId": "uk.co.barclays.bmbappstore",
+      "hours": 0.8,
+      "sessions": 37,
+      "knownMetadata": false
+    },
+    {
+      "name": "Google Photos: Backup & Edit",
+      "bundleId": "com.google.photos",
+      "hours": 0.8,
+      "sessions": 6,
+      "knownMetadata": false
+    },
+    {
+      "name": "com.apple.sharing.airdropui",
+      "bundleId": "com.apple.sharing.airdropui",
+      "hours": 0.8,
+      "sessions": 7,
+      "knownMetadata": false
+    },
+    {
+      "name": "Bunnings",
+      "bundleId": "au.com.bunnings.prodfinder",
+      "hours": 0.8,
+      "sessions": 85,
+      "knownMetadata": false
+    },
+    {
+      "name": "Wise",
+      "bundleId": "com.transferwise.Transferwise",
+      "hours": 0.8,
+      "sessions": 50,
+      "knownMetadata": false
+    },
+    {
+      "name": "Coinbase: Buy BTC, ETH, SOL",
+      "bundleId": "com.vilcsak.bitcoin2",
+      "hours": 0.6,
+      "sessions": 1,
+      "knownMetadata": false
+    },
+    {
+      "name": "com.apple.MediaRemoteUIService",
+      "bundleId": "com.apple.MediaRemoteUIService",
+      "hours": 0.6,
+      "sessions": 50,
+      "knownMetadata": false
+    },
+    {
+      "name": "giffgaff",
+      "bundleId": "com.giffgaff.mygiffgaff",
+      "hours": 0.6,
+      "sessions": 29,
+      "knownMetadata": false
+    },
+    {
+      "name": "Flybuys",
+      "bundleId": "com.flybuys.iphone",
+      "hours": 0.6,
+      "sessions": 36,
+      "knownMetadata": false
+    },
+    {
+      "name": "Ubank Money App",
+      "bundleId": "au.com.86400",
+      "hours": 0.6,
+      "sessions": 46,
+      "knownMetadata": false
+    },
+    {
+      "name": "ChatGPT",
+      "bundleId": "com.openai.chat",
+      "hours": 0.5,
+      "sessions": 4,
+      "knownMetadata": false
+    },
+    {
+      "name": "Australia Post",
+      "bundleId": "com.auspost.mobile",
+      "hours": 0.5,
+      "sessions": 38,
+      "knownMetadata": false
+    },
+    {
+      "name": "Deputy: Roster & Shift Planner",
+      "bundleId": "com.deputy.prod",
+      "hours": 0.5,
+      "sessions": 26,
+      "knownMetadata": false
+    }
+  ],
+  "webServices": [
+    {
+      "domain": "earth.google.com",
+      "hours": 1.55,
+      "sessions": 702,
+      "knownMetadata": true
+    },
+    {
+      "domain": "www.amazon.co.uk",
+      "hours": 1.33,
+      "sessions": 217,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.centrelink.gov.au",
+      "hours": 1.24,
+      "sessions": 251,
+      "knownMetadata": false
+    },
+    {
+      "domain": "lacrossegear.com.au",
+      "hours": 0.85,
+      "sessions": 81,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.realestate.com.au",
+      "hours": 0.84,
+      "sessions": 241,
+      "knownMetadata": false
+    },
+    {
+      "domain": "app.2apply.com.au",
+      "hours": 0.74,
+      "sessions": 250,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.screwfix.com",
+      "hours": 0.71,
+      "sessions": 156,
+      "knownMetadata": false
+    },
+    {
+      "domain": "admin.cloud.microsoft",
+      "hours": 0.68,
+      "sessions": 254,
+      "knownMetadata": true
+    },
+    {
+      "domain": "console.cloud.google.com",
+      "hours": 0.65,
+      "sessions": 285,
+      "knownMetadata": true
+    },
+    {
+      "domain": "go.xero.com",
+      "hours": 0.59,
+      "sessions": 133,
+      "knownMetadata": true
+    },
+    {
+      "domain": "www.ausport.gov.au",
+      "hours": 0.55,
+      "sessions": 180,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.reddit.com",
+      "hours": 0.45,
+      "sessions": 79,
+      "knownMetadata": true
+    },
+    {
+      "domain": "github.com",
+      "hours": 0.44,
+      "sessions": 247,
+      "knownMetadata": true
+    },
+    {
+      "domain": "v3.rpform.com",
+      "hours": 0.41,
+      "sessions": 23,
+      "knownMetadata": false
+    },
+    {
+      "domain": "app.netlify.com",
+      "hours": 0.39,
+      "sessions": 136,
+      "knownMetadata": true
+    },
+    {
+      "domain": "assemblyfestival.sharepoint.com",
+      "hours": 0.38,
+      "sessions": 154,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.asics.com",
+      "hours": 0.37,
+      "sessions": 126,
+      "knownMetadata": false
+    },
+    {
+      "domain": "andrewkaymanagement.au.deputy.com",
+      "hours": 0.35,
+      "sessions": 30,
+      "knownMetadata": false
+    },
+    {
+      "domain": "console.cloudinary.com",
+      "hours": 0.34,
+      "sessions": 87,
+      "knownMetadata": true
+    },
+    {
+      "domain": "www.flints.co.uk",
+      "hours": 0.33,
+      "sessions": 50,
+      "knownMetadata": false
+    },
+    {
+      "domain": "fonts.adobe.com",
+      "hours": 0.32,
+      "sessions": 124,
+      "knownMetadata": true
+    },
+    {
+      "domain": "supabase.com",
+      "hours": 0.31,
+      "sessions": 100,
+      "knownMetadata": true
+    },
+    {
+      "domain": "www.thistlebuildingsupplies.co.uk",
+      "hours": 0.3,
+      "sessions": 85,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.decathlon.co.uk",
+      "hours": 0.28,
+      "sessions": 47,
+      "knownMetadata": false
+    },
+    {
+      "domain": "stringking.com",
+      "hours": 0.28,
+      "sessions": 117,
+      "knownMetadata": false
+    },
+    {
+      "domain": "cars.booking.com",
+      "hours": 0.28,
+      "sessions": 51,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.airbnb.com.au",
+      "hours": 0.26,
+      "sessions": 111,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.enterprisecarclub.co.uk",
+      "hours": 0.21,
+      "sessions": 28,
+      "knownMetadata": false
+    },
+    {
+      "domain": "myrecord.ehealth.gov.au",
+      "hours": 0.21,
+      "sessions": 48,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.yay.com",
+      "hours": 0.2,
+      "sessions": 50,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.guardian.edu.au",
+      "hours": 0.2,
+      "sessions": 23,
+      "knownMetadata": false
+    },
+    {
+      "domain": "macosicons.com",
+      "hours": 0.19,
+      "sessions": 110,
+      "knownMetadata": false
+    },
+    {
+      "domain": "estore.pepwave.com",
+      "hours": 0.19,
+      "sessions": 83,
+      "knownMetadata": false
+    },
+    {
+      "domain": "my.gov.au",
+      "hours": 0.18,
+      "sessions": 91,
+      "knownMetadata": false
+    },
+    {
+      "domain": "uklacrosse.com",
+      "hours": 0.17,
+      "sessions": 58,
+      "knownMetadata": false
+    },
+    {
+      "domain": "access.dwservice.net",
+      "hours": 0.17,
+      "sessions": 45,
+      "knownMetadata": false
+    },
+    {
+      "domain": "fontawesome.com",
+      "hours": 0.16,
+      "sessions": 35,
+      "knownMetadata": false
+    },
+    {
+      "domain": "app.tina.io",
+      "hours": 0.16,
+      "sessions": 67,
+      "knownMetadata": true
+    },
+    {
+      "domain": "www.booking.com",
+      "hours": 0.15,
+      "sessions": 33,
+      "knownMetadata": false
+    },
+    {
+      "domain": "uk.momcozy.com",
+      "hours": 0.15,
+      "sessions": 33,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.plexicam.com",
+      "hours": 0.14,
+      "sessions": 5,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.commbank.com.au",
+      "hours": 0.14,
+      "sessions": 48,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.aicd.com.au",
+      "hours": 0.14,
+      "sessions": 23,
+      "knownMetadata": false
+    },
+    {
+      "domain": "medium.com",
+      "hours": 0.13,
+      "sessions": 26,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.linkedin.com",
+      "hours": 0.12,
+      "sessions": 26,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.gocompare.com",
+      "hours": 0.12,
+      "sessions": 11,
+      "knownMetadata": false
+    },
+    {
+      "domain": "lacrossevictoria.com.au",
+      "hours": 0.12,
+      "sessions": 40,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.layher.co.uk",
+      "hours": 0.11,
+      "sessions": 11,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.jotform.com",
+      "hours": 0.11,
+      "sessions": 15,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.fontshare.com",
+      "hours": 0.11,
+      "sessions": 32,
+      "knownMetadata": false
+    },
+    {
+      "domain": "uketa.com",
+      "hours": 0.11,
+      "sessions": 6,
+      "knownMetadata": false
+    },
+    {
+      "domain": "policy.poweredbycovermore.com",
+      "hours": 0.11,
+      "sessions": 6,
+      "knownMetadata": false
+    },
+    {
+      "domain": "my.lollipop.camera",
+      "hours": 0.11,
+      "sessions": 10,
+      "knownMetadata": false
+    },
+    {
+      "domain": "auspost.com.au",
+      "hours": 0.11,
+      "sessions": 28,
+      "knownMetadata": false
+    },
+    {
+      "domain": "amlfi-tech-stack.netlify.app",
+      "hours": 0.11,
+      "sessions": 71,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www1.my.commbank.com.au",
+      "hours": 0.1,
+      "sessions": 24,
+      "knownMetadata": false
+    },
+    {
+      "domain": "www.apple.com",
+      "hours": 0.1,
+      "sessions": 9,
+      "knownMetadata": false
+    },
+    {
+      "domain": "source.thenbs.com",
+      "hours": 0.1,
+      "sessions": 48,
+      "knownMetadata": false
+    },
+    {
+      "domain": "myaccount.google.com",
+      "hours": 0.1,
+      "sessions": 26,
+      "knownMetadata": false
+    },
+    {
+      "domain": "entra.microsoft.com",
+      "hours": 0.1,
+      "sessions": 27,
+      "knownMetadata": false
+    },
+    {
+      "domain": "calebleigh.me",
+      "hours": 0.1,
+      "sessions": 29,
+      "knownMetadata": false
+    }
+  ]
+}

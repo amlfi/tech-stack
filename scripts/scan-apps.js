@@ -158,6 +158,7 @@ function generateMarkdown(app, today) {
     category: info.category || '',
     content: `---
 name: "${app.name}"
+type: "mac"
 category: "${info.category || ''}"
 subcategory: "${info.subcategory || ''}"
 description: "${info.description || ''}"
@@ -321,7 +322,7 @@ async function main() {
     }
 
     console.log(`\nGenerated ${count} files. All have display: false.`);
-    console.log('Edit in TinaCMS to review, tweak, and enable.\n');
+    console.log('Edit in Airtable to review, tweak, and enable.\n');
     console.log('Useful commands:');
     console.log(`  node scripts/scan-apps.js --recent ${today}   # see this batch`);
     console.log('  node scripts/scan-apps.js --missing           # what\'s not installed');

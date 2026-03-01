@@ -1,34 +1,33 @@
 {
   "name": "tech-stack-showcase",
   "version": "1.0.0",
-  "description": "A tech stack showcase website with TinaCMS integration for Netlify",
+  "description": "A tech stack showcase website — managed via Airtable, built with Handlebars, deployed on Netlify",
   "main": "build.js",
   "scripts": {
-    "build": "node build.js && tinacms build",
-    "dev": "tinacms dev -c \"node dev-server.js\"",
-    "dev:tina": "tinacms dev",
+    "build": "node build.js",
+    "dev": "node build.js && node dev-server.js",
     "init-content": "node scripts/init-content.js",
-    "fetch-icons": "node scripts/fetch-icons.js",
+    "sync:push": "node scripts/sync-airtable.js push",
+    "sync:pull": "node scripts/sync-airtable.js pull",
+    "sync:status": "node scripts/sync-airtable.js status",
     "lint": "npx @biomejs/biome check .",
     "lint:fix": "npx @biomejs/biome check . --write"
   },
   "keywords": [
     "tech-stack",
     "portfolio",
-    "tinacms",
+    "airtable",
     "static-site",
     "netlify"
   ],
   "author": "Moana",
   "license": "MIT",
   "dependencies": {
-    "@tinacms/cli": "^2.1.6",
     "chokidar": "^3.6.0",
     "express": "^4.22.1",
     "fs-extra": "^11.3.3",
     "handlebars": "^4.7.8",
-    "markdown-it": "^14.1.1",
-    "tinacms": "^3.5.0"
+    "markdown-it": "^14.1.1"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.4"

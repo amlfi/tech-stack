@@ -6,7 +6,7 @@ description: "Apple iMessage and SMS"
 url: "https://support.apple.com/messages"
 icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772109632/Messages-1024_m34dd0.png"
 tags: ["messaging", "imessage", "sms", "chat", "apple"]
-devices: ["mbp", "iphone"]
+devices: ["mbp", "ios"]
 display: false
 status: "active"
 startedUsing: ""

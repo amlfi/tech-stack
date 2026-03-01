@@ -2,6 +2,7 @@
          data-tags="{{tags}}"
          data-name="{{name}}"
          data-tool-id="{{slug}}"
+         data-type="{{type}}"
          {{#if featured}}data-featured="true"{{/if}}
          {{#if (eq status 'retired')}}data-status="retired"{{/if}}>
   <button class="tool-card-button" data-modal-trigger="{{slug}}">
@@ -19,6 +20,8 @@
       <div class="tool-content">
         <h3 class="tool-name">
           {{name}}
+          {{#if (eq type 'ios')}}<span class="type-badge type-ios">iOS</span>{{/if}}
+          {{#if (eq type 'web')}}<span class="type-badge type-web">Web</span>{{/if}}
           {{#if (eq status 'retired')}}
             <span class="retired-badge">Retired</span>
           {{/if}}
@@ -50,7 +53,11 @@
           </div>
         {{/if}}
         <div>
-          <h2 id="modal-title-{{slug}}" class="tool-modal-title">{{name}}</h2>
+          <h2 id="modal-title-{{slug}}" class="tool-modal-title">
+            {{name}}
+            {{#if (eq type 'ios')}}<span class="type-badge type-ios">iOS</span>{{/if}}
+            {{#if (eq type 'web')}}<span class="type-badge type-web">Web</span>{{/if}}
+          </h2>
           <p class="tool-modal-subtitle">{{description}}</p>
         </div>
       </div>
@@ -59,7 +66,7 @@
         {{#if content}}
           {{#if (neq content description)}}
             <div class="tool-modal-section">
-              <h3>Why I Use It</h3>
+              <h3>{{#if (eq status 'retired')}}Why I Stopped Using It{{else}}Why I Use It{{/if}}</h3>
               <div class="tool-modal-text">
                 {{{markdown content}}}
               </div>
@@ -79,7 +86,7 @@
         {{#if previouslyUsed}}
           <div class="tool-modal-section tool-modal-migration">
             <h3>Previously Used</h3>
-            <p>Before {{name}}, I used <strong>{{previouslyUsed}}</strong></p>
+            <p>Before {{name}}, I used <a href="#" class="tool-link" data-modal-trigger="{{previouslyUsed}}">{{previouslyUsedName}}</a></p>
           </div>
         {{/if}}
 
@@ -87,7 +94,7 @@
           {{#if replacedBy}}
             <div class="tool-modal-section tool-modal-migration">
               <h3>Replaced By</h3>
-              <p>I now use <strong>{{replacedBy}}</strong> instead</p>
+              <p>I now use <a href="#" class="tool-link" data-modal-trigger="{{replacedBy}}">{{replacedByName}}</a> instead</p>
             </div>
           {{/if}}
         {{/if}}
@@ -119,12 +126,6 @@
               </svg>
             </a>
           {{/if}}
-          <a href="./admin/#/collections/edit/tool/{{tinaPath}}" class="tool-modal-link tool-modal-edit">
-            Edit
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
         </div>
       </div>
     </div>

@@ -163,6 +163,75 @@ body {
   color: var(--color-text-secondary);
 }
 
+/* Platform Filter */
+.platform-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--spacing-sm);
+  justify-content: center;
+}
+
+.platform-btn {
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.platform-btn:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.platform-btn.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.platform-count {
+  font-size: 0.625rem;
+  opacity: 0.7;
+}
+
+.platform-btn.active .platform-count {
+  opacity: 0.85;
+}
+
+/* Type Badges */
+.type-badge {
+  display: inline-block;
+  padding: 0 5px;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+  line-height: 1.6;
+}
+
+.type-ios {
+  background: var(--color-type-ios-bg);
+  color: var(--color-type-ios);
+}
+
+.type-web {
+  background: var(--color-type-web-bg);
+  color: var(--color-type-web);
+}
+
 /* Category Filter */
 .category-filter {
   display: flex;
@@ -681,6 +750,17 @@ body {
   color: var(--color-text);
 }
 
+.tool-link {
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tool-link:hover {
+  opacity: 0.8;
+}
+
 .tool-modal-actions {
   margin-top: var(--spacing-md);
   padding-top: var(--spacing-md);
@@ -703,11 +783,6 @@ body {
 
 .tool-modal-link:hover {
   opacity: 0.85;
-}
-
-.tool-modal-edit {
-  background: var(--color-surface-hover);
-  color: var(--color-text-secondary);
 }
 
 /* Scrollbar Styling */

@@ -4,7 +4,7 @@ category: "development"
 subcategory: "virtualization"
 description: "Virtual machines for macOS"
 url: "https://mac.getutm.app/"
-icon: "https://s3.macosicons.com/macosicons/icons/BrwGduj5Lt/lowResPngFile_ccb52027bb71c00e4682290fa06f3bfd_low_res_UTM__Default_.png"
+icon: "https://res.cloudinary.com/dk3rktqns/image/upload/v1772244691/UTM_1024.png"
 tags: ["virtual-machines", "emulation", "linux", "windows"]
 devices: ["mbp"]
 display: false
