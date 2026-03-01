@@ -54,7 +54,8 @@
       >
     </div>
 
-    <!-- Platform Filter -->
+    <!-- Platform Filter (only shown when multiple platform types exist) -->
+    {{#if hasMultiplePlatforms}}
     <div class="platform-filter">
       <button class="platform-btn active" data-platform="all">All <span class="platform-count">{{platformCounts.all}}</span></button>
       <button class="platform-btn" data-platform="mac">Mac <span class="platform-count">{{platformCounts.mac}}</span></button>
@@ -65,6 +66,7 @@
         <button class="platform-btn" data-platform="web">Web <span class="platform-count">{{platformCounts.web}}</span></button>
       {{/if}}
     </div>
+    {{/if}}
 
     <!-- Category Filter -->
     <div class="category-filter">

@@ -237,6 +237,7 @@ async function build() {
     ios: activeTools.filter((t) => t.type === 'ios').length,
     web: activeTools.filter((t) => t.type === 'web').length,
   };
+  const hasMultiplePlatforms = [platformCounts.mac, platformCounts.ios, platformCounts.web].filter(Boolean).length > 1;
 
   console.log(`   ✓ Loaded ${categories.length} categories`);
   console.log(`   ✓ Loaded ${activeTools.length} active tools`);
@@ -284,6 +285,7 @@ async function build() {
     toolsBySubcategory,
     retiredToolsByCategory,
     platformCounts,
+    hasMultiplePlatforms,
     site: {
       title: 'My Tech Stack',
       description: 'The tools and applications I use daily',
